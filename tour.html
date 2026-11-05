@@ -10,7 +10,7 @@ h1,h2,h3{font-family:'Potta One',cursive;font-weight:400;margin:0}
 .wrap{max-width:1100px;margin:0 auto;padding:16px}
 .guide{display:flex;gap:14px;align-items:center;background:var(--sun);border:4px solid var(--ink);border-radius:14px 2px 14px 2px;box-shadow:6px 6px 0 var(--red);padding:14px}
 .avslot{width:130px;height:130px;flex:none}
-#flyer{position:absolute;left:0;top:0;width:130px;height:130px;z-index:40;transition:left .7s cubic-bezier(.4,1.4,.5,1),top .7s cubic-bezier(.4,1.4,.5,1),width .4s,height .4s;pointer-events:none}
+#flyer{position:absolute;left:0;top:0;width:130px;height:130px;z-index:40;transition:left 1.15s cubic-bezier(.65,0,.35,1),top 1.15s cubic-bezier(.65,0,.35,1),width .6s ease,height .6s ease;pointer-events:none}
 #flyer img{display:block;width:100%;height:100%;border-radius:50%;border:4px solid var(--ink);background:#fff;box-shadow:3px 3px 0 var(--ink);transition:transform .3s}
 #flyer.flip img{transform:scaleX(-1)}#flyer.sm .gem{width:30px;height:30px;font-size:17px}
 #flyer.sm{width:84px;height:84px}
@@ -72,23 +72,36 @@ h3.sec{font-size:22px;margin:22px 0 8px}
 .guide .gtxt:after{content:"";position:absolute;left:-13px;top:50px;border:8px solid transparent;border-right-color:#fff;border-left:0}
 .guide .say{background:none;border:0;padding:0}
 .avslot{background-size:cover;border-radius:50%;opacity:1}.avslot.away{opacity:.18;filter:grayscale(1)}
-#fsay{position:absolute;top:4px;width:170px;background:#fff;border:3px solid var(--ink);border-radius:14px;padding:6px 10px;font-weight:900;font-size:13px;line-height:1.3;box-shadow:3px 3px 0 var(--ink);opacity:0;transition:opacity .3s;pointer-events:none}
+#fsay{position:absolute;top:4px;width:260px;background:#fff;border:3px solid var(--ink);border-radius:16px;padding:10px 12px;font-weight:700;font-size:13.5px;line-height:1.45;box-shadow:4px 4px 0 var(--ink);opacity:0;transform:translateY(8px) scale(.96);transition:opacity .45s ease,transform .45s ease;pointer-events:none}
 #fsay:after{content:"";position:absolute;top:18px;border:8px solid transparent}
 #flyer.sayR #fsay{left:calc(100% + 12px)}#flyer.sayR #fsay:after{left:-14px;border-right-color:var(--ink);border-left:0}
 #flyer.sayL #fsay{right:calc(100% + 12px)}#flyer.sayL #fsay:after{right:-14px;border-left-color:var(--ink);border-right:0}
-#flyer.sayon #fsay{opacity:1}
+#flyer.sayon #fsay{opacity:1;transform:none;pointer-events:auto}
 #consult{margin-top:22px;background:var(--sun);border:4px solid var(--ink);border-radius:14px 2px 14px 2px;box-shadow:6px 6px 0 var(--red);padding:18px}
 #consult h3{font-size:26px;margin:4px 0 6px}#consult .cg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:12px 0}
 #consult .cg div{background:#fff;border:3px solid var(--ink);border-radius:12px;padding:10px;font-size:14px;line-height:1.4}#consult .cg b{display:block;font-family:"Potta One",cursive;font-weight:400;font-size:16px;margin-bottom:2px}
 #consult .note2{background:#fff;border:3px dashed var(--ink);border-radius:12px;padding:10px 12px;font-size:14px;line-height:1.5;margin:0 0 12px}
-@media(max-width:820px){#consult .cg{grid-template-columns:1fr}#fsay{width:130px;font-size:12px}}
+@media(max-width:820px){#consult .cg{grid-template-columns:1fr}#fsay{width:200px;font-size:12.5px}}
 html,body{overflow-x:hidden}
+#flyer img{animation:xfloat 3.4s ease-in-out infinite}@keyframes xfloat{0%,100%{translate:0 0}50%{translate:0 -6px}}
+#flyer.sayB #fsay{left:-20px;top:calc(100% + 12px)}#flyer.sayB #fsay:after{left:30px;top:-14px;border-bottom-color:var(--ink);border-top:0}#flyer.sayBR #fsay{left:auto;right:-10px}#flyer.sayBR #fsay:after{left:auto;right:30px}
+#fsay .fmsg{opacity:0;transform:translateY(6px);transition:opacity .5s ease,transform .5s ease}#fsay .fmsg.in{opacity:1;transform:none}
+#fsay mark{background:#ffe08a;padding:0 3px;border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+#fsay .fnav{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}#fsay .btn{font-size:12px;padding:5px 11px;box-shadow:2px 2px 0 var(--ink)}#fsay .btn[disabled]{opacity:.4}
+.typing{display:inline-flex;gap:4px;padding:4px 0}.typing i{width:7px;height:7px;border-radius:50%;background:var(--ink);opacity:.3;animation:tdot 1s infinite}.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes tdot{0%,100%{opacity:.25;transform:translateY(0)}50%{opacity:1;transform:translateY(-3px)}}
+#fsay .fmsg.wait{opacity:1;transform:none}
+.chatlog{max-height:150px;overflow-y:auto;display:flex;flex-direction:column;gap:6px;padding:2px 2px 4px;scroll-behavior:smooth}
+.chatlog .cm{max-width:88%;padding:6px 10px;border:2px solid var(--ink);border-radius:12px;font-size:13.5px;line-height:1.4;font-weight:700;animation:cmin .45s ease}
+.chatlog .cm.x{align-self:flex-start;background:#fff;border-bottom-left-radius:3px}.chatlog .cm.u{align-self:flex-end;background:var(--red);color:#fff;border-bottom-right-radius:3px}
+@keyframes cmin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
 </style></head><body><div class="wrap" style="position:relative">
 
 <div class="guide">
 <div class="avslot" id="avslot"></div>
 <div class="gtxt"><span class="tag">Xander</span><span class="act" id="act"></span><h2 id="st">Hey, I'm Xander.</h2>
-<div class="say" id="say"></div>
+<div class="say chatlog" id="say"></div>
 <div class="nav"><button class="btn" id="bk">Back</button><button class="btn red" id="nx">Next</button><div class="dots" id="dots"></div></div></div>
 </div>
 
@@ -347,18 +360,35 @@ var S=[
 var cur=0;$('avslot').style.backgroundImage='url('+document.querySelector('#flyer img').src+')';
 var TG=[['#avslot','in'],['.cm-bar','right'],['#mix','left'],['.cm-svg','mapNE'],['.cm-svg','mapSW'],['.cm-svg','mapSE'],['#rows','right'],['#pbody','left'],['#consult','right']];
 var G=[['wave','👋','waves hello','Hey there! I am Xander.'],['point','👉','traces the rings','Three drive-time rings.'],['bounce','📍','hops across the dots','50 leads, right here.'],['nod','🏢','nods at the towers','Apartments rebook monthly.'],['spin','🥂','raises a glass','Singles events sell out.'],['lean','🍺','leans in close','No kitchen? You fill the gap.'],['tap','✋','counts on his fingers','Right channel. Three touches.'],['plant','🚩','plants the flag','Own the core first.'],['cheer','🎉','cheers','Just 15 minutes!']];
-function gest(i){var g=G[i]||G[0],fl=$('flyer'),old=fl.querySelector('.gem');if(old)old.remove();fl.className=fl.className.replace(/\bg-\w+/g,'').trim();void fl.offsetWidth;var e=document.createElement('span');e.className='gem';e.textContent=g[1];fl.querySelector('.gw').appendChild(e);fl.classList.add('g-'+g[0]);$('act').textContent='*'+g[2]+'*';var s=$('fsay');s.textContent=g[3];}
+function gest(i){var g=G[i]||G[0],fl=$('flyer'),old=fl.querySelector('.gem');if(old)old.remove();fl.className=fl.className.replace(/\bg-\w+/g,'').trim();void fl.offsetWidth;var e=document.createElement('span');e.className='gem';e.textContent=g[1];fl.querySelector('.gw').appendChild(e);fl.classList.add('g-'+g[0]);$('act').textContent='*'+g[2]+'*';talk(i);}
 function fly(i){var tg=TG[i]||TG[0],el=document.querySelector(tg[0]),fl=$('flyer'),sp=$('spot');if(!el)return;
 var wr=document.querySelector('.wrap').getBoundingClientRect(),r=el.getBoundingClientRect(),x=r.left-wr.left,y=r.top-wr.top,w=fl.offsetWidth,L,T,flip=false,small=tg[1]!='in';
 if(tg[1]=='in'){L=x;T=y}else if(tg[1]=='right'){L=Math.min(x+r.width-w+10,wr.width-w);T=y-w*0.6;flip=true}else if(tg[1]=='left'){L=Math.max(x-w*0.55,0);T=y+r.height/2-w/2}
 else if(tg[1]=='mapNE'){L=x+r.width-w-8;T=y+120;flip=true}else if(tg[1]=='mapSW'){L=x+8;T=y+r.height-w-8}else{L=x+r.width-w-8;T=y+r.height-w-8;flip=true}
-fl.style.left=L+'px';fl.style.top=T+'px';var keep=(fl.className.match(/\bg-\w+/g)||[]).join(' ');fl.className=(flip?'flip ':'')+(small?'sm ':'')+(tg[1]=='in'?'':'pt ')+(tg[1]=='in'?'':(L<190?'sayR ':'sayL '))+(tg[1]=='in'?'':'sayon ')+keep;var as=$('avslot');as.className='avslot'+(tg[1]=='in'?'':' away');
+var bw=window.innerWidth<820?200:260,side=(L+w+bw+18<=wr.width)?'sayR ':((L-bw-18>=0)?'sayL ':(L>wr.width/2?'sayB sayBR ':'sayB '));fl.style.left=L+'px';fl.style.top=T+'px';var keep=(fl.className.match(/\bg-\w+/g)||[]).join(' ');fl.className=(flip?'flip ':'')+(small?'sm ':'')+(tg[1]=='in'?'':'pt ')+(tg[1]=='in'?'':side)+(tg[1]=='in'?'':'sayon ')+keep;var as=$('avslot');as.className='avslot'+(tg[1]=='in'?'':' away');
 if(tg[1]=='in'){sp.style.opacity=0}else{sp.style.opacity=1;sp.style.left=(x-6)+'px';sp.style.top=(y-6)+'px';sp.style.width=(r.width+12)+'px';sp.style.height=(r.height+12)+'px'}
 if(i>0&&(r.top<60||r.bottom>window.innerHeight-20))el.scrollIntoView({behavior:'smooth',block:'center'})}
 window.addEventListener('resize',function(){fly(cur)});
 $('dots').innerHTML=S.map(function(s,i){return '<i data-i="'+i+'"></i>'}).join('');
-function go(i){cur=Math.max(0,Math.min(S.length-1,i));var s=S[cur];$('st').textContent=s.h;$('say').textContent=s.say;$('ph').textContent=s.ph;$('pbody').innerHTML=s.body();
-s.run();stats();rows();[].forEach.call($('dots').children,function(d,j){d.className=j==cur?'on':''});$('bk').disabled=cur==0;setTimeout(function(){fly(cur)},60);setTimeout(function(){gest(cur)},720);$('nx').textContent=cur==S.length-1?'Start over':'Next'}
+function go(i){cur=Math.max(0,Math.min(S.length-1,i));var s=S[cur];$('st').textContent=s.h;log(cur);$('ph').textContent=s.ph;$('pbody').innerHTML=s.body();
+s.run();stats();rows();[].forEach.call($('dots').children,function(d,j){d.className=j==cur?'on':''});$('bk').disabled=cur==0;setTimeout(function(){fly(cur)},60);setTimeout(function(){gest(cur)},720);$('nx').textContent=RP[cur];$('bk').style.display=$('nx').style.display=cur?'none':''}
+
+var RP=["Show me the service area","Who are the 50 leads?","Why apartments first?","What about singles events?","And venues and breweries?","How does each lead get worked?","Where do we start this winter?","What do you need from me?","Start over"];
+var BUB=[
+"Hey, I'm Xander. I'll walk you through how we fill your calendar this winter: the Charlotte market, <b>50 leads we already sourced</b>, and the <mark>holiday, New Year and Valentine's windows</mark> coming up.",
+"Charlotte is a car city, so we plan by drive time. <b>Under 15 minutes</b> is your core for meal prep and quick drops. <b>25 to 40 minutes</b> is where bigger catering lives. <mark>When it gets cold, we lean on the core rings</mark>: short drives keep food fresh and on time for indoor parties.",
+"Each pin is a lead: apartment communities, singles events, venues, breweries, planners, offices and gyms. <b>Most sit inside the first two rings.</b> <mark>Holiday and private party season is when these groups book food</mark>, so we reach them now, before their calendars fill.",
+"Apartment communities run <b>resident events every month</b>, and one management company can mean several buildings. <mark>Winter push: holiday resident mixers in December and new-neighbor nights in January.</mark> They get a plain-text email from the separate sending domain, then a free tasting offer.",
+"Singles mixers and speed dating run all season at South End, NoDa and Camp North End venues. <mark>Valentine's week is their busiest stretch: Galentine's on Sat Feb 13, Valentine's on Sun Feb 14.</mark> We DM the organizers so you become their food partner, with share plates at every event.",
+"Lots of breweries and event spaces don't cook, and <b>you fill that gap</b>. <mark>December is holiday party month: corporate and private parties book rooms like RSVP South End and Camp North End.</mark> We DM venue managers to list you as a preferred caterer.",
+"<b>Right channel, three touches.</b> Offices, corporate teams and apartment managers get email from a separate domain, because your own address lands in spam. Events and hospitality get social DMs only: follow and comment first, then DM on day 2 and day 5. <mark>DMs start this week. Email starts Nov 20 once the domain warms up.</mark>",
+"We own the core first: Uptown, South End and NoDa, then the apartment belts. <mark>Top 5 this winter: Mistletoe Market at Camp North End, New Year's Eve parties, the Urban District Market holiday weekend, singles mixers into Valentine's, and private holiday parties at event venues.</mark> Dates are in the Campaign tab.",
+"All I need is a <b>15-minute call</b> to walk through the plan and set up your access. <mark>The sooner we start, the more of the holiday season we catch.</mark> If you like the concept, pricing is the next phase."];
+var TK=0;
+function talk(i){var f=$('fsay'),k=++TK;f.innerHTML='<div class="fmsg wait"><span class="typing"><i></i><i></i><i></i></span></div><div class="fnav"><button class="btn" data-a="bk"'+(i?'':' disabled')+'>Back</button><button class="btn red" data-a="nx">'+RP[i]+'</button></div>';
+setTimeout(function(){if(k!=TK)return;var m=f.querySelector('.fmsg');m.className='fmsg';m.innerHTML=BUB[i];void m.offsetWidth;m.classList.add('in');setTimeout(function(){var r=f.getBoundingClientRect();if(r.bottom>innerHeight-8||r.top<0)f.scrollIntoView({behavior:'smooth',block:'nearest'})},520)},700)}
+function log(c){var h='';for(var j=0;j<=c;j++){h+='<div class="cm x">'+(j==0?BUB[0]:G[j][3])+'</div>';if(j<c)h+='<div class="cm u">'+RP[j]+'</div>'}var el=$('say');el.innerHTML=h;el.scrollTop=el.scrollHeight}
+$('fsay').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;if(b.dataset.a=='nx')go(cur==S.length-1?0:cur+1);else go(cur-1)});
 $('book').onclick=function(){try{parent.postMessage({book:1},'*')}catch(e){}};
 $('nx').onclick=function(){go(cur==S.length-1?0:cur+1)};$('bk').onclick=function(){go(cur-1)};
 $('dots').onclick=function(e){if(e.target.dataset.i)go(+e.target.dataset.i)};
