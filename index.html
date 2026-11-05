@@ -59,7 +59,7 @@ td b.n{font-family:"Potta One";font-weight:400;font-size:18px}
 .cm-chip{font:inherit;font-size:12px;font-weight:700;border:2px solid #1a1316;background:#fff;border-radius:999px;padding:4px 10px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;opacity:.55}
 .cm-chip.on{opacity:1;box-shadow:2px 2px 0 #1a1316}.cm-chip i{width:10px;height:10px;border-radius:50%;border:1.5px solid #1a1316;display:inline-block}
 .cm-wrap{position:relative;border:3px solid #1a1316;border-radius:14px 2px 14px 2px;box-shadow:6px 6px 0 #e2231a;background:#fbf4e6;overflow:hidden}
-.cm-svg{width:100%;height:auto;display:block;touch-action:none;cursor:grab;aspect-ratio:900/460}
+.cm-svg{width:100%;height:auto;display:block;touch-action:none;cursor:grab;aspect-ratio:900/970}
 .cm-zoom{position:absolute;right:8px;top:8px;display:flex;flex-direction:column;gap:4px}.cm-zoom button{width:32px;height:32px;font-size:18px;font-weight:700;border:2px solid #1a1316;background:#fff;border-radius:8px;cursor:pointer}
 .cm-info{margin-top:12px}.cm-card{background:#fff;border:3px solid #1a1316;border-radius:12px;padding:10px 12px;font-size:14px;line-height:1.5}.cm-card b{font-size:16px;margin-right:8px}
 .cm-sm{font-size:12.5px;color:#6b5a52}.cm-pill{display:inline-block;color:#fff;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;border:2px solid #1a1316;margin-right:6px}.cm-pill.dk{background:#1a1316}
@@ -79,7 +79,7 @@ td b.n{font-family:"Potta One";font-weight:400;font-size:18px}
 <div class="top">
   <h1>Street Roll Sushi <small>Sample brand · Charlotte, NC · by TAZ</small></h1>
   <span class="stamp">VIEW-ONLY · SAMPLE DATA · NOTHING SENDS</span>
-  <div class="tabs"><button data-t="tour" class="on">TAZ Tour</button><button data-t="beta">Beta site</button><button data-t="plan">Gameplan</button><button data-t="prop">Proposal</button></div>
+  <div class="tabs"><button data-t="tour" class="on">Guided Tour</button><button data-t="beta">Beta site</button><button data-t="plan">Gameplan</button><button data-t="prop">Proposal</button></div>
 </div>
 <main>
 <section id="plan"><div class="wrap">
@@ -87,33 +87,34 @@ td b.n{font-family:"Potta One";font-weight:400;font-size:18px}
     <span class="tape">What we built, and how it makes money</span>
     <h2>A targeted outreach engine <span>for a Charlotte caterer</span></h2>
     <p>This beta is a working front door (website, meal prep menu, Charlotte ordering) wired to a back office (lead radar, outreach sequences, bookings board, social calendar). The plan below explains how TAZ runs outreach behind it to turn catering inquiries and meal prep subscriptions into steady weekly revenue.</p>
-    <p style="margin-top:14px"><span class="btn" onclick="go('beta')">Open the beta</span> <span class="btn" onclick="go('tour')">Meet TAZ</span></p>
+    <p style="margin-top:14px"><span class="btn" onclick="go('beta')">Open the beta</span> <span class="btn" onclick="go('tour')">Meet Xander</span></p>
   </div>
 
 
   <h3 class="sec">The Charlotte market at a glance</h3>
-  <p class="sub">Every dot is one of the 50 leads (sample placeholders until the Stamina list loads). Rings are drive times from the Uptown kitchen. The three zones we own first are circled in red.</p>
+  <p class="sub">Every dot is one of the 50 leads (sample placeholders until the Stamina list loads). Rings are drive times from the Uptown kitchen. The three zones we own first are circled in red. Zoom in for streets, lakes and landmarks.</p>
   <div class="mkt">
     <div><div id="gmap"></div></div>
     <div>
-      <div class="zone"><i>1</i><div><b>Uptown + South End</b><small>Densest cluster of offices, apartments and planners, all under 15 minutes. Cheapest to serve, fastest to taste.</small></div></div>
-      <div class="zone"><i>2</i><div><b>SouthPark</b><small>Office parks and realty teams with recurring lunch budgets. Second ring, still a quick drive.</small></div></div>
-      <div class="zone"><i>3</i><div><b>Ballantyne</b><small>Brokerages and corporate HQs. Bigger tickets, booked ahead, worth the 25 minute drive.</small></div></div>
-      <div class="zone" style="background:var(--panel2)"><i style="background:var(--indigo)">+</i><div><b>Later: Matthews, Huntersville, Concord</b><small>Outer ring opens in month 3 once the core zones carry the week.</small></div></div>
+      <div class="zone"><i>1</i><div><b>Uptown, South End and NoDa</b><small>The singles-event, brewery and rooftop-venue core, ringed by apartment towers. All under 15 minutes. Cheapest to serve, fastest to taste.</small></div></div>
+      <div class="zone"><i>2</i><div><b>Apartment belts: SouthPark, Ballantyne, University City</b><small>Big communities with monthly resident events and lease-up pushes. One property manager can mean several buildings.</small></div></div>
+      <div class="zone"><i>3</i><div><b>Venue corridor: Plaza Midwood and Camp North End</b><small>Loft, warehouse and gallery venues with no kitchen, plus taprooms. Get on their approved-caterer lists.</small></div></div>
+      <div class="zone" style="background:var(--panel2)"><i style="background:var(--indigo)">+</i><div><b>Later: Matthews, Huntersville, Concord, Lake Norman</b><small>Outer ring opens in month 3 once the core zones carry the week.</small></div></div>
     </div>
   </div>
 
   <h3 class="sec">Target market analysis</h3>
-  <p class="sub">Each segment scored 1 to 5 on four things: how big an order is, how often they reorder, how easy they are to reach, and how close they sit to the kitchen. Green rows go first.</p>
+  <p class="sub">Charlotte has a big apartment boom, a busy singles and nightlife calendar, and plenty of venues and breweries with no kitchen. Each segment is scored 1 to 5 on four things: how big an order is, how often they reorder, how easy they are to reach, and how close they sit to the kitchen. Green rows go first.</p>
   <div style="overflow-x:auto"><table class="score">
     <thead><tr><th>Segment</th><th>Order size</th><th>Reorders</th><th>Easy to reach</th><th>Close by</th><th>Score</th><th>Call</th></tr></thead>
     <tbody>
-      <tr class="go"><td><b>Offices and HR teams</b><br><small>16 leads</small></td><td class="d">●●●●<em>●</em></td><td class="d">●●●●●</td><td class="d">●●●●<em>●</em></td><td class="d">●●●●●</td><td class="tot">18</td><td><b>Go first.</b> Recurring lunches, one buyer equals many orders.</td></tr>
-      <tr class="go"><td><b>Realty teams</b><br><small>8 leads</small></td><td class="d">●●●●<em>●</em></td><td class="d">●●●●<em>●</em></td><td class="d">●●●●●</td><td class="d">●●●●<em>●</em></td><td class="tot">17</td><td><b>Go.</b> Open houses all year, agents refer agents.</td></tr>
-      <tr class="go"><td><b>Event planners</b><br><small>7 leads</small></td><td class="d">●●●●●</td><td class="d">●●●●<em>●</em></td><td class="d">●●●<em>●●</em></td><td class="d">●●●<em>●●</em></td><td class="tot">15</td><td><b>Go.</b> Highest ticket; win the planner, not the event.</td></tr>
-      <tr class="wait"><td><b>Gyms and studios</b><br><small>7 leads</small></td><td class="d">●●<em>●●●</em></td><td class="d">●●●●●</td><td class="d">●●●●<em>●</em></td><td class="d">●●●●<em>●</em></td><td class="tot">15</td><td><b>Month 2.</b> Subscriptions, pickup at the studio.</td></tr>
-      <tr class="wait"><td><b>Apartment communities</b><br><small>6 leads</small></td><td class="d">●●●<em>●●</em></td><td class="d">●●●<em>●●</em></td><td class="d">●●●<em>●●</em></td><td class="d">●●●●●</td><td class="tot">14</td><td><b>Month 2.</b> Resident events, steady but smaller.</td></tr>
-      <tr class="wait"><td><b>Community groups</b><br><small>6 leads</small></td><td class="d">●●●●<em>●</em></td><td class="d">●●<em>●●●</em></td><td class="d">●●●<em>●●</em></td><td class="d">●●<em>●●●</em></td><td class="tot">11</td><td><b>Month 3.</b> Big volume, seasonal, longer drives.</td></tr>
+      <tr class="go"><td><b>Apartment communities</b><br><small>10 leads</small></td><td class="d">●●●●<em>●</em></td><td class="d">●●●●●</td><td class="d">●●●●<em>●</em></td><td class="d">●●●●●</td><td class="tot">18</td><td><b>Go first.</b> Monthly resident events, and one management company owns many buildings.</td></tr>
+      <tr class="go"><td><b>Singles events</b><br><small>10 leads</small></td><td class="d">●●●<em>●●</em></td><td class="d">●●●●●</td><td class="d">●●●●●</td><td class="d">●●●●<em>●</em></td><td class="tot">17</td><td><b>Go first.</b> Recurring socials, organizers live on Instagram, always need food.</td></tr>
+      <tr class="go"><td><b>Venues without a kitchen</b><br><small>9 leads</small></td><td class="d">●●●●●</td><td class="d">●●●●<em>●</em></td><td class="d">●●●<em>●●</em></td><td class="d">●●●●<em>●</em></td><td class="tot">16</td><td><b>Go.</b> Approved-caterer lists. Get on the list and every booking is yours to win.</td></tr>
+      <tr class="go"><td><b>Breweries and bars</b><br><small>6 leads</small></td><td class="d">●●●<em>●●</em></td><td class="d">●●●●<em>●</em></td><td class="d">●●●●<em>●</em></td><td class="d">●●●●●</td><td class="tot">16</td><td><b>Go.</b> No kitchen, so a sushi pairing night fills a gap.</td></tr>
+      <tr class="wait"><td><b>Event planners</b><br><small>6 leads</small></td><td class="d">●●●●●</td><td class="d">●●●●<em>●</em></td><td class="d">●●●<em>●●</em></td><td class="d">●●●<em>●●</em></td><td class="tot">15</td><td><b>Month 2.</b> Highest ticket; win the planner, not the event.</td></tr>
+      <tr class="wait"><td><b>Offices and HR teams</b><br><small>5 leads</small></td><td class="d">●●●●<em>●</em></td><td class="d">●●●●<em>●</em></td><td class="d">●●●<em>●●</em></td><td class="d">●●●●<em>●</em></td><td class="tot">15</td><td><b>Month 2.</b> Recurring lunches, but slower to reach.</td></tr>
+      <tr class="wait"><td><b>Gyms and run clubs</b><br><small>4 leads</small></td><td class="d">●●●<em>●●</em></td><td class="d">●●●●<em>●</em></td><td class="d">●●●●<em>●</em></td><td class="d">●●●●<em>●</em></td><td class="tot">15</td><td><b>Month 3.</b> Post-run socials and member packs.</td></tr>
       <tr class="no"><td><b>Walk-in retail, food trucks</b></td><td class="d">●<em>●●●●</em></td><td class="d">●<em>●●●●</em></td><td class="d">●●<em>●●●</em></td><td class="d">●●●<em>●●</em></td><td class="tot">7</td><td><b>Avoid.</b> Low ticket, price-driven, eats prep time.</td></tr>
     </tbody>
   </table></div>
@@ -129,9 +130,9 @@ td b.n{font-family:"Potta One";font-weight:400;font-size:18px}
 
   <h3 class="sec">How the map fills in: 30, 60, 90 days</h3>
   <div class="ph3">
-    <div class="card"><h4><span>30</span>Own the core</h4><div id="m1"></div><p>Uptown, South End, Dilworth, NoDa. Offices and planners first. Target: 4 accounts.</p></div>
-    <div class="card"><h4><span>60</span>Ring out</h4><div id="m2"></div><p>SouthPark, Ballantyne, University City. Realty teams, gyms, apartments. Target: 10 accounts total.</p></div>
-    <div class="card"><h4><span>90</span>Cover every ring</h4><div id="m3"></div><p>Matthews, Huntersville, Concord, Fort Mill. Community groups and events. Referrals carry growth.</p></div>
+    <div class="card"><h4><span>30</span>Own the core</h4><div id="m1"></div><p>Uptown, South End, NoDa, Plaza Midwood. Singles events, breweries and the apartment towers around them. Target: 4 accounts.</p></div>
+    <div class="card"><h4><span>60</span>Ring out</h4><div id="m2"></div><p>SouthPark, Ballantyne, University City. Apartment communities and venues without a kitchen. Target: 10 accounts total.</p></div>
+    <div class="card"><h4><span>90</span>Cover every ring</h4><div id="m3"></div><p>Matthews, Huntersville, Concord, Lake Norman. Planners, weekend venues and Q4 parties. Referrals carry growth.</p></div>
   </div>
 
   <h3 class="sec">What's in the beta</h3>
@@ -139,7 +140,7 @@ td b.n{font-family:"Potta One";font-weight:400;font-size:18px}
     <div class="card"><h4>Website</h4><p>Same bones as the current site (food strip, coming-soon box and meal prep, story, contact form, to-go and delivery), restyled with the island-meets-sushi look and pointed at Charlotte.</p></div>
     <div class="card"><h4>Order</h4><p>Preset meal prep boxes, weekly packs and party trays. Pickup or delivery by drive-time ring, prep days, order minimum, totals. The live version takes payment and texts the kitchen.</p></div>
     <div class="card"><h4>Service Area</h4><p>A real map of Charlotte with 15, 25 and 40 minute drive rings from Uptown, so customers and the kitchen agree on where delivery makes sense.</p></div>
-    <div class="card"><h4>Lead Radar</h4><p>Scored list of businesses most likely to book: offices, realty teams, planners, community groups. Each one carries a reason (a signal) and a fit score.</p></div>
+    <div class="card"><h4>Lead Radar</h4><p>Scored list of businesses most likely to book: apartment communities, singles events, venues, breweries and planners. Each one carries a reason (a signal) and a fit score.</p></div>
     <div class="card"><h4>Outreach</h4><p>A 3-touch sequence per lead: email, Instagram DM, call script. Written in the chef's voice, edited in place, tracked by TAZ.</p></div>
     <div class="card"><h4>Bookings + Social</h4><p>A five-stage board from New to Booked, plus a weekly Instagram plan so the page stays warm while outreach runs.</p></div>
   </div>
@@ -147,7 +148,7 @@ td b.n{font-family:"Potta One";font-weight:400;font-size:18px}
   <h3 class="sec">The backend: how outreach runs</h3>
   <p class="sub">Every week the loop below runs. TAZ does the finding, writing and tracking. The chef does the tasting, the cooking and the closing conversation.</p>
   <div class="flow">
-    <div class="step"><i>1</i><b>Find</b><small>Pull Charlotte businesses by segment and drive ring: new offices, HR and office managers, realty teams, planners, studios. Sources: Google Business, LinkedIn, Instagram, local event listings.</small></div>
+    <div class="step"><i>1</i><b>Find</b><small>Pull Charlotte businesses by segment and drive ring: apartment communities, singles-event hosts, venues without kitchens, breweries and bars, planners. Sources: Google Business, LinkedIn, Instagram, Eventbrite and Meetup listings.</small></div>
     <div class="step"><i>2</i><b>Score</b><small>Fit (does this place buy group food?) plus timing (hiring, new location, event season). Only 80+ scores go to outreach.</small></div>
     <div class="step"><i>3</i><b>Reach</b><small>3 touches over 6 days: email, IG DM, call. Every message names the business and the occasion. Replies land in one inbox.</small></div>
     <div class="step"><i>4</i><b>Taste</b><small>The offer is a free sample tray, not a discount. Tastings convert far better than price talk.</small></div>
@@ -161,12 +162,12 @@ td b.n{font-family:"Potta One";font-weight:400;font-size:18px}
     <thead><tr><th>Stream</th><th>Unit</th><th>Weekly target by month 3</th><th>Monthly revenue</th><th>Why it matters</th></tr></thead>
     <tbody>
       <tr><td><b>Meal prep subscriptions</b></td><td>$60 to $115 per pack</td><td>35 packs</td><td><b class="n">$11k</b></td><td>Predictable, prep-day batched, no event-day labor spike.</td></tr>
-      <tr><td><b>Office lunches and trays</b></td><td>$75 to $400 per order</td><td>6 orders</td><td><b class="n">$5k</b></td><td>Recurring monthly; one office manager equals many orders.</td></tr>
-      <tr><td><b>Private and corporate events</b></td><td>$600 to $1,500</td><td>2 events</td><td><b class="n">$8k</b></td><td>Highest ticket; planner relationships compound.</td></tr>
+      <tr><td><b>Apartment and resident events</b></td><td>$250 to $700 per event</td><td>4 events</td><td><b class="n">$8k</b></td><td>Recurring monthly; one property manager equals many buildings.</td></tr>
+      <tr><td><b>Singles events, venues and bars</b></td><td>$400 to $1,200 per event</td><td>3 events</td><td><b class="n">$9k</b></td><td>Highest ticket; approved-caterer lists and organizer relationships compound.</td></tr>
     </tbody>
   </table>
   <div class="kpis">
-    <div class="kpi"><b>~$24k</b><span>Sample monthly run-rate</span></div>
+    <div class="kpi"><b>~$28k</b><span>Sample monthly run-rate</span></div>
     <div class="kpi"><b>40</b><span>New targets reached per week</span></div>
     <div class="kpi"><b>8%</b><span>Target reply-to-tasting rate</span></div>
     <div class="kpi"><b>50%</b><span>Tasting-to-booking target</span></div>
@@ -175,12 +176,12 @@ td b.n{font-family:"Potta One";font-weight:400;font-size:18px}
 
   <h3 class="sec">Target markets: go after these</h3>
   <div class="grid">
-    <div class="card good"><span class="pill">Best fit</span><h4>Offices and HR teams (Uptown, South End, SouthPark, Ballantyne)</h4><ul><li>Monthly team lunches and appreciation days are budgeted and recurring.</li><li>One office manager is a repeat buyer, not a one-off.</li><li>Fusion menu is a story for the team, which beats another sandwich platter.</li></ul></div>
-    <div class="card good"><span class="pill">Best fit</span><h4>Realty teams and brokerages</h4><ul><li>Client appreciation events, open houses and agent lunches all year.</li><li>Agents are networkers; one event seeds five referrals.</li><li>Ballantyne, SouthPark and Lake Norman offices sit inside the 25 to 40 minute rings.</li></ul></div>
-    <div class="card good"><span class="pill">Multiplier</span><h4>Event planners and venue coordinators</h4><ul><li>Each planner books many events a year; win the planner, not the event.</li><li>They value reliability and a distinctive menu over the lowest price.</li><li>Sample tray plus a one-page menu is the pitch.</li></ul></div>
-    <div class="card good"><span class="pill">Subscription</span><h4>Gyms, studios and co-working members</h4><ul><li>Meal prep packs fit an existing weekly habit.</li><li>Pickup at the studio removes the delivery cost.</li><li>Owners will promote it for a member perk; cheap distribution.</li></ul></div>
-    <div class="card good"><span class="pill">Community</span><h4>Churches, Latino and Caribbean community groups, PR cultural orgs</h4><ul><li>The island-meets-sushi story lands hardest here.</li><li>Fellowship dinners and festivals are high volume, low acquisition cost.</li><li>Word of mouth inside these groups is fast.</li></ul></div>
-    <div class="card good"><span class="pill">Seasonal</span><h4>Holiday and Q4 corporate parties</h4><ul><li>Budgets open in October; outreach starts in September.</li><li>Higher ticket, same kitchen.</li><li>Use the booked list to pre-sell next year's dates.</li></ul></div>
+    <div class="card good"><span class="pill">Best fit</span><h4>Apartment complexes (Uptown, South End, Ballantyne, University City)</h4><ul><li>Charlotte keeps adding towers and every one needs resident events to fill and keep units.</li><li>Community and lifestyle managers have a monthly events budget.</li><li>One management company can mean several buildings.</li></ul></div>
+    <div class="card good"><span class="pill">Best fit</span><h4>Singles events and social hosts</h4><ul><li>Mixers, speed dating, supper clubs and run-club socials happen every week.</li><li>Organizers sell out and want a food partner; they live on Instagram, so a DM works.</li><li>A great tray at one event gets seen by 80 people who then follow the page.</li></ul></div>
+    <div class="card good"><span class="pill">Multiplier</span><h4>Event venues with no kitchen</h4><ul><li>Lofts, warehouses, galleries and rooftops keep an approved-caterer list.</li><li>Get on the list and the venue sends you bookings.</li><li>Sample tray plus a one-page menu is the pitch.</li></ul></div>
+    <div class="card good"><span class="pill">Partnership</span><h4>Breweries, taprooms and bars</h4><ul><li>Most have no kitchen and lean on food trucks.</li><li>A sushi pairing night is easy for them to promote.</li><li>Recurring weekly slots turn into steady revenue.</li></ul></div>
+    <div class="card good"><span class="pill">Multiplier</span><h4>Event planners and venue coordinators</h4><ul><li>Each planner books many events a year; win the planner, not the event.</li><li>They value reliability and a distinctive menu over the lowest price.</li></ul></div>
+    <div class="card good"><span class="pill">Seasonal</span><h4>Holiday and Q4 parties</h4><ul><li>Budgets open in October; outreach starts in September.</li><li>Higher ticket, same kitchen.</li><li>Use the booked list to pre-sell next year's dates.</li></ul></div>
   </div>
 
   <h3 class="sec">Markets to avoid (for now)</h3>
@@ -190,40 +191,63 @@ td b.n{font-family:"Potta One";font-weight:400;font-size:18px}
     <div class="card avoid"><span class="pill">Avoid</span><h4>Wedding marketplaces and lead-fee sites</h4><p>Price shoppers, pay-per-lead fees, one-time buyers. Take weddings only by referral from planners already on the board.</p></div>
     <div class="card avoid"><span class="pill">Avoid</span><h4>Anything beyond the 40 minute ring</h4><p>Drive time eats margin and quality (sushi does not travel well). Rock Hill, Salisbury and Hickory wait until a second prep location exists.</p></div>
     <div class="card avoid"><span class="pill">Avoid</span><h4>Wholesale and grocery</h4><p>Different business: labeling, shelf life, slotting fees. It dilutes the catering brand and the chef's time.</p></div>
-    <div class="card avoid"><span class="pill">Avoid</span><h4>Big-company RFPs</h4><p>Long forms, legal review, and they want a vendor with a fleet. Land their individual departments through office managers instead.</p></div>
+    <div class="card avoid"><span class="pill">Avoid</span><h4>Big-company RFPs</h4><p>Long forms, legal review, and they want a vendor with a fleet. Land their individual teams through office managers instead.</p></div>
   </div>
 
   <h3 class="sec">Six-week gameplan</h3>
   <div class="week">
     <div class="card"><h4>Week 1</h4><p>Confirm real menu, prices, prep days and the pickup address. Swap sample content for real. Turn on order payments.</p></div>
-    <div class="card"><h4>Week 2</h4><p>Load 200 Charlotte targets into Lead Radar across the five go-after segments. Approve the 3-touch sequence in the chef's voice.</p></div>
+    <div class="card"><h4>Week 2</h4><p>Load 200 Charlotte targets into Lead Radar across apartments, singles events, venues, breweries and planners. Approve the 3-touch sequence in the chef's voice.</p></div>
     <div class="card"><h4>Week 3</h4><p>Outreach live: 40 targets a week. Instagram plan posting on schedule. First sample trays go out.</p></div>
     <div class="card"><h4>Week 4</h4><p>Review replies and tastings. Cut the segment that is not answering, double the one that is.</p></div>
-    <div class="card"><h4>Week 5</h4><p>First reorder nudges and referral asks. Launch meal prep pickup at one studio or co-working partner.</p></div>
+    <div class="card"><h4>Week 5</h4><p>First reorder nudges and referral asks. Run a first resident event at one apartment community and a first food night at one brewery or singles event.</p></div>
     <div class="card"><h4>Week 6</h4><p>Read the numbers against the targets above. Set Q4 party outreach. Decide on the second delivery ring.</p></div>
   </div>
   <p class="note">Sample brand and sample data throughout. Nothing on this page or the beta sends messages, takes payment, or stores customer information.</p>
-<div class="hero" style="margin-top:28px;box-shadow:8px 8px 0 var(--sun)"><span class="tape">Next stop</span><h2 style="font-size:30px">See the <span>proposal</span></h2><p>What it costs to run this for real, and the 30-60-90 plan.</p><p style="margin-top:12px"><span class="btn" onclick="go('prop')">Open the proposal</span> <span class="btn" style="background:#fff;color:var(--ink)" onclick="go('tour')">Replay TAZ Tour</span></p></div>
+<div class="hero" style="margin-top:28px;box-shadow:8px 8px 0 var(--sun)"><span class="tape">Next stop</span><h2 style="font-size:30px">See the <span>proposal</span></h2><p>What it costs to run this for real, and the 30-60-90 plan. Your next step is a 15-minute consultation to talk pricing and set up.</p><p style="margin-top:12px"><span class="btn" onclick="go('prop')">Open the proposal</span> <span class="btn" style="background:#fff;color:var(--ink)" onclick="go('tour')">Replay the Tour</span></p></div>
 </div></section>
-<section id="tour" class="on"><iframe src="tour.html" title="TAZ Tour"></iframe></section>
+<section id="tour" class="on"><iframe src="tour.html" title="Guided Tour"></iframe></section>
 <section id="beta"><iframe src="beta.html" title="Beta site"></iframe></section>
 <section id="prop"><iframe src="proposal.html" title="Proposal"></iframe></section>
 </main>
 <script>
-/* Interactive Charlotte drive-time map (pure SVG, no tiles, works offline). */
+/* Interactive Charlotte drive-time map (pure SVG, true lat/lon, no tiles, works offline). */
 (function(){
-var PLACES=[['Uptown (kitchen)',35.2271,-80.8431,0],['South End',35.2155,-80.8577,1],['Dilworth',35.2042,-80.8520,1],['NoDa',35.2473,-80.8044,1],['Plaza Midwood',35.2203,-80.8060,1],['Elizabeth',35.2140,-80.8215,1],
-['SouthPark',35.1526,-80.8318,2],['Ballantyne',35.0540,-80.8500,2],['University City',35.3080,-80.7420,2],['Pineville',35.0832,-80.8923,2],['Steele Creek',35.1230,-80.9680,2],
-['Matthews',35.1168,-80.7237,3],['Mint Hill',35.1796,-80.6473,3],['Huntersville',35.4107,-80.8429,3],['Cornelius',35.4868,-80.8601,3],['Concord',35.4088,-80.5795,3],['Fort Mill, SC',35.0074,-80.9451,3],['Gastonia',35.2621,-81.1873,3],['Mooresville',35.5849,-80.8101,3]];
+var PLACES=[['Uptown (kitchen)',35.2271,-80.8431,0,1],
+['South End',35.2155,-80.8577,1,1],['Dilworth',35.2042,-80.8520,1,2],['NoDa',35.2473,-80.8044,1,1],['Plaza Midwood',35.2203,-80.8060,1,1],['Elizabeth',35.2140,-80.8215,1,2],['Camp North End',35.2470,-80.8465,1,2],['Myers Park',35.1890,-80.8350,1,2],
+['SouthPark',35.1526,-80.8318,2,1],['Ballantyne',35.0540,-80.8500,2,1],['University City',35.3080,-80.7420,2,1],['Pineville',35.0832,-80.8923,2,2],['Steele Creek',35.1230,-80.9680,2,2],
+['Matthews',35.1168,-80.7237,3,1],['Mint Hill',35.1796,-80.6473,3,2],['Huntersville',35.4107,-80.8429,3,1],['Cornelius',35.4868,-80.8601,3,2],['Davidson',35.4994,-80.8487,3,3],['Concord',35.4088,-80.5795,3,1],['Fort Mill, SC',35.0074,-80.9451,3,2],['Gastonia',35.2621,-81.1873,3,1],['Mooresville',35.5849,-80.8101,3,1],
+['Belmont',35.2430,-81.0370,3,2],['Mount Holly',35.2985,-81.0160,3,3],['Lake Wylie, SC',35.1170,-81.0330,3,3],['Indian Trail',35.0768,-80.6692,3,3],['Weddington',35.0190,-80.7600,3,3],['Waxhaw',34.9246,-80.7434,3,3],['Harrisburg',35.3226,-80.6579,3,3],['Kannapolis',35.4874,-80.6217,3,3],['Stallings',35.0985,-80.6810,3,3]];
+var LAND=[['Bank of America Stadium',35.2258,-80.8528,3],['Spectrum Center',35.2251,-80.8392,3],['Charlotte Douglas Airport',35.2140,-80.9431,2],['Carowinds',35.1033,-80.9425,3],['US National Whitewater Center',35.2705,-81.0145,3],['Freedom Park',35.1955,-80.8350,3],['Charlotte Motor Speedway',35.3520,-80.6830,3],['Lake Norman State Park',35.6,-80.93,9]];
 var RC=['#1a1316','#e2231a','#ffc531','#1256d6'];
-var RINFO=[{t:'Kitchen',f:'Pickup point (sample)',d:'Sample Uptown location'},{t:'Under 15 min',f:'$4 delivery',d:'Core zone. Fastest turnaround, best for same-day trays.'},{t:'15 to 25 min',f:'$6 delivery',d:'Strong office parks and new apartments.'},{t:'25 to 40 min',f:'$9 delivery',d:'Best for catering and events, scheduled ahead.'}];
-var CATC={'Office':'#1256d6','Realty':'#e2231a','Planner':'#ff7a00','Gym / Studio':'#1f9e6a','Community':'#8a3ffc','Apartment':'#d4a017'};
-var W=900,H=460,LAT0=35.62,LAT1=34.95,LON0=-81.30,LON1=-80.45;
+var RINFO=[{t:'Kitchen',f:'Pickup point (sample)',d:'Sample Uptown location'},{t:'Under 15 min',f:'$4 delivery',d:'Core zone. Fastest turnaround, best for same-day trays and nightlife venues.'},{t:'15 to 25 min',f:'$6 delivery',d:'Venues, breweries and offices around the I-485 loop.'},{t:'25 to 40 min',f:'$9 delivery',d:'Best for catering and events, scheduled ahead.'}];
+var CATC={'Singles event':'#e2231a','Event venue':'#1256d6','Brewery / bar':'#ff7a00','Apartment':'#d4a017','Planner':'#8a3ffc','Office':'#1f9e6a','Gym / Club':'#5a6b7a'};
+var W=900,H=970,LAT0=35.65,LAT1=34.90,LON0=-81.25,LON1=-80.40;
 function X(lo){return (lo-LON0)/(LON1-LON0)*W}function Y(la){return (LAT0-la)/(LAT0-LAT1)*H}
 var CX=X(-80.8431),CY=Y(35.2271);
 function ringEl(km,col,id){var rx=km/90.9/(LON1-LON0)*W,ry=km/111/(LAT0-LAT1)*H;return '<ellipse class="r'+id+'" cx="'+CX+'" cy="'+CY+'" rx="'+rx+'" ry="'+ry+'" fill="'+col+'" fill-opacity=".10" stroke="'+col+'" stroke-width="3"/>'}
-function pl(pts,col,w,dash){return '<polyline points="'+pts.map(function(p){return X(p[1])+','+Y(p[0])}).join(' ')+'" fill="none" stroke="'+col+'" stroke-width="'+w+'"'+(dash?' stroke-dasharray="'+dash+'"':'')+'/>'}
+function pts(a){return a.map(function(p){return X(p[1]).toFixed(1)+','+Y(p[0]).toFixed(1)}).join(' ')}
+function pl(a,col,w,dash,cl){return '<polyline points="'+pts(a)+'" fill="none" stroke="'+col+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round"'+(dash?' stroke-dasharray="'+dash+'"':'')+'/>'}
+function pg(a,fill,stroke,w){return '<polygon points="'+pts(a)+'" fill="'+fill+'"'+(stroke?' stroke="'+stroke+'" stroke-width="'+(w||1.5)+'"':'')+'/>'}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+var BORDER=[[35.165,-81.25],[35.158,-81.06],[35.12,-81.04],[35.10,-80.95],[35.06,-80.92],[35.02,-80.88],[34.97,-80.85],[34.90,-80.84]];
+var I485=[[35.34,-80.88],[35.335,-80.80],[35.29,-80.72],[35.20,-80.68],[35.12,-80.70],[35.06,-80.76],[35.035,-80.84],[35.045,-80.92],[35.09,-80.98],[35.17,-81.00],[35.25,-80.99],[35.31,-80.94],[35.34,-80.88]];
+var I277=[[35.241,-80.845],[35.238,-80.826],[35.218,-80.826],[35.212,-80.845],[35.222,-80.860],[35.236,-80.858],[35.241,-80.845]];
+var I77=[[35.65,-80.86],[35.58,-80.85],[35.49,-80.86],[35.40,-80.85],[35.32,-80.86],[35.25,-80.855],[35.2271,-80.856],[35.19,-80.87],[35.15,-80.89],[35.10,-80.93],[35.04,-80.93],[34.98,-80.94],[34.90,-80.95]];
+var I85=[[35.30,-81.25],[35.26,-81.15],[35.25,-81.05],[35.27,-80.98],[35.28,-80.92],[35.26,-80.87],[35.27,-80.82],[35.30,-80.77],[35.33,-80.70],[35.39,-80.60],[35.46,-80.58],[35.55,-80.60]];
+var US74=[[35.2271,-80.8431],[35.205,-80.79],[35.17,-80.75],[35.12,-80.72],[35.09,-80.66],[35.05,-80.56],[34.98,-80.45]];
+var US74W=[[35.2271,-80.8431],[35.215,-80.90],[35.20,-80.95],[35.19,-81.02],[35.17,-81.12],[35.16,-81.25]];
+var US521=[[35.2271,-80.8431],[35.19,-80.835],[35.15,-80.83],[35.10,-80.82],[35.05,-80.82],[35.00,-80.79],[34.93,-80.74]];
+var BGP=[[35.222,-80.858],[35.215,-80.90],[35.2140,-80.9431]];
+var NC16=[[35.2471,-80.8465],[35.31,-80.87],[35.34,-80.80]];
+var LAKENORMAN=[[35.43,-80.965],[35.45,-80.935],[35.48,-80.905],[35.52,-80.915],[35.56,-80.925],[35.60,-80.94],[35.64,-80.965],[35.60,-80.99],[35.56,-80.97],[35.52,-80.955],[35.49,-80.95],[35.46,-80.975]];
+var MTNISL=[[35.33,-80.95],[35.30,-80.97],[35.27,-80.995],[35.30,-81.012],[35.335,-80.975]];
+var WYLIE=[[35.16,-81.04],[35.13,-81.01],[35.08,-81.00],[35.03,-81.01],[35.03,-81.04],[35.08,-81.06],[35.13,-81.06]];
+var CATAWBA=[[35.33,-80.95],[35.25,-81.0]];
+var SUGAR=[[35.27,-80.85],[35.20,-80.86],[35.15,-80.90],[35.10,-80.93]];
+var PARKS=[[[35.1985,-80.8425],[35.1985,-80.8275],[35.1915,-80.8275],[35.1915,-80.8425]],[[35.385,-80.955],[35.385,-80.925],[35.355,-80.925],[35.355,-80.955]],[[35.285,-81.03],[35.285,-81.00],[35.265,-81.00],[35.265,-81.03]]];
+function shield(la,lo,txt,sc){var x=X(lo),y=Y(la),s=1/Math.sqrt(sc),w=(txt.length*5.5+8)*s;return '<g><rect x="'+(x-w/2)+'" y="'+(y-7*s)+'" width="'+w+'" height="'+(14*s)+'" rx="'+(3*s)+'" fill="#1a1316" stroke="#fff" stroke-width="'+(1.2*s)+'"/><text x="'+x+'" y="'+(y+3.6*s)+'" text-anchor="middle" font-size="'+(9.5*s)+'" font-weight="800" fill="#fff">'+txt+'</text></g>'}
+function wlab(la,lo,txt,sc,sz){return '<text x="'+X(lo)+'" y="'+Y(la)+'" font-size="'+((sz||11)/Math.sqrt(sc))+'" font-style="italic" fill="#3b7fa8" text-anchor="middle" letter-spacing="1">'+txt+'</text>'}
 function mount(el,opts){
 opts=opts||{};
 var st={vb:{x:0,y:0,w:W,h:H},rings:{1:true,2:true,3:true},cat:null,sel:null,leads:opts.leads||[],hi:null,selLead:null};
@@ -236,27 +260,42 @@ Object.keys(CATC).forEach(function(c){var n=st.leads.filter(function(l){return l
 bar.innerHTML=h}
 function lscale(){return W/st.vb.w}
 function draw(){
+var sc=lscale(),q=Math.sqrt(sc);
 var h='<rect x="0" y="0" width="'+W+'" height="'+H+'" fill="#fbf4e6"/>';
-h+=pl([[35.153,-81.30],[35.153,-81.04],[35.10,-80.93],[35.02,-80.86],[34.99,-80.78],[34.95,-80.70],[34.95,-80.45]],'#1a1316',2,'8 6');
-h+='<text x="'+X(-80.60)+'" y="'+(Y(34.97)+16)+'" font-size="12" fill="#6b5a52">SOUTH CAROLINA</text><text x="'+X(-80.60)+'" y="'+(Y(34.99)-6)+'" font-size="12" fill="#6b5a52">NORTH CAROLINA</text>';
-h+=pl([[35.60,-80.86],[35.41,-80.84],[35.23,-80.84],[35.08,-80.89],[34.95,-80.98]],'#c9b8a3',4);
-h+=pl([[35.28,-81.30],[35.26,-81.00],[35.25,-80.86],[35.31,-80.74],[35.40,-80.58],[35.45,-80.45]],'#c9b8a3',4);
-h+='<text x="'+X(-80.835)+'" y="'+(Y(35.545))+'" font-size="10" fill="#9a8878">I-77</text><text x="'+X(-81.27)+'" y="'+(Y(35.30))+'" font-size="10" fill="#9a8878">I-85</text>';
+h+=pg(BORDER.concat([[34.90,-81.25]]),'#f1e6d0');
+h+=pl(BORDER,'#1a1316',2,'8 6');
+h+='<text x="'+X(-81.20)+'" y="'+(Y(35.19))+'" font-size="12" fill="#9a8878" letter-spacing="3">NORTH CAROLINA</text><text x="'+X(-81.18)+'" y="'+(Y(34.95))+'" font-size="12" fill="#9a8878" letter-spacing="3">SOUTH CAROLINA</text><text x="'+X(-81.1)+'" y="'+(Y(35.137))+'" font-size="9" fill="#6b5a52" transform="rotate(0)">state line (approx.)</text>';
+PARKS.forEach(function(p){h+=pg(p,'#d9ecd2')});
+h+=pg(LAKENORMAN,'#bfe0f0','#8bbbd4');h+=pg(MTNISL,'#bfe0f0','#8bbbd4');h+=pg(WYLIE,'#bfe0f0','#8bbbd4');h+=pl(CATAWBA,'#8bbbd4',3);h+=pl(SUGAR,'#a9cfe2',2);
+h+=wlab(35.53,-80.95,'LAKE NORMAN',sc,12)+wlab(35.305,-81.03,'Mountain Island Lake',sc,9)+wlab(35.09,-81.09,'Lake Wylie',sc,10);
+/* roads */
+[I485,I277].forEach(function(r,i){h+=pl(r,'#fff',(i?6:7)).replace('fill="none"','fill="none"')+pl(r,'#d9a066',(i?3:4))});
+[I77,I85].forEach(function(r){h+=pl(r,'#fff',8)+pl(r,'#c9873f',5)});
+[US74,US74W,US521,BGP,NC16].forEach(function(r){h+=pl(r,'#fff',5)+pl(r,'#e4c79a',2.6)});
+h+=shield(35.52,-80.855,'I-77',sc)+shield(35.05,-80.94,'I-77',sc)+shield(35.27,-81.10,'I-85',sc)+shield(35.37,-80.64,'I-85',sc)+shield(35.31,-80.71,'485',sc)+shield(35.07,-80.72,'485',sc)+shield(35.14,-80.99,'485',sc)+shield(35.34,-80.84,'485',sc)+shield(35.14,-80.69,'US-74',sc)+shield(35.10,-80.82,'US-521',sc)+shield(35.2271,-80.8431+0.0,'277',sc);
+h+='<text x="'+X(-80.80)+'" y="'+(Y(35.185))+'" font-size="'+(8/q)+'" fill="#8a6a3a" font-weight="700" transform="rotate(32 '+X(-80.78)+' '+Y(35.18)+')">Independence Blvd</text>';
+if(sc>1.8)h+='<text x="'+X(-80.905)+'" y="'+Y(35.208)+'" font-size="'+(8/q)+'" fill="#8a6a3a" font-weight="700">Billy Graham Pkwy</text>';
 if(st.rings[3])h+=ringEl(42,RC[3],3);if(st.rings[2])h+=ringEl(26,RC[2],2);if(st.rings[1])h+=ringEl(13,RC[1],1);
-var sc=lscale();
+/* landmarks */
+LAND.forEach(function(l){if(l[3]>=9)return;var vis=l[3]==2||sc>=1.8;if(!vis)return;var x=X(l[2]),y=Y(l[1]),a=5/q;var plane=l[0].indexOf('Airport')>-1;
+h+='<g><rect x="'+(x-a)+'" y="'+(y-a)+'" width="'+(2*a)+'" height="'+(2*a)+'" fill="'+(plane?'#6b5a52':'#fff')+'" stroke="#1a1316" stroke-width="'+1.5/q+'" transform="rotate(45 '+x+' '+y+')"/><text x="'+(x+8/q)+'" y="'+(y+3/q)+'" font-size="'+(plane?10:8.5)/q+'" fill="#6b5a52" font-style="italic" paint-order="stroke" stroke="#fbf4e6" stroke-width="'+2.5/q+'">'+esc(plane?'CLT Airport':l[0])+'</text></g>'});
 PLACES.forEach(function(p,i){var vis=p[3]==0||st.rings[p[3]];if(!vis)return;var x=X(p[2]),y=Y(p[1]);
 var isSel=st.sel==i,isHi=st.hi&&st.hi.indexOf(p[0])>-1;
-h+='<g class="pl" data-i="'+i+'" style="cursor:pointer"><circle cx="'+x+'" cy="'+y+'" r="'+((p[3]==0?10:7)+(isSel?4:0)+(isHi?3:0))/Math.sqrt(sc)+'" fill="'+RC[p[3]]+'" stroke="'+(isHi?'#e2231a':'#1a1316')+'" stroke-width="'+(isSel||isHi?3:2)/Math.sqrt(sc)+'"/><circle cx="'+x+'" cy="'+y+'" r="'+22/Math.sqrt(sc)+'" fill="transparent"/>';
-if(p[3]!=1||sc>1.7||isSel||isHi)h+='<text x="'+(x+11/Math.sqrt(sc))+'" y="'+(y+4)+'" font-size="'+11/Math.sqrt(sc)+'" font-weight="700" fill="#1a1316" paint-order="stroke" stroke="#fbf4e6" stroke-width="'+3/Math.sqrt(sc)+'">'+esc(p[0].replace(' (kitchen)',''))+'</text>';
+h+='<g class="pl" data-i="'+i+'" style="cursor:pointer"><circle cx="'+x+'" cy="'+y+'" r="'+((p[3]==0?10:7)+(isSel?4:0)+(isHi?3:0))/q+'" fill="'+RC[p[3]]+'" stroke="'+(isHi?'#e2231a':'#1a1316')+'" stroke-width="'+(isSel||isHi?3:2)/q+'"/><circle cx="'+x+'" cy="'+y+'" r="'+22/q+'" fill="transparent"/>';
+var tier=p[4]||1,show=isSel||isHi||p[3]==0||(tier==1&&sc>=1)||(tier==2&&sc>=1.9)||(tier==3&&sc>=3);
+if(show)h+='<text x="'+(x+11/q)+'" y="'+(y+4/q)+'" font-size="'+11/q+'" font-weight="700" fill="#1a1316" paint-order="stroke" stroke="#fbf4e6" stroke-width="'+3/q+'">'+esc(p[0].replace(' (kitchen)',''))+'</text>';
 h+='<title>'+esc(p[0])+'</title></g>'});
 st.leads.forEach(function(l,i){if(st.cat&&l.cat!=st.cat)return;if(!st.rings[l.ring]&&l.ring>0)return;var x=X(l.lon),y=Y(l.lat),on=st.selLead===i;
-h+='<g class="ld" data-i="'+i+'" style="cursor:pointer"><circle cx="'+x+'" cy="'+y+'" r="'+(on?8:4.5)/Math.sqrt(sc)+'" fill="'+(CATC[l.cat]||'#333')+'" stroke="'+(on?'#1a1316':'#fff')+'" stroke-width="'+(on?3:1.5)/Math.sqrt(sc)+'"/><circle cx="'+x+'" cy="'+y+'" r="'+11/Math.sqrt(sc)+'" fill="transparent"/><title>'+esc(l.n)+'</title></g>'});
+h+='<g class="ld" data-i="'+i+'" style="cursor:pointer"><circle cx="'+x+'" cy="'+y+'" r="'+(on?8:4.5)/q+'" fill="'+(CATC[l.cat]||'#333')+'" stroke="'+(on?'#1a1316':'#fff')+'" stroke-width="'+(on?3:1.5)/q+'"/><circle cx="'+x+'" cy="'+y+'" r="'+11/q+'" fill="transparent"/><title>'+esc(l.n)+'</title></g>'});
+/* compass + scale */
+h+='<g transform="translate('+(st.vb.x+22/q)+','+(st.vb.y+26/q)+')"><text y="0" font-size="'+13/q+'" font-weight="900" text-anchor="middle">N</text><path d="M0 '+(4/q)+' L'+(-5/q)+' '+(20/q)+' L0 '+(16/q)+' L'+(5/q)+' '+(20/q)+' Z" fill="#1a1316"/></g>';
+var km10=10/90.9/(LON1-LON0)*W;h+='<g transform="translate('+(st.vb.x+10/q)+','+(st.vb.y+st.vb.h-14/q)+')"><rect x="0" y="'+(-4/q)+'" width="'+km10+'" height="'+(4/q)+'" fill="#1a1316"/><text x="'+(km10+5/q)+'" y="0" font-size="'+9/q+'" font-weight="700">10 km</text></g>';
 svg.innerHTML=h;svg.setAttribute('viewBox',st.vb.x+' '+st.vb.y+' '+st.vb.w+' '+st.vb.h)}
 function drawInfo(){
 if(st.selLead!=null){var l=st.leads[st.selLead];info.innerHTML='<div class="cm-card"><b>'+esc(l.n)+'</b><span class="cm-pill" style="background:'+CATC[l.cat]+'">'+esc(l.cat)+'</span><span class="cm-pill dk">Fit '+l.score+'</span><div>'+esc(l.area)+' &middot; '+RINFO[l.ring].t+'</div><div class="cm-sm">Signal: '+esc(l.signal)+'</div><div class="cm-sm">First touch: '+esc(l.touch)+'</div>'+(l.sample?'<div class="cm-sm">Sample lead for the demo.</div>':'')+'</div>';return}
 if(st.sel!=null){var p=PLACES[st.sel],r=RINFO[p[3]];var n=st.leads.filter(function(l){return l.area==p[0].replace(' (kitchen)','')}).length;
 info.innerHTML='<div class="cm-card"><b>'+esc(p[0])+'</b><span class="cm-pill" style="background:'+RC[p[3]]+';color:'+(p[3]==2?'#111':'#fff')+'">'+r.t+'</span><div>'+r.f+'. '+r.d+'</div>'+(n?'<div class="cm-sm">'+n+' lead'+(n>1?'s':'')+' here.</div>':'')+(opts.orderBtn&&p[3]>0?'<button class="cm-go" data-go="1">Order delivery to '+esc(p[0])+'</button>':'')+'</div>';return}
-info.innerHTML='<div class="cm-card cm-sm">'+(opts.hint||'Tap a neighborhood to see its drive time and delivery fee. Use the rings to filter. Drag the map to pan.')+'</div>'}
+info.innerHTML='<div class="cm-card cm-sm">'+(opts.hint||'Tap a neighborhood to see its drive time and delivery fee. Use the rings to filter. Zoom in for more streets, parks and landmarks. Drag the map to pan.')+'</div>'}
 function redraw(){drawBar();draw();drawInfo()}
 bar.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
 if(b.dataset.r){st.rings[b.dataset.r]=!st.rings[b.dataset.r]}
@@ -269,6 +308,7 @@ info.addEventListener('click',function(e){if(e.target.dataset.go&&opts.orderBtn&
 el.querySelector('.cm-zoom').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var z=b.dataset.z;if(z=='reset')api.view('all');else zoom(z=='in'?0.65:1.5)});
 function zoom(f,cx,cy){var v=st.vb,nw=Math.max(150,Math.min(W,v.w*f)),nh=nw*H/W;cx=cx==null?v.x+v.w/2:cx;cy=cy==null?v.y+v.h/2:cy;
 v.x=Math.max(0,Math.min(W-nw,cx-nw/2));v.y=Math.max(0,Math.min(H-nh,cy-nh/2));v.w=nw;v.h=nh;draw()}
+svg.addEventListener('wheel',function(e){if(!e.ctrlKey&&!e.metaKey)return;e.preventDefault();var r=svg.getBoundingClientRect(),v=st.vb;zoom(e.deltaY<0?0.8:1.25,v.x+(e.clientX-r.left)/r.width*v.w,v.y+(e.clientY-r.top)/r.height*v.h)},{passive:false});
 var drag=null,moved=false;
 svg.addEventListener('pointerdown',function(e){drag={x:e.clientX,y:e.clientY,vx:st.vb.x,vy:st.vb.y};moved=false});
 window.addEventListener('pointermove',function(e){if(!drag)return;var r=svg.getBoundingClientRect(),dx=(e.clientX-drag.x)*st.vb.w/r.width,dy=(e.clientY-drag.y)*st.vb.h/r.height;
@@ -276,7 +316,7 @@ if(Math.abs(e.clientX-drag.x)+Math.abs(e.clientY-drag.y)>5)moved=true;if(!moved)
 st.vb.x=Math.max(0,Math.min(W-st.vb.w,drag.vx-dx));st.vb.y=Math.max(0,Math.min(H-st.vb.h,drag.vy-dy));svg.setAttribute('viewBox',st.vb.x+' '+st.vb.y+' '+st.vb.w+' '+st.vb.h)});
 window.addEventListener('pointerup',function(){drag=null;setTimeout(function(){moved=false},0)});
 var api={
-view:function(k){var v=st.vb;if(k=='core'){v.w=300;v.h=300*H/W;v.x=CX-150;v.y=CY-v.h/2+10}else if(k=='south'){v.w=330;v.h=330*H/W;v.x=CX-120;v.y=Y(35.10)-v.h/2}else{v.x=0;v.y=0;v.w=W;v.h=H}draw()},
+view:function(k){var v=st.vb;if(k=='core'){v.w=360;v.h=360*H/W;v.x=CX-180;v.y=CY-v.h/2+10}else if(k=='south'){v.w=330;v.h=330*H/W;v.x=CX-120;v.y=Y(35.10)-v.h/2}else if(k=='north'){v.w=330;v.h=330*H/W;v.x=CX-165;v.y=Y(35.40)-v.h/2}else{v.x=0;v.y=0;v.w=W;v.h=H}v.x=Math.max(0,Math.min(W-v.w,v.x));v.y=Math.max(0,Math.min(H-v.h,v.y));draw()},
 setRings:function(r){st.rings=r;redraw()},
 setCat:function(c){st.cat=c;st.selLead=null;redraw()},
 setLeads:function(a){st.leads=a;redraw()},
@@ -293,12 +333,13 @@ window.CLTMap={mount:mount,PLACES:PLACES,CATC:CATC,RINFO:RINFO,X:X,Y:Y};
 (function(){
 var P={};CLTMap.PLACES.forEach(function(p){P[p[0].replace(' (kitchen)','')]=p});
 var spec=[
-['Office',16,['Uptown','South End','SouthPark','Ballantyne','University City','Huntersville','Uptown','South End'],['Law firm office manager','Regional bank branch lead','HR director, mid-size firm','Insurance agency manager','Tech startup ops lead','Accounting firm admin','Hospital admin office','Engineering firm office manager'],['Hiring 5+ roles','New office lease','Quarterly all-hands','Team appreciation season'],'Email: free sample tray for the team'],
-['Realty',8,['Ballantyne','SouthPark','Matthews','Dilworth','Huntersville'],['Brokerage team lead','Top-producer agent','Relocation specialist','New-home sales office'],['Open-house season','Client appreciation event','New agents joining'],'IG DM + email: tray for the next open house'],
-['Planner',7,['Uptown','Plaza Midwood','Concord','Mooresville','South End','Cornelius','Elizabeth'],['Wedding planner','Corporate event planner','Venue coordinator','Baby-shower planner','Festival organizer'],['Booking spring dates','Vendor list refresh','Weekend event calendar full'],'Call: offer a vendor tasting'],
-['Gym / Studio',7,['South End','NoDa','Plaza Midwood','Pineville','Matthews','Dilworth','Steele Creek'],['Boutique gym owner','CrossFit box owner','Yoga studio manager','Cycling studio owner'],['Members asking about meal prep','New location opening','Challenge month coming'],'IG DM: weekly pack for members, pickup at the studio'],
-['Community',6,['Mint Hill','Gastonia','Fort Mill, SC','Steele Creek','University City','Plaza Midwood'],['Church fellowship coordinator','Cultural org organizer','PTA lunch chair','Community center director','Youth league manager','Latino business group lead'],['Festival season','Monthly fellowship dinner','Fundraiser planning'],'Email: fundraiser tray with a story'],
-['Apartment',6,['Uptown','South End','Ballantyne','Pineville','University City','NoDa'],['Community manager','Leasing office lead','Resident events coordinator','Property marketing manager','Amenity manager','Build-to-rent manager'],['New building opening','Resident retention push','Monthly resident event'],'Email: resident event menu']];
+['Singles event',10,['South End','NoDa','Uptown','Plaza Midwood','Camp North End','Elizabeth','South End','Dilworth','Ballantyne','University City'],['Singles mixer series','Speed dating host','Professional singles meetup','Supper club for singles','Rooftop social host','Over-30 singles social','Wine and mingle host','Dating event promoter','Salsa night organizer','Matchmaking events company'],['Monthly event, 80+ RSVPs','Sells out, wants a food partner','Hosts weekly socials','Adding a food partner this season'],'IG DM: free appetizer tray at the next event'],
+['Event venue',9,['Camp North End','Uptown','South End','NoDa','Plaza Midwood','Matthews','Concord','Cornelius','Huntersville'],['Event space manager','Rooftop venue sales lead','Warehouse venue events lead','Hotel banquet manager','Gallery event space','Private dining manager','Lakeside venue coordinator','Wedding venue coordinator','Loft venue manager'],['No in-house kitchen','Approved caterer list refresh','Booking spring dates','Weekend calendar filling up'],'Email: join the approved vendor list with a tasting'],
+['Brewery / bar',6,['NoDa','South End','Plaza Midwood','Dilworth','Matthews','Cornelius'],['Taproom general manager','Brewery events lead','Cocktail bar owner','Rooftop bar manager','Wine bar owner','Sports bar owner'],['No kitchen, rotating food trucks','Wants a pairing menu','Hosts trivia and mixers'],'IG DM: sushi pairing night'],
+['Apartment',10,['Uptown','South End','NoDa','Ballantyne','University City','Pineville','SouthPark','Plaza Midwood','Steele Creek','Matthews'],['Community manager','Leasing office lead','Resident events coordinator','Property marketing manager','Amenity manager','Build-to-rent manager','Lifestyle director','Regional property manager'],['New building opening','Resident retention push','Monthly resident event','Lease-up season, needs events'],'Email: resident event menu and a free tasting for the leasing team'],
+['Planner',6,['Uptown','Plaza Midwood','Concord','Mooresville','South End','Elizabeth'],['Wedding planner','Corporate event planner','Venue coordinator','Festival organizer','Social events planner','Birthday and private party planner'],['Booking spring dates','Vendor list refresh','Weekend event calendar full'],'Call: offer a vendor tasting'],
+['Office',5,['Uptown','South End','SouthPark','Ballantyne','University City'],['Law firm office manager','Regional bank branch lead','HR director, mid-size firm','Tech startup ops lead','Accounting firm admin'],['Hiring 5+ roles','Quarterly all-hands','Team appreciation season'],'Email: free sample tray for the team'],
+['Gym / Club',4,['South End','NoDa','Matthews','Dilworth'],['Run club organizer','Boutique gym owner','Social sports league lead','Yoga studio manager'],['Post-run socials','Challenge month coming','Members ask about food'],'IG DM: post-event tray, pickup at the studio']];
 function rnd(i){var x=Math.sin(i*9301+49297)*233280;return x-Math.floor(x)}
 var L=[],k=0;
 spec.forEach(function(s){for(var i=0;i<s[1];i++,k++){var a=s[2][i%s[2].length],p=P[a];
@@ -312,20 +353,22 @@ function col(n){for(var i=0;i<h.length;i++)for(var j=0;j<n.length;j++)if(h[i].in
 var cN=col(['company','name','business']),cC=col(['category','industry','type','segment']),cA=col(['area','city','neighborhood','location']),cS=col(['signal','note','reason']);
 var names=Object.keys(P);
 var out=[];rows.slice(1).forEach(function(r,i){var name=(r[cN]||'').trim();if(!name)return;var raw=(r[cA]||'').toLowerCase(),a=names.filter(function(n){return raw.indexOf(n.toLowerCase().split(',')[0])>-1})[0]||'Uptown';var p=P[a];
-var c=(r[cC]||'').toLowerCase(),cat=/real|broker|agent/.test(c)?'Realty':/event|plan|venue|wedding/.test(c)?'Planner':/gym|fit|yoga|studio/.test(c)?'Gym / Studio':/church|communit|nonprofit|school/.test(c)?'Community':/apart|property|residen/.test(c)?'Apartment':'Office';
+var c=((r[cC]||'')+' '+name).toLowerCase(),cat=/single|speed dat|mixer|social club|meetup|dating/.test(c)?'Singles event':/apart|property|residen|leasing|multifamily/.test(c)?'Apartment':/brewer|taproom|bar\b|pub|winery|cocktail/.test(c)?'Brewery / bar':/venue|event space|banquet|hotel|loft|rooftop|ballroom/.test(c)?'Event venue':/plan|wedding|event/.test(c)?'Planner':/gym|fit|yoga|studio|run club|crossfit/.test(c)?'Gym / Club':'Office';
 out.push({n:name,cat:cat,area:a,ring:p[3],lat:p[1]+(rnd(i+3)-.5)*.034,lon:p[2]+(rnd(i+91)-.5)*.034,score:80,signal:(r[cS]||'From the Stamina export').trim(),touch:'Email: free sample tray',sample:false})});
 return out};
 })();
 
-(function(){var g=CLTMap.mount(document.getElementById('gmap'),{leads:SAMPLE_LEADS,hint:'Tap a lead dot or a neighborhood. Drag to pan.'});g.highlight(['Uptown (kitchen)','South End','SouthPark','Ballantyne']);
-var m1=CLTMap.mount(document.getElementById('m1'),{leads:SAMPLE_LEADS.filter(function(l){return l.ring<=1})});m1.setRings({1:true,2:false,3:false});m1.view('core');m1.highlight(['Uptown (kitchen)','South End','Dilworth','NoDa']);
-var m2=CLTMap.mount(document.getElementById('m2'),{leads:SAMPLE_LEADS.filter(function(l){return l.ring<=2})});m2.setRings({1:true,2:true,3:false});m2.view('south');m2.highlight(['SouthPark','Ballantyne','University City']);
-var m3=CLTMap.mount(document.getElementById('m3'),{leads:SAMPLE_LEADS});m3.view('all');m3.highlight(['Matthews','Huntersville','Concord','Fort Mill, SC']);})();
+(function(){var g=CLTMap.mount(document.getElementById('gmap'),{leads:SAMPLE_LEADS,hint:'Tap a lead dot or a neighborhood. Drag to pan.'});g.highlight(['Uptown (kitchen)','South End','NoDa','Plaza Midwood','Camp North End','SouthPark','Ballantyne','University City']);
+var m1=CLTMap.mount(document.getElementById('m1'),{leads:SAMPLE_LEADS.filter(function(l){return l.ring<=1})});m1.setRings({1:true,2:false,3:false});m1.view('core');m1.highlight(['Uptown (kitchen)','South End','NoDa','Plaza Midwood']);
+var m2=CLTMap.mount(document.getElementById('m2'),{leads:SAMPLE_LEADS.filter(function(l){return l.ring<=2})});m2.setRings({1:true,2:true,3:false});m2.view('all');m2.highlight(['SouthPark','Ballantyne','University City']);
+var m3=CLTMap.mount(document.getElementById('m3'),{leads:SAMPLE_LEADS});m3.view('all');m3.highlight(['Matthews','Huntersville','Concord','Cornelius']);})();
 </script>
 <script>
 function go(t){document.querySelectorAll('.tabs button').forEach(function(b){b.classList.toggle('on',b.dataset.t==t)});document.querySelectorAll('main > section').forEach(function(s){s.classList.toggle('on',s.id==t)});try{location.hash=t}catch(e){}}
 document.querySelectorAll('.tabs button').forEach(function(b){b.onclick=function(){go(b.dataset.t)}});
-window.addEventListener('message',function(e){var d=e.data||{};if(!d.go)return;go(d.go);if(d.go=='beta'&&d.sub){var f=document.querySelector('#beta iframe');f.contentWindow.postMessage({tab:d.sub},'*')}});
+var BOOK_URL='';/* paste a Calendly or Google Calendar booking link here */
+function toast(m){var t=document.getElementById('toast');if(!t){t=document.createElement('div');t.id='toast';t.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#1a1316;color:#fff;border:3px solid #ffc531;border-radius:14px;padding:12px 18px;font-weight:700;font-size:14px;z-index:99;max-width:90vw;text-align:center';document.body.appendChild(t)}t.textContent=m;t.style.display='block';clearTimeout(t._t);t._t=setTimeout(function(){t.style.display='none'},6000)}
+window.addEventListener('message',function(e){var d=e.data||{};if(d.book){if(BOOK_URL)window.open(BOOK_URL,'_blank');else toast('Reply "ready" to Xander\'s text and he will lock in your 15 minutes.');return}if(!d.go)return;go(d.go);if(d.go=='beta'&&d.sub){var f=document.querySelector('#beta iframe');f.contentWindow.postMessage({tab:d.sub},'*')}});
 var h=(location.hash||'').slice(1);if(['tour','beta','plan','prop'].indexOf(h)>-1)go(h);
 </script>
 </body>
