@@ -18,7 +18,7 @@ h2{font-size:22px;margin-bottom:8px}
 .say{display:flex;gap:10px;align-items:flex-start;margin:10px 0}
 .say img{width:48px;height:48px;border-radius:50%;border:2px solid var(--ink)}
 .say p{margin:0;background:var(--sakura);border:2px solid var(--ink);border-radius:12px;padding:8px 12px;font-size:14px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}@media(max-width:760px){.grid{grid-template-columns:1fr 1fr}}
 .mini{border:2px solid var(--ink);border-radius:10px;padding:10px;background:var(--paper);font-size:14px}
 .mini b{display:block;font-size:15px}
 button{font:inherit;font-weight:900;cursor:pointer;border:3px solid var(--ink);border-radius:10px;background:#fff;padding:8px 12px;box-shadow:3px 3px 0 var(--ink)}
@@ -90,6 +90,7 @@ input[type=range]{width:100%}
 <div class="step"><i style="background:var(--sun);color:#111">3</i><div>Send 10 photos or clips of your best dishes.</div></div>
 <div class="step"><i style="background:var(--sun);color:#111">4</i><div>We go live on the next Monday.</div></div>
 </div>
+<div class="card" style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><div><b style="font-family:Potta One;font-size:18px">Want to see it again?</b><br><span style="font-size:13px">Replay the TAZ Tour or click through the beta.</span></div><div style="display:flex;gap:8px"><button onclick="parent.postMessage({go:'tour'},'*')">TAZ Tour</button><button class="on" onclick="parent.postMessage({go:'beta'},'*')">Beta site</button></div></div>
 <p class="small" style="text-align:center">Sample brand, sample data. Built with TAZ by HTL.</p>
 </div>
 

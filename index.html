@@ -141,6 +141,7 @@ td b.n{font-family:"Potta One";font-weight:400;font-size:18px}
     <div class="card"><h4>Week 6</h4><p>Read the numbers against the targets above. Set Q4 party outreach. Decide on the second delivery ring.</p></div>
   </div>
   <p class="note">Sample brand and sample data throughout. Nothing on this page or the beta sends messages, takes payment, or stores customer information.</p>
+<div class="hero" style="margin-top:28px;box-shadow:8px 8px 0 var(--sun)"><span class="tape">Next stop</span><h2 style="font-size:30px">See the <span>proposal</span></h2><p>What it costs to run this for real, and the 30-60-90 plan.</p><p style="margin-top:12px"><span class="btn" onclick="go('prop')">Open the proposal</span> <span class="btn" style="background:#fff;color:var(--ink)" onclick="go('tour')">Replay TAZ Tour</span></p></div>
 </div></section>
 <section id="tour" class="on"><iframe src="tour.html" title="TAZ Tour"></iframe></section>
 <section id="beta"><iframe src="beta.html" title="Beta site"></iframe></section>
@@ -149,6 +150,7 @@ td b.n{font-family:"Potta One";font-weight:400;font-size:18px}
 <script>
 function go(t){document.querySelectorAll('.tabs button').forEach(function(b){b.classList.toggle('on',b.dataset.t==t)});document.querySelectorAll('main > section').forEach(function(s){s.classList.toggle('on',s.id==t)});try{location.hash=t}catch(e){}}
 document.querySelectorAll('.tabs button').forEach(function(b){b.onclick=function(){go(b.dataset.t)}});
+window.addEventListener('message',function(e){var d=e.data||{};if(!d.go)return;go(d.go);if(d.go=='beta'&&d.sub){var f=document.querySelector('#beta iframe');f.contentWindow.postMessage({tab:d.sub},'*')}});
 var h=(location.hash||'').slice(1);if(['tour','beta','plan','prop'].indexOf(h)>-1)go(h);
 </script>
 </body>

@@ -27,6 +27,8 @@ h1,h2,h3{font-family:'Potta One',cursive;font-weight:400;margin:0}
 table{width:100%;border-collapse:collapse;font-size:13px;background:#fff;border:3px solid var(--ink)}th{text-align:left;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--mute);background:#fff1dc;padding:8px;border-bottom:3px solid var(--ink)}
 td{padding:7px 8px;border-bottom:2px solid #f0dcc4}tr.r{cursor:pointer}tr.r:hover{background:#fff1dc}
 .dot{display:inline-block;width:10px;height:10px;border-radius:50%;border:1.5px solid var(--ink);margin-right:6px}
+.jump{display:flex;flex-wrap:wrap;gap:8px}.jump .btn{font-size:12px;padding:6px 11px}
+.nextbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:22px 0 6px;background:var(--indigo);color:#fff;border:4px solid var(--ink);border-radius:14px 2px 14px 2px;padding:14px 16px;box-shadow:6px 6px 0 var(--sun)}.nextbar b{font-family:"Potta One";font-weight:400;font-size:20px}
 .note{font-size:12px;color:var(--mute);line-height:1.5;margin-top:8px}
 h3.sec{font-size:22px;margin:22px 0 8px}
 .cm-bar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:8px}.cm-lab{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#6b5a52}
@@ -52,12 +54,15 @@ h3.sec{font-size:22px;margin:22px 0 8px}
 <div><div id="map"></div></div>
 <div>
 <div class="panel"><h3 id="ph">The Charlotte market</h3><div class="stats"><div class="stat"><b id="s1">0</b><span>Leads shown</span></div><div class="stat"><b id="s2">0</b><span>Avg fit</span></div><div class="stat"><b id="s3">-</b><span>Top area</span></div></div><div id="pbody"></div></div>
+<div class="panel" style="margin-top:14px"><h3>Leads by type</h3><div id="mix"></div></div>
+<div class="panel" style="margin-top:14px;background:#fff1dc"><h3>See it live in the beta</h3><div class="jump"><button class="btn" data-j="order">Order page</button><button class="btn" data-j="service">Delivery map</button><button class="btn" data-j="radar">Lead Radar</button><button class="btn" data-j="outreach">Outreach</button><button class="btn" data-j="pipe">Bookings</button><button class="btn" data-j="social">Social</button></div></div>
 </div></div>
 
 <h3 class="sec">The 50 leads: complimentary from Stamina</h3>
 <p class="note" style="margin:0 0 8px;font-size:13px">These 50 rows are <b>sample placeholders</b> showing exactly how your real list will look. Tap a row to find it on the map. Have the real export? <label class="btn" style="display:inline-block;padding:4px 10px;font-size:11px">Load CSV<input id="csv" type="file" accept=".csv" style="display:none"></label> <span id="csvmsg"></span></p>
 <div style="overflow-x:auto"><table><thead><tr><th>Lead</th><th>Type</th><th>Area</th><th>Signal</th><th>Fit</th></tr></thead><tbody id="rows"></tbody></table></div>
 <p class="note">Sample data for demonstration. Nothing here sends. Real leads load from the Stamina export and stay in your browser.</p>
+<div class="nextbar"><div><b>Next stop: the beta site</b><br><span style="font-size:13px">Click through the storefront and the sales office. I'll keep guiding you in the corner.</span></div><button class="btn red" data-j="site">Open the beta</button></div>
 </div>
 
 <script>
@@ -199,6 +204,8 @@ function rows(){var a=leads.map(function(l,i){return [l,i]}).filter(function(x){
 $('rows').innerHTML=a.map(function(x){var l=x[0];return '<tr class="r" data-i="'+x[1]+'"><td>'+l.n+'</td><td><i class="dot" style="background:'+CATC[l.cat]+'"></i>'+l.cat+'</td><td>'+l.area+'</td><td>'+l.signal+'</td><td><b>'+l.score+'</b></td></tr>'}).join('')}
 $('rows').onclick=function(e){var tr=e.target.closest('tr');if(!tr)return;map.selectLead(+tr.dataset.i);$('map').scrollIntoView({behavior:'smooth',block:'center'})};
 $('csv').onchange=function(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(){var a=leadsFromCSV(r.result);if(!a.length){$('csvmsg').textContent='No rows found. Use columns like company, category, area.';return}
-leads=a;map.setLeads(leads);$('csvmsg').textContent='Loaded '+a.length+' leads. They stay in this browser.';stats();rows()};r.readAsText(f)};
-go(0);
+leads=a;map.setLeads(leads);mix();$('csvmsg').textContent='Loaded '+a.length+' leads. They stay in this browser.';stats();rows()};r.readAsText(f)};
+function mix(){$('mix').innerHTML=bars()}
+document.addEventListener('click',function(e){var b=e.target.closest('[data-j]');if(!b)return;try{parent.postMessage({go:'beta',sub:b.dataset.j},'*')}catch(x){}});
+go(0);mix();
 </script></body></html>
