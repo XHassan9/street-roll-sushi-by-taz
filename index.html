@@ -18,7 +18,7 @@ h1,h2,h3,h4{font-family:"Potta One","Arial Black",Impact,sans-serif;font-weight:
 .tabs button.on{background:var(--red);border-color:var(--red);color:#fff;box-shadow:3px 3px 0 var(--ink)}
 .stamp{background:var(--sun);border:3px solid var(--ink);padding:5px 10px;font-size:11px;font-weight:700;transform:rotate(2deg);box-shadow:3px 3px 0 var(--blue)}
 main{flex:1;min-height:0;display:flex}
-#tour,#beta,#prop{flex:1;display:none}#tour.on,#beta.on,#prop.on{display:flex}
+#tour,#beta,#prop,#camp{flex:1;display:none}#tour.on,#beta.on,#prop.on,#camp.on{display:flex}
 section iframe{flex:1;border:0;width:100%}
 #plan{display:none;overflow:auto;flex:1}#plan.on{display:block}
 .wrap{max-width:1120px;margin:0 auto;padding:24px 20px 60px}
@@ -79,7 +79,7 @@ td b.n{font-family:"Potta One";font-weight:400;font-size:18px}
 <div class="top">
   <h1>Street Roll Sushi <small>Sample brand · Charlotte, NC · by TAZ</small></h1>
   <span class="stamp">VIEW-ONLY · SAMPLE DATA · NOTHING SENDS</span>
-  <div class="tabs"><button data-t="tour" class="on">Guided Tour</button><button data-t="beta">Beta site</button><button data-t="plan">Gameplan</button><button data-t="prop">Proposal</button></div>
+  <div class="tabs"><button data-t="tour" class="on">Guided Tour</button><button data-t="beta">Beta site</button><button data-t="plan">Gameplan</button><button data-t="camp">Campaign</button><button data-t="prop">Proposal</button></div>
 </div>
 <main>
 <section id="plan"><div class="wrap">
@@ -141,7 +141,7 @@ td b.n{font-family:"Potta One";font-weight:400;font-size:18px}
     <div class="card"><h4>Order</h4><p>Preset meal prep boxes, weekly packs and party trays. Pickup or delivery by drive-time ring, prep days, order minimum, totals. The live version takes payment and texts the kitchen.</p></div>
     <div class="card"><h4>Service Area</h4><p>A real map of Charlotte with 15, 25 and 40 minute drive rings from Uptown, so customers and the kitchen agree on where delivery makes sense.</p></div>
     <div class="card"><h4>Lead Radar</h4><p>Scored list of businesses most likely to book: apartment communities, singles events, venues, breweries and planners. Each one carries a reason (a signal) and a fit score.</p></div>
-    <div class="card"><h4>Outreach</h4><p>A 3-touch sequence per lead: email, Instagram DM, call script. Written in the chef's voice, edited in place, tracked by TAZ.</p></div>
+    <div class="card"><h4>Outreach</h4><p>Two tracks. Email from a separate sending domain for offices, corporate and apartments. Social DMs only for events, venues and hospitality. Three touches each, in the chef's voice, tracked by TAZ.</p></div>
     <div class="card"><h4>Bookings + Social</h4><p>A five-stage board from New to Booked, plus a weekly Instagram plan so the page stays warm while outreach runs.</p></div>
   </div>
 
@@ -150,24 +150,25 @@ td b.n{font-family:"Potta One";font-weight:400;font-size:18px}
   <div class="flow">
     <div class="step"><i>1</i><b>Find</b><small>Pull Charlotte businesses by segment and drive ring: apartment communities, singles-event hosts, venues without kitchens, breweries and bars, planners. Sources: Google Business, LinkedIn, Instagram, Eventbrite and Meetup listings.</small></div>
     <div class="step"><i>2</i><b>Score</b><small>Fit (does this place buy group food?) plus timing (hiring, new location, event season). Only 80+ scores go to outreach.</small></div>
-    <div class="step"><i>3</i><b>Reach</b><small>3 touches over 6 days: email, IG DM, call. Every message names the business and the occasion. Replies land in one inbox.</small></div>
+    <div class="step"><i>3</i><b>Reach</b><small>3 touches over 6 days on the right channel: email from a Smartlead domain for offices, corporate and apartments; social DMs for events and hospitality. Every message names the business and the occasion.</small></div>
     <div class="step"><i>4</i><b>Taste</b><small>The offer is a free sample tray, not a discount. Tastings convert far better than price talk.</small></div>
     <div class="step"><i>5</i><b>Book</b><small>Quote, deposit, prep day on the calendar. TAZ chases quotes older than 3 days.</small></div>
     <div class="step"><i>6</i><b>Repeat</b><small>Every booked client gets a reorder nudge before their next cycle and a 2-referral ask. Repeat and referral is where margin lives.</small></div>
   </div>
 
-  <h3 class="sec">Revenue model (sample numbers)</h3>
-  <p class="sub">Illustrative, built from the menu pricing in the beta. Swap in real costs and volumes once the chef confirms them.</p>
+  <h3 class="sec">Revenue model (volumes only)</h3>
+  <p class="sub">These are volume targets. Dollar figures wait for the food pricing worksheet in the Campaign tab, so every price in the model is Izaya's.</p>
   <table>
-    <thead><tr><th>Stream</th><th>Unit</th><th>Weekly target by month 3</th><th>Monthly revenue</th><th>Why it matters</th></tr></thead>
+    <thead><tr><th>Stream</th><th>Price</th><th>Target by month 3</th><th>Channel</th><th>Why it matters</th></tr></thead>
     <tbody>
-      <tr><td><b>Meal prep subscriptions</b></td><td>$60 to $115 per pack</td><td>35 packs</td><td><b class="n">$11k</b></td><td>Predictable, prep-day batched, no event-day labor spike.</td></tr>
-      <tr><td><b>Apartment and resident events</b></td><td>$250 to $700 per event</td><td>4 events</td><td><b class="n">$8k</b></td><td>Recurring monthly; one property manager equals many buildings.</td></tr>
-      <tr><td><b>Singles events, venues and bars</b></td><td>$400 to $1,200 per event</td><td>3 events</td><td><b class="n">$9k</b></td><td>Highest ticket; approved-caterer lists and organizer relationships compound.</td></tr>
+      <tr><td><b>Meal prep subscriptions</b></td><td>Set with Izaya</td><td>35 packs a week</td><td>Social</td><td>Predictable, prep-day batched, no event-day labor spike.</td></tr>
+      <tr><td><b>Apartment and resident events</b></td><td>Set with Izaya</td><td>4 events a month</td><td>Email</td><td>Recurring monthly; one property manager equals many buildings.</td></tr>
+      <tr><td><b>Office and corporate lunches</b></td><td>Set with Izaya</td><td>5 lunches a month</td><td>Email</td><td>December team lunches turn into standing monthly orders.</td></tr>
+      <tr><td><b>Singles events, venues and bars</b></td><td>Set with Izaya</td><td>3 events a month</td><td>Social DM</td><td>Highest ticket; approved-caterer lists and organizer relationships compound.</td></tr>
     </tbody>
   </table>
   <div class="kpis">
-    <div class="kpi"><b>~$28k</b><span>Sample monthly run-rate</span></div>
+    <div class="kpi"><b>TBD</b><span>Run-rate, once prices are set</span></div>
     <div class="kpi"><b>40</b><span>New targets reached per week</span></div>
     <div class="kpi"><b>8%</b><span>Target reply-to-tasting rate</span></div>
     <div class="kpi"><b>50%</b><span>Tasting-to-booking target</span></div>
@@ -204,10 +205,11 @@ td b.n{font-family:"Potta One";font-weight:400;font-size:18px}
     <div class="card"><h4>Week 6</h4><p>Read the numbers against the targets above. Set Q4 party outreach. Decide on the second delivery ring.</p></div>
   </div>
   <p class="note">Sample brand and sample data throughout. Nothing on this page or the beta sends messages, takes payment, or stores customer information.</p>
-<div class="hero" style="margin-top:28px;box-shadow:8px 8px 0 var(--sun)"><span class="tape">Next stop</span><h2 style="font-size:30px">See the <span>proposal</span></h2><p>What it costs to run this for real, and the 30-60-90 plan. Your next step is a 15-minute consultation to talk pricing and set up.</p><p style="margin-top:12px"><span class="btn" onclick="go('prop')">Open the proposal</span> <span class="btn" style="background:#fff;color:var(--ink)" onclick="go('tour')">Replay the Tour</span></p></div>
+<div class="hero" style="margin-top:28px;box-shadow:8px 8px 0 var(--sun)"><span class="tape">Next stop</span><h2 style="font-size:30px">See the <span>proposal</span></h2><p>The campaign we would run for you, and the 30-60-90 plan. Your next step is a 15-minute consultation to talk budget and set up.</p><p style="margin-top:12px"><span class="btn" onclick="go('prop')">Open the proposal</span> <span class="btn" style="background:#fff;color:var(--ink)" onclick="go('tour')">Replay the Tour</span></p></div>
 </div></section>
 <section id="tour" class="on"><iframe src="tour.html" title="Guided Tour"></iframe></section>
 <section id="beta"><iframe src="beta.html" title="Beta site"></iframe></section>
+<section id="camp"><iframe src="campaign.html" title="Campaign"></iframe></section>
 <section id="prop"><iframe src="proposal.html" title="Proposal"></iframe></section>
 </main>
 <script>
@@ -217,11 +219,28 @@ var PLACES=[['Uptown (kitchen)',35.2271,-80.8431,0,1],
 ['South End',35.2155,-80.8577,1,1],['Dilworth',35.2042,-80.8520,1,2],['NoDa',35.2473,-80.8044,1,1],['Plaza Midwood',35.2203,-80.8060,1,1],['Elizabeth',35.2140,-80.8215,1,2],['Camp North End',35.2470,-80.8465,1,2],['Myers Park',35.1890,-80.8350,1,2],
 ['SouthPark',35.1526,-80.8318,2,1],['Ballantyne',35.0540,-80.8500,2,1],['University City',35.3080,-80.7420,2,1],['Pineville',35.0832,-80.8923,2,2],['Steele Creek',35.1230,-80.9680,2,2],
 ['Matthews',35.1168,-80.7237,3,1],['Mint Hill',35.1796,-80.6473,3,2],['Huntersville',35.4107,-80.8429,3,1],['Cornelius',35.4868,-80.8601,3,2],['Davidson',35.4994,-80.8487,3,3],['Concord',35.4088,-80.5795,3,1],['Fort Mill, SC',35.0074,-80.9451,3,2],['Gastonia',35.2621,-81.1873,3,1],['Mooresville',35.5849,-80.8101,3,1],
-['Belmont',35.2430,-81.0370,3,2],['Mount Holly',35.2985,-81.0160,3,3],['Lake Wylie, SC',35.1170,-81.0330,3,3],['Indian Trail',35.0768,-80.6692,3,3],['Weddington',35.0190,-80.7600,3,3],['Waxhaw',34.9246,-80.7434,3,3],['Harrisburg',35.3226,-80.6579,3,3],['Kannapolis',35.4874,-80.6217,3,3],['Stallings',35.0985,-80.6810,3,3]];
+['Belmont',35.2430,-81.0370,3,2],['Mount Holly',35.2985,-81.0160,3,3],['Lake Wylie, SC',35.1170,-81.0330,3,3],['Indian Trail',35.0768,-80.6692,3,3],['Weddington',35.0190,-80.7600,3,3],['Waxhaw',34.9246,-80.7434,3,3],['Harrisburg',35.3226,-80.6579,3,3],['Kannapolis',35.4874,-80.6217,3,3],['Stallings',35.0985,-80.6810,3,3],
+['Optimist Park',35.2400,-80.8230,1,2],['Wesley Heights',35.2290,-80.8680,1,3],['Cotswold',35.1760,-80.7930,2,3],['Quail Hollow',35.1440,-80.8050,2,3],['Arboretum',35.0990,-80.8120,2,3],['Blakeney',35.0690,-80.8040,2,3],['Eastland',35.2000,-80.7480,2,3],['Northlake',35.3480,-80.8800,2,3],['Birkdale',35.3920,-80.8530,3,3],['Highland Creek',35.3470,-80.7450,3,3],['Mallard Creek',35.3300,-80.7650,2,3]];
 var LAND=[['Bank of America Stadium',35.2258,-80.8528,3],['Spectrum Center',35.2251,-80.8392,3],['Charlotte Douglas Airport',35.2140,-80.9431,2],['Carowinds',35.1033,-80.9425,3],['US National Whitewater Center',35.2705,-81.0145,3],['Freedom Park',35.1955,-80.8350,3],['Charlotte Motor Speedway',35.3520,-80.6830,3],['Lake Norman State Park',35.6,-80.93,9]];
 var RC=['#1a1316','#e2231a','#ffc531','#1256d6'];
 var RINFO=[{t:'Kitchen',f:'Pickup point (sample)',d:'Sample Uptown location'},{t:'Under 15 min',f:'$4 delivery',d:'Core zone. Fastest turnaround, best for same-day trays and nightlife venues.'},{t:'15 to 25 min',f:'$6 delivery',d:'Venues, breweries and offices around the I-485 loop.'},{t:'25 to 40 min',f:'$9 delivery',d:'Best for catering and events, scheduled ahead.'}];
 var CATC={'Singles event':'#e2231a','Event venue':'#1256d6','Brewery / bar':'#ff7a00','Apartment':'#d4a017','Planner':'#8a3ffc','Office':'#1f9e6a','Gym / Club':'#5a6b7a'};
+var CHAN={'Email':{n:'Email · Smartlead domain',c:'#1256d6'},'Social DM':{n:'Social DM',c:'#e2231a'}};
+var ZONES=[{id:1,n:'Zone 1 · Core',col:'#e2231a',pl:['Uptown (kitchen)','South End','NoDa']},
+{id:2,n:'Zone 2 · Apartment belts',col:'#d4a017',pl:['SouthPark','Ballantyne','University City']},
+{id:3,n:'Zone 3 · Venue corridor',col:'#8a3ffc',pl:['Plaza Midwood','Camp North End','Elizabeth']},
+{id:4,n:'Later · Outer ring',col:'#5a6b7a',pl:['Matthews','Huntersville','Concord','Cornelius']}];
+var WINTER=[{n:'Uptown',lat:35.2300,lon:-80.8480,t:'Holiday office parties and NYE rooftops',w:'Mid Nov to Dec 20 for corporate; Dec 1 to Dec 28 for NYE',p:'Office team lunches by email; rooftops and hotel bars by DM'},
+{n:'South End',lat:35.2100,lon:-80.8600,t:'Friendsgiving crawls, NYE, Valentine\'s socials',w:'Nov 16 to Nov 25 for Friendsgiving; Jan 10 to Feb 10 for Valentine\'s',p:'Singles hosts and bar owners by Instagram DM'},
+{n:'NoDa',lat:35.2520,lon:-80.7980,t:'Holiday markets and taproom pairing nights',w:'Weekends from Nov 20 through Dec 20',p:'Taprooms by Instagram DM: sushi pairing night'},
+{n:'Plaza Midwood',lat:35.2250,lon:-80.7990,t:'Galentine\'s, supper clubs, winter pop-ups',w:'Jan 15 to Feb 13',p:'Supper club hosts and planners by DM'},
+{n:'Camp North End',lat:35.2520,lon:-80.8420,t:'Winter markets and loft holiday parties',w:'Nov 25 to Dec 23',p:'Venue events lead by DM: approved-caterer list'},
+{n:'Ballantyne',lat:35.0600,lon:-80.8420,t:'Resident holiday parties and renewal season',w:'Dec 1 to Dec 20; New Year kickoff in January',p:'Community managers by email from the Smartlead domain'},
+{n:'SouthPark',lat:35.1480,lon:-80.8250,t:'Corporate holiday lunches and resident events',w:'Nov 16 to Dec 18',p:'Office managers and leasing teams by email'},
+{n:'University City',lat:35.3140,lon:-80.7360,t:'Student-area apartments and office parks',w:'Dec 1 to Jan 31',p:'Apartment managers by email; run clubs by DM'}];
+var LYNXB=[[35.0560,-80.8870],[35.0830,-80.8900],[35.1100,-80.8800],[35.1500,-80.8730],[35.1950,-80.8650],[35.2155,-80.8577],[35.2271,-80.8431],[35.2330,-80.8300],[35.2420,-80.8140],[35.2473,-80.8044],[35.2620,-80.7900],[35.2900,-80.7600],[35.3080,-80.7420]];
+var PROVRD=[[35.1890,-80.8350],[35.1500,-80.8050],[35.1000,-80.7800],[35.0400,-80.7600]];
+var ALBEM=[[35.2203,-80.8060],[35.2050,-80.7600],[35.1950,-80.7100],[35.1796,-80.6473]];
 var W=900,H=970,LAT0=35.65,LAT1=34.90,LON0=-81.25,LON1=-80.40;
 function X(lo){return (lo-LON0)/(LON1-LON0)*W}function Y(la){return (LAT0-la)/(LAT0-LAT1)*H}
 var CX=X(-80.8431),CY=Y(35.2271);
@@ -248,15 +267,35 @@ var SUGAR=[[35.27,-80.85],[35.20,-80.86],[35.15,-80.90],[35.10,-80.93]];
 var PARKS=[[[35.1985,-80.8425],[35.1985,-80.8275],[35.1915,-80.8275],[35.1915,-80.8425]],[[35.385,-80.955],[35.385,-80.925],[35.355,-80.925],[35.355,-80.955]],[[35.285,-81.03],[35.285,-81.00],[35.265,-81.00],[35.265,-81.03]]];
 function shield(la,lo,txt,sc){var x=X(lo),y=Y(la),s=1/Math.sqrt(sc),w=(txt.length*5.5+8)*s;return '<g><rect x="'+(x-w/2)+'" y="'+(y-7*s)+'" width="'+w+'" height="'+(14*s)+'" rx="'+(3*s)+'" fill="#1a1316" stroke="#fff" stroke-width="'+(1.2*s)+'"/><text x="'+x+'" y="'+(y+3.6*s)+'" text-anchor="middle" font-size="'+(9.5*s)+'" font-weight="800" fill="#fff">'+txt+'</text></g>'}
 function wlab(la,lo,txt,sc,sz){return '<text x="'+X(lo)+'" y="'+Y(la)+'" font-size="'+((sz||11)/Math.sqrt(sc))+'" font-style="italic" fill="#3b7fa8" text-anchor="middle" letter-spacing="1">'+txt+'</text>'}
-function mount(el,opts){
+function hull(P){var a=P.slice().sort(function(p,q){return p[0]-q[0]||p[1]-q[1]});if(a.length<3)return a;
+function cr(o,p,q){return (p[0]-o[0])*(q[1]-o[1])-(p[1]-o[1])*(q[0]-o[0])}
+var lo=[],up=[],i;for(i=0;i<a.length;i++){while(lo.length>=2&&cr(lo[lo.length-2],lo[lo.length-1],a[i])<=0)lo.pop();lo.push(a[i])}
+for(i=a.length-1;i>=0;i--){while(up.length>=2&&cr(up[up.length-2],up[up.length-1],a[i])<=0)up.pop();up.push(a[i])}
+lo.pop();up.pop();return lo.concat(up)}
+var cssDone=false;
+function injectCSS(){if(cssDone||!document.head)return;cssDone=true;var t=document.createElement('style');
+t.textContent='.cm-row{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:6px}.cm-chip.sq{border-radius:6px}.cm-leg{display:flex;flex-wrap:wrap;gap:10px 16px;margin-top:10px;font-size:12px;font-weight:700;color:#3b2f2a}.cm-leg span{display:inline-flex;align-items:center;gap:5px}.cm-leg svg{width:18px;height:20px}'
++'.cm-list{margin-top:10px;max-height:300px;overflow:auto;border:3px solid #1a1316;border-radius:12px;background:#fff}.cm-li{display:flex;gap:8px;align-items:center;padding:7px 10px;border-bottom:1.5px solid #eadfcf;font-size:13px;cursor:pointer}.cm-li:last-child{border-bottom:0}.cm-li:hover,.cm-li.on{background:#fff3c4}.cm-li i{width:12px;height:12px;border-radius:50%;border:1.5px solid #1a1316;flex:none}.cm-li b{flex:1;min-width:0}.cm-li small{color:#6b5a52;white-space:nowrap}'
++'.cm-tag{display:inline-block;font-size:10.5px;font-weight:800;padding:1px 7px;border-radius:999px;border:2px solid #1a1316;color:#fff;margin-right:4px}@media(max-width:700px){.cm-chip{font-size:11px;padding:3px 8px;gap:4px}.cm-lab{font-size:10px}.cm-row{gap:4px;margin-bottom:4px}}';
+document.head.appendChild(t)}
+function pin(x,y,q,col,ch,on){var k=(on?1.35:0.95)/Math.pow(q,0.85),g='<g transform="translate('+x+','+y+') scale('+k+')"><path d="M0 0C-4 -7 -8 -10 -8 -15A8 8 0 1 1 8 -15C8 -10 4 -7 0 0Z" fill="'+col+'" stroke="'+(on?'#1a1316':'#fff')+'" stroke-width="'+(on?2:1.6)+'"/>';
+if(ch=='Email')g+='<rect x="-4.2" y="-18" width="8.4" height="6" rx="1" fill="#fff"/><path d="M-4.2 -17.5L0 -14.2L4.2 -17.5" fill="none" stroke="'+col+'" stroke-width="1.1"/>';else g+='<circle cx="0" cy="-15" r="3.3" fill="#fff"/>';
+return g+'</g>'}
+function star(x,y,q,on){var k=(on?1.4:1)/Math.pow(q,0.85),p=[],i,r;for(i=0;i<10;i++){r=i%2?4.2:10;p.push((Math.sin(i*Math.PI/5)*r).toFixed(1)+','+(-Math.cos(i*Math.PI/5)*r).toFixed(1))}
+return '<g transform="translate('+x+','+y+') scale('+k+')"><circle r="13" fill="#1d3557" stroke="#fff" stroke-width="2"/><polygon points="'+p.join(' ')+'" fill="#ffc93c" stroke="#1a1316" stroke-width=".8"/></g>'}
+function mount(el,opts){injectCSS();
 opts=opts||{};
-var st={vb:{x:0,y:0,w:W,h:H},rings:{1:true,2:true,3:true},cat:null,sel:null,leads:opts.leads||[],hi:null,selLead:null};
-el.innerHTML='<div class="cm-bar"></div><div class="cm-wrap"><svg class="cm-svg" viewBox="0 0 '+W+' '+H+'"></svg><div class="cm-zoom"><button data-z="in" title="Zoom in">+</button><button data-z="out" title="Zoom out">&minus;</button><button data-z="reset" title="Reset view">&#8634;</button></div></div><div class="cm-info"></div>';
-var bar=el.querySelector('.cm-bar'),svg=el.querySelector('.cm-svg'),info=el.querySelector('.cm-info');
-function drawBar(){var h='<span class="cm-lab">Show:</span>';
+var st={vb:{x:0,y:0,w:W,h:H},rings:{1:true,2:true,3:true},cat:null,chan:null,sel:null,leads:opts.leads||[],hi:null,selLead:null,selWin:null,lay:{zones:opts.zones!==false,winter:opts.winter!==false,transit:true}};
+el.innerHTML='<div class="cm-bar"></div><div class="cm-wrap"><svg class="cm-svg" viewBox="0 0 '+W+' '+H+'"></svg><div class="cm-zoom"><button data-z="in" title="Zoom in">+</button><button data-z="out" title="Zoom out">&minus;</button><button data-z="reset" title="Reset view">&#8634;</button></div></div><div class="cm-info"></div>'+(opts.legend?'<div class="cm-leg"></div>':'')+(opts.list?'<div class="cm-list"></div>':'');
+var bar=el.querySelector('.cm-bar'),svg=el.querySelector('.cm-svg'),info=el.querySelector('.cm-info'),leg=el.querySelector('.cm-leg'),lst=el.querySelector('.cm-list');
+function vis(){return st.leads.filter(function(l){return (!st.cat||l.cat==st.cat)&&(!st.chan||l.chan==st.chan)})}
+function drawBar(){var h='<div class="cm-row"><span class="cm-lab">Drive time:</span>';
 [[1,'Under 15 min'],[2,'15 to 25 min'],[3,'25 to 40 min']].forEach(function(r){h+='<button class="cm-chip'+(st.rings[r[0]]?' on':'')+'" data-r="'+r[0]+'"><i style="background:'+RC[r[0]]+'"></i>'+r[1]+'</button>'});
-if(st.leads.length){h+='<span class="cm-lab" style="margin-left:10px">Leads:</span><button class="cm-chip'+(st.cat===null?' on':'')+'" data-c="">All '+st.leads.length+'</button>';
-Object.keys(CATC).forEach(function(c){var n=st.leads.filter(function(l){return l.cat==c}).length;if(n)h+='<button class="cm-chip'+(st.cat===c?' on':'')+'" data-c="'+c+'"><i style="background:'+CATC[c]+'"></i>'+c+' '+n+'</button>'})}
+h+='</div>'+(opts.layers===false?'':'<div class="cm-row"><span class="cm-lab">Layers:</span><button class="cm-chip sq'+(st.lay.zones?' on':'')+'" data-l="zones">Coverage zones</button><button class="cm-chip sq'+(st.lay.winter?' on':'')+'" data-l="winter">Winter hotspots</button><button class="cm-chip sq'+(st.lay.transit?' on':'')+'" data-l="transit">Transit and roads</button></div>');
+if(st.leads.length){h+='<div class="cm-row"><span class="cm-lab">Channel:</span><button class="cm-chip'+(st.chan===null?' on':'')+'" data-ch="">All '+st.leads.length+'</button>';
+Object.keys(CHAN).forEach(function(k){var n=st.leads.filter(function(l){return l.chan==k}).length;if(n)h+='<button class="cm-chip'+(st.chan===k?' on':'')+'" data-ch="'+k+'"><i style="background:'+CHAN[k].c+'"></i>'+CHAN[k].n+' '+n+'</button>'});
+h+='</div><div class="cm-row"><span class="cm-lab">Segment:</span><button class="cm-chip'+(st.cat===null?' on':'')+'" data-c="">All</button>';
+Object.keys(CATC).forEach(function(c){var n=st.leads.filter(function(l){return l.cat==c&&(!st.chan||l.chan==st.chan)}).length;if(n)h+='<button class="cm-chip'+(st.cat===c?' on':'')+'" data-c="'+c+'"><i style="background:'+CATC[c]+'"></i>'+c+' '+n+'</button>'});h+='</div>'}
 bar.innerHTML=h}
 function lscale(){return W/st.vb.w}
 function draw(){
@@ -272,9 +311,17 @@ h+=wlab(35.53,-80.95,'LAKE NORMAN',sc,12)+wlab(35.305,-81.03,'Mountain Island La
 [I485,I277].forEach(function(r,i){h+=pl(r,'#fff',(i?6:7)).replace('fill="none"','fill="none"')+pl(r,'#d9a066',(i?3:4))});
 [I77,I85].forEach(function(r){h+=pl(r,'#fff',8)+pl(r,'#c9873f',5)});
 [US74,US74W,US521,BGP,NC16].forEach(function(r){h+=pl(r,'#fff',5)+pl(r,'#e4c79a',2.6)});
+if(st.lay.transit){[PROVRD,ALBEM].forEach(function(r){h+=pl(r,'#fff',4)+pl(r,'#e4c79a',2)});h+=pl(LYNXB,'#1256d6',4,'2 7');
+if(sc>=1.5)h+='<text x="'+X(-80.7790)+'" y="'+Y(35.2640)+'" font-size="'+8/q+'" fill="#1256d6" font-weight="800" transform="rotate(-38 '+X(-80.7790)+' '+Y(35.2640)+')">LYNX Blue Line (approx.)</text><text x="'+X(-80.795)+'" y="'+Y(35.1280)+'" font-size="'+8/q+'" fill="#8a6a3a" font-weight="700" transform="rotate(26 '+X(-80.795)+' '+Y(35.128)+')">Providence Rd</text><text x="'+X(-80.757)+'" y="'+Y(35.2085)+'" font-size="'+8/q+'" fill="#8a6a3a" font-weight="700" transform="rotate(13 '+X(-80.757)+' '+Y(35.2085)+')">Albemarle Rd</text>'}
 h+=shield(35.52,-80.855,'I-77',sc)+shield(35.05,-80.94,'I-77',sc)+shield(35.27,-81.10,'I-85',sc)+shield(35.37,-80.64,'I-85',sc)+shield(35.31,-80.71,'485',sc)+shield(35.07,-80.72,'485',sc)+shield(35.14,-80.99,'485',sc)+shield(35.34,-80.84,'485',sc)+shield(35.14,-80.69,'US-74',sc)+shield(35.10,-80.82,'US-521',sc)+shield(35.2271,-80.8431+0.0,'277',sc);
 h+='<text x="'+X(-80.80)+'" y="'+(Y(35.185))+'" font-size="'+(8/q)+'" fill="#8a6a3a" font-weight="700" transform="rotate(32 '+X(-80.78)+' '+Y(35.18)+')">Independence Blvd</text>';
 if(sc>1.8)h+='<text x="'+X(-80.905)+'" y="'+Y(35.208)+'" font-size="'+(8/q)+'" fill="#8a6a3a" font-weight="700">Billy Graham Pkwy</text>';
+if(st.lay.zones){ZONES.forEach(function(z){var P2=z.pl.map(function(n){var p=PLACES.filter(function(a){return a[0]==n})[0];return [X(p[2]),Y(p[1])]});var hp=hull(P2),cx=0,cy=0,mnx=1e9,mxx=-1e9,mny=1e9,mxy=-1e9;P2.forEach(function(p){cx+=p[0]/P2.length;cy+=p[1]/P2.length;mnx=Math.min(mnx,p[0]);mxx=Math.max(mxx,p[0]);mny=Math.min(mny,p[1]);mxy=Math.max(mxy,p[1])});
+var dash=z.id==4?' stroke-dasharray="3 9"':'';
+if(hp.length>=3)h+='<polygon points="'+hp.map(function(p){return p[0].toFixed(1)+','+p[1].toFixed(1)}).join(' ')+'" fill="'+z.col+'" fill-opacity="'+(z.id==4?.05:.12)+'" stroke="'+z.col+'" stroke-opacity="'+(z.id==4?.5:.45)+'" stroke-width="'+(z.id==4?3:14)+'" stroke-linejoin="round"'+dash+'/>';
+var cnt=st.leads.filter(function(l){return z.pl.some(function(n){return n.replace(' (kitchen)','')==l.area})&&(!st.cat||l.cat==st.cat)&&(!st.chan||l.chan==st.chan)}).length;
+var lx=cx,ly=cy,anc='middle';if(z.id==1){ly=mny-24}else if(z.id==2){ly=mxy+30}else if(z.id==3){lx=mxx+26;ly=cy+4;anc='start'}else{ly=mny-18}
+if(sc<2.4)h+='<text x="'+lx+'" y="'+ly+'" font-size="'+10.5/q+'" font-weight="900" fill="'+z.col+'" text-anchor="'+anc+'" paint-order="stroke" stroke="#fbf4e6" stroke-width="'+3.5/q+'" letter-spacing=".4">'+esc(z.n.toUpperCase())+(cnt?' · '+cnt:'')+'</text>'})}
 if(st.rings[3])h+=ringEl(42,RC[3],3);if(st.rings[2])h+=ringEl(26,RC[2],2);if(st.rings[1])h+=ringEl(13,RC[1],1);
 /* landmarks */
 LAND.forEach(function(l){if(l[3]>=9)return;var vis=l[3]==2||sc>=1.8;if(!vis)return;var x=X(l[2]),y=Y(l[1]),a=5/q;var plane=l[0].indexOf('Airport')>-1;
@@ -282,28 +329,39 @@ h+='<g><rect x="'+(x-a)+'" y="'+(y-a)+'" width="'+(2*a)+'" height="'+(2*a)+'" fi
 PLACES.forEach(function(p,i){var vis=p[3]==0||st.rings[p[3]];if(!vis)return;var x=X(p[2]),y=Y(p[1]);
 var isSel=st.sel==i,isHi=st.hi&&st.hi.indexOf(p[0])>-1;
 h+='<g class="pl" data-i="'+i+'" style="cursor:pointer"><circle cx="'+x+'" cy="'+y+'" r="'+((p[3]==0?10:7)+(isSel?4:0)+(isHi?3:0))/q+'" fill="'+RC[p[3]]+'" stroke="'+(isHi?'#e2231a':'#1a1316')+'" stroke-width="'+(isSel||isHi?3:2)/q+'"/><circle cx="'+x+'" cy="'+y+'" r="'+22/q+'" fill="transparent"/>';
-var tier=p[4]||1,show=isSel||isHi||p[3]==0||(tier==1&&sc>=1)||(tier==2&&sc>=1.9)||(tier==3&&sc>=3);
+var tier=p[4]||1,show=isSel||isHi||p[3]==0||(tier==1&&sc>=1)||(tier==2&&sc>=1.6)||(tier==3&&sc>=2.4);
 if(show)h+='<text x="'+(x+11/q)+'" y="'+(y+4/q)+'" font-size="'+11/q+'" font-weight="700" fill="#1a1316" paint-order="stroke" stroke="#fbf4e6" stroke-width="'+3/q+'">'+esc(p[0].replace(' (kitchen)',''))+'</text>';
 h+='<title>'+esc(p[0])+'</title></g>'});
-st.leads.forEach(function(l,i){if(st.cat&&l.cat!=st.cat)return;if(!st.rings[l.ring]&&l.ring>0)return;var x=X(l.lon),y=Y(l.lat),on=st.selLead===i;
-h+='<g class="ld" data-i="'+i+'" style="cursor:pointer"><circle cx="'+x+'" cy="'+y+'" r="'+(on?8:4.5)/q+'" fill="'+(CATC[l.cat]||'#333')+'" stroke="'+(on?'#1a1316':'#fff')+'" stroke-width="'+(on?3:1.5)/q+'"/><circle cx="'+x+'" cy="'+y+'" r="'+11/q+'" fill="transparent"/><title>'+esc(l.n)+'</title></g>'});
+st.leads.forEach(function(l,i){if(st.cat&&l.cat!=st.cat)return;if(st.chan&&l.chan!=st.chan)return;if(!st.rings[l.ring]&&l.ring>0)return;var x=X(l.lon),y=Y(l.lat),on=st.selLead===i;
+h+='<g class="ld" data-i="'+i+'" style="cursor:pointer">'+pin(x,y,q,CATC[l.cat]||'#333',l.chan,on)+'<circle cx="'+x+'" cy="'+(y-8/q)+'" r="'+12/q+'" fill="transparent"/><title>'+esc(l.n)+'</title></g>'});
+if(st.lay.winter)WINTER.forEach(function(w,i){var x=X(w.lon),y=Y(w.lat),on=st.selWin===i;
+h+='<g class="wn" data-i="'+i+'" style="cursor:pointer">'+star(x,y,q,on)+'<circle cx="'+x+'" cy="'+y+'" r="'+16/q+'" fill="transparent"/><title>Winter hotspot: '+esc(w.n)+'</title></g>';
+if(sc>=1.8||on)h+='<text x="'+(x+16/q)+'" y="'+(y+3/q)+'" font-size="'+8.5/q+'" font-weight="800" fill="#1d3557" paint-order="stroke" stroke="#fbf4e6" stroke-width="'+3/q+'">Winter · '+esc(w.n)+'</text>'});
 /* compass + scale */
-h+='<g transform="translate('+(st.vb.x+22/q)+','+(st.vb.y+26/q)+')"><text y="0" font-size="'+13/q+'" font-weight="900" text-anchor="middle">N</text><path d="M0 '+(4/q)+' L'+(-5/q)+' '+(20/q)+' L0 '+(16/q)+' L'+(5/q)+' '+(20/q)+' Z" fill="#1a1316"/></g>';
+h+='<g transform="translate('+(st.vb.x+st.vb.w-34/q*1)+','+(st.vb.y+st.vb.h-40/q)+')"><text y="0" font-size="'+13/q+'" font-weight="900" text-anchor="middle">N</text><path d="M0 '+(4/q)+' L'+(-5/q)+' '+(20/q)+' L0 '+(16/q)+' L'+(5/q)+' '+(20/q)+' Z" fill="#1a1316"/></g>';
 var km10=10/90.9/(LON1-LON0)*W;h+='<g transform="translate('+(st.vb.x+10/q)+','+(st.vb.y+st.vb.h-14/q)+')"><rect x="0" y="'+(-4/q)+'" width="'+km10+'" height="'+(4/q)+'" fill="#1a1316"/><text x="'+(km10+5/q)+'" y="0" font-size="'+9/q+'" font-weight="700">10 km</text></g>';
 svg.innerHTML=h;svg.setAttribute('viewBox',st.vb.x+' '+st.vb.y+' '+st.vb.w+' '+st.vb.h)}
 function drawInfo(){
-if(st.selLead!=null){var l=st.leads[st.selLead];info.innerHTML='<div class="cm-card"><b>'+esc(l.n)+'</b><span class="cm-pill" style="background:'+CATC[l.cat]+'">'+esc(l.cat)+'</span><span class="cm-pill dk">Fit '+l.score+'</span><div>'+esc(l.area)+' &middot; '+RINFO[l.ring].t+'</div><div class="cm-sm">Signal: '+esc(l.signal)+'</div><div class="cm-sm">First touch: '+esc(l.touch)+'</div>'+(l.sample?'<div class="cm-sm">Sample lead for the demo.</div>':'')+'</div>';return}
+if(st.selLead!=null){var l=st.leads[st.selLead];info.innerHTML='<div class="cm-card"><b>'+esc(l.n)+'</b><span class="cm-pill" style="background:'+CATC[l.cat]+'">'+esc(l.cat)+'</span><span class="cm-pill dk">Fit '+l.score+'</span><span class="cm-pill" style="background:'+CHAN[l.chan].c+'">'+CHAN[l.chan].n+'</span><div>'+esc(l.area)+' &middot; '+RINFO[l.ring].t+'</div><div class="cm-sm">Signal: '+esc(l.signal)+'</div><div class="cm-sm">First touch: '+esc(l.touch)+'</div><div class="cm-sm">Winter hook: '+esc(l.win||'')+'</div>'+(l.sample?'<div class="cm-sm">Sample lead for the demo.</div>':'')+'</div>';return}
+if(st.selWin!=null){var w=WINTER[st.selWin];info.innerHTML='<div class="cm-card"><b>Winter hotspot: '+esc(w.n)+'</b><span class="cm-pill" style="background:#1d3557">Target window</span><div>'+esc(w.t)+'</div><div class="cm-sm">When to reach out: '+esc(w.w)+'</div><div class="cm-sm">How: '+esc(w.p)+'</div><div class="cm-sm">Planning windows, not confirmed events.</div></div>';return}
 if(st.sel!=null){var p=PLACES[st.sel],r=RINFO[p[3]];var n=st.leads.filter(function(l){return l.area==p[0].replace(' (kitchen)','')}).length;
 info.innerHTML='<div class="cm-card"><b>'+esc(p[0])+'</b><span class="cm-pill" style="background:'+RC[p[3]]+';color:'+(p[3]==2?'#111':'#fff')+'">'+r.t+'</span><div>'+r.f+'. '+r.d+'</div>'+(n?'<div class="cm-sm">'+n+' lead'+(n>1?'s':'')+' here.</div>':'')+(opts.orderBtn&&p[3]>0?'<button class="cm-go" data-go="1">Order delivery to '+esc(p[0])+'</button>':'')+'</div>';return}
 info.innerHTML='<div class="cm-card cm-sm">'+(opts.hint||'Tap a neighborhood to see its drive time and delivery fee. Use the rings to filter. Zoom in for more streets, parks and landmarks. Drag the map to pan.')+'</div>'}
-function redraw(){drawBar();draw();drawInfo()}
+function drawLeg(){if(!leg)return;leg.innerHTML='<span><svg viewBox="-10 -20 20 22"><path d="M0 0C-4 -7 -8 -10 -8 -15A8 8 0 1 1 8 -15C8 -10 4 -7 0 0Z" fill="#1256d6"/><rect x="-4.2" y="-18" width="8.4" height="6" rx="1" fill="#fff"/></svg>Email pin (offices, corporate, apartments)</span><span><svg viewBox="-10 -20 20 22"><path d="M0 0C-4 -7 -8 -10 -8 -15A8 8 0 1 1 8 -15C8 -10 4 -7 0 0Z" fill="#e2231a"/><circle cx="0" cy="-15" r="3.3" fill="#fff"/></svg>Social DM pin (events, venues, hospitality)</span><span><svg viewBox="-14 -14 28 28"><circle r="13" fill="#1d3557"/><polygon points="0,-10 2.5,-3.4 9.5,-3.1 4,1.3 5.9,8.1 0,4.2 -5.9,8.1 -4,1.3 -9.5,-3.1 -2.5,-3.4" fill="#ffc93c"/></svg>Winter hotspot</span><span>Pin colour = segment. Shaded areas = coverage zones. Dotted blue = LYNX Blue Line.</span>'}
+function drawList(){if(!lst)return;var v=vis().map(function(l){return [l,st.leads.indexOf(l)]}).sort(function(a,b){return b[0].score-a[0].score});
+lst.innerHTML=v.length?v.map(function(p){var l=p[0];return '<div class="cm-li'+(st.selLead===p[1]?' on':'')+'" data-i="'+p[1]+'"><i style="background:'+CATC[l.cat]+'"></i><b>'+esc(l.n)+'</b><span class="cm-tag" style="background:'+CHAN[l.chan].c+'">'+(l.chan=='Email'?'Email':'DM')+'</span><small>'+l.score+'</small></div>'}).join(''):'<div class="cm-li">No leads match this filter.</div>'}
+function redraw(){drawBar();draw();drawInfo();drawLeg();drawList()}
 bar.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
 if(b.dataset.r){st.rings[b.dataset.r]=!st.rings[b.dataset.r]}
 else if(b.dataset.c!==undefined){st.cat=b.dataset.c===''?null:b.dataset.c;st.selLead=null;if(opts.onCat)opts.onCat(st.cat)}
+else if(b.dataset.ch!==undefined){st.chan=b.dataset.ch===''?null:b.dataset.ch;st.selLead=null}
+else if(b.dataset.l){st.lay[b.dataset.l]=!st.lay[b.dataset.l]}
 redraw()});
-svg.addEventListener('click',function(e){if(moved)return;var g=e.target.closest('g.ld');if(g){st.selLead=+g.dataset.i;st.sel=null;redraw();if(opts.onLead)opts.onLead(st.leads[st.selLead]);return}
-g=e.target.closest('g.pl');if(g){st.sel=+g.dataset.i;st.selLead=null;redraw();if(opts.onPlace)opts.onPlace(PLACES[st.sel]);return}
-st.sel=null;st.selLead=null;redraw()});
+svg.addEventListener('click',function(e){if(moved)return;var wg=e.target.closest('g.wn');if(wg){st.selWin=+wg.dataset.i;st.sel=null;st.selLead=null;redraw();return}
+var g=e.target.closest('g.ld');if(g){st.selLead=+g.dataset.i;st.sel=null;st.selWin=null;redraw();if(opts.onLead)opts.onLead(st.leads[st.selLead]);return}
+g=e.target.closest('g.pl');if(g){st.sel=+g.dataset.i;st.selLead=null;st.selWin=null;redraw();if(opts.onPlace)opts.onPlace(PLACES[st.sel]);return}
+st.sel=null;st.selLead=null;st.selWin=null;redraw()});
+if(lst)lst.addEventListener('click',function(e){var r=e.target.closest('.cm-li');if(!r||r.dataset.i===undefined)return;api.focus(+r.dataset.i)});
 info.addEventListener('click',function(e){if(e.target.dataset.go&&opts.orderBtn&&st.sel!=null)opts.orderBtn(PLACES[st.sel])});
 el.querySelector('.cm-zoom').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var z=b.dataset.z;if(z=='reset')api.view('all');else zoom(z=='in'?0.65:1.5)});
 function zoom(f,cx,cy){var v=st.vb,nw=Math.max(150,Math.min(W,v.w*f)),nh=nw*H/W;cx=cx==null?v.x+v.w/2:cx;cy=cy==null?v.y+v.h/2:cy;
@@ -316,17 +374,20 @@ if(Math.abs(e.clientX-drag.x)+Math.abs(e.clientY-drag.y)>5)moved=true;if(!moved)
 st.vb.x=Math.max(0,Math.min(W-st.vb.w,drag.vx-dx));st.vb.y=Math.max(0,Math.min(H-st.vb.h,drag.vy-dy));svg.setAttribute('viewBox',st.vb.x+' '+st.vb.y+' '+st.vb.w+' '+st.vb.h)});
 window.addEventListener('pointerup',function(){drag=null;setTimeout(function(){moved=false},0)});
 var api={
-view:function(k){var v=st.vb;if(k=='core'){v.w=360;v.h=360*H/W;v.x=CX-180;v.y=CY-v.h/2+10}else if(k=='south'){v.w=330;v.h=330*H/W;v.x=CX-120;v.y=Y(35.10)-v.h/2}else if(k=='north'){v.w=330;v.h=330*H/W;v.x=CX-165;v.y=Y(35.40)-v.h/2}else{v.x=0;v.y=0;v.w=W;v.h=H}v.x=Math.max(0,Math.min(W-v.w,v.x));v.y=Math.max(0,Math.min(H-v.h,v.y));draw()},
+view:function(k){var v=st.vb;if(k=='core'){v.w=300;v.h=300*H/W;v.x=CX-150;v.y=CY-v.h/2+10}else if(k=='south'){v.w=330;v.h=330*H/W;v.x=CX-120;v.y=Y(35.10)-v.h/2}else if(k=='north'){v.w=330;v.h=330*H/W;v.x=CX-165;v.y=Y(35.40)-v.h/2}else{v.x=0;v.y=0;v.w=W;v.h=H}v.x=Math.max(0,Math.min(W-v.w,v.x));v.y=Math.max(0,Math.min(H-v.h,v.y));draw()},
 setRings:function(r){st.rings=r;redraw()},
 setCat:function(c){st.cat=c;st.selLead=null;redraw()},
 setLeads:function(a){st.leads=a;redraw()},
 highlight:function(a){st.hi=a;draw()},
 select:function(name){st.sel=PLACES.findIndex(function(p){return p[0]==name});st.selLead=null;redraw()},
 selectLead:function(i){st.selLead=i;st.sel=null;redraw()},
-clear:function(){st.sel=null;st.selLead=null;st.hi=null;redraw()}
+focus:function(i){var l=st.leads[i];if(!l)return;var v=st.vb;v.w=260;v.h=260*H/W;v.x=Math.max(0,Math.min(W-v.w,X(l.lon)-v.w/2));v.y=Math.max(0,Math.min(H-v.h,Y(l.lat)-v.h/2));st.selLead=i;st.sel=null;st.selWin=null;redraw()},
+setChan:function(c){st.chan=c;st.selLead=null;redraw()},
+setLayers:function(o){for(var k in o)st.lay[k]=o[k];redraw()},
+clear:function(){st.sel=null;st.selLead=null;st.selWin=null;st.hi=null;redraw()}
 };
 redraw();return api}
-window.CLTMap={mount:mount,PLACES:PLACES,CATC:CATC,RINFO:RINFO,X:X,Y:Y};
+window.CLTMap={mount:mount,PLACES:PLACES,CATC:CATC,CHAN:CHAN,WINTER:WINTER,RINFO:RINFO,X:X,Y:Y};
 })();
 
 /* 50 SAMPLE Charlotte leads (placeholder for the Stamina export). No real businesses. */
@@ -340,10 +401,13 @@ var spec=[
 ['Planner',6,['Uptown','Plaza Midwood','Concord','Mooresville','South End','Elizabeth'],['Wedding planner','Corporate event planner','Venue coordinator','Festival organizer','Social events planner','Birthday and private party planner'],['Booking spring dates','Vendor list refresh','Weekend event calendar full'],'Call: offer a vendor tasting'],
 ['Office',5,['Uptown','South End','SouthPark','Ballantyne','University City'],['Law firm office manager','Regional bank branch lead','HR director, mid-size firm','Tech startup ops lead','Accounting firm admin'],['Hiring 5+ roles','Quarterly all-hands','Team appreciation season'],'Email: free sample tray for the team'],
 ['Gym / Club',4,['South End','NoDa','Matthews','Dilworth'],['Run club organizer','Boutique gym owner','Social sports league lead','Yoga studio manager'],['Post-run socials','Challenge month coming','Members ask about food'],'IG DM: post-event tray, pickup at the studio']];
+var CH=function(c){return (c=='Office'||c=='Apartment')?'Email':'Social DM'};
+var TOUCH={'Singles event':'Instagram DM to the host: free tray for their next mixer','Event venue':'Instagram or Facebook DM to the events lead: join the approved-caterer list','Brewery / bar':'Instagram DM to the owner: sushi pairing night, no kitchen needed','Planner':'Instagram or LinkedIn DM: sample tray for a client tasting','Gym / Club':'Instagram DM: post-run social tray','Apartment':'Email from the Smartlead domain to the community manager: resident event question','Office':'Email from the Smartlead domain to the office manager or HR: team lunch question'};
+var WIN={'Singles event':'Valentine\'s and Galentine\'s socials, NYE parties','Event venue':'Holiday parties and NYE buyouts','Brewery / bar':'Friendsgiving and holiday pairing nights','Planner':'Holiday client events and Q1 kickoffs','Gym / Club':'New Year challenge socials','Apartment':'Resident holiday parties and renewal season','Office':'December team lunches and January kickoffs'};
 function rnd(i){var x=Math.sin(i*9301+49297)*233280;return x-Math.floor(x)}
 var L=[],k=0;
 spec.forEach(function(s){for(var i=0;i<s[1];i++,k++){var a=s[2][i%s[2].length],p=P[a];
-L.push({n:s[3][i%s[3].length]+' ('+a+', sample)',cat:s[0],area:a,ring:p[3],lat:p[1]+(rnd(k)-.5)*.034,lon:p[2]+(rnd(k+77)-.5)*.034,score:70+Math.round(rnd(k+5)*27),signal:s[4][i%s[4].length],touch:s[5],sample:true})}});
+L.push({n:s[3][i%s[3].length]+' ('+a+', sample)',cat:s[0],area:a,ring:p[3],lat:p[1]+(rnd(k)-.5)*.034,lon:p[2]+(rnd(k+77)-.5)*.034,score:70+Math.round(rnd(k+5)*27),signal:s[4][i%s[4].length],touch:TOUCH[s[0]],win:WIN[s[0]],chan:CH(s[0]),sample:true})}});
 window.SAMPLE_LEADS=L;
 /* CSV import: columns can be company/name, category/industry, area/city/neighborhood, optional signal. */
 window.leadsFromCSV=function(text){
@@ -354,7 +418,7 @@ var cN=col(['company','name','business']),cC=col(['category','industry','type','
 var names=Object.keys(P);
 var out=[];rows.slice(1).forEach(function(r,i){var name=(r[cN]||'').trim();if(!name)return;var raw=(r[cA]||'').toLowerCase(),a=names.filter(function(n){return raw.indexOf(n.toLowerCase().split(',')[0])>-1})[0]||'Uptown';var p=P[a];
 var c=((r[cC]||'')+' '+name).toLowerCase(),cat=/single|speed dat|mixer|social club|meetup|dating/.test(c)?'Singles event':/apart|property|residen|leasing|multifamily/.test(c)?'Apartment':/brewer|taproom|bar\b|pub|winery|cocktail/.test(c)?'Brewery / bar':/venue|event space|banquet|hotel|loft|rooftop|ballroom/.test(c)?'Event venue':/plan|wedding|event/.test(c)?'Planner':/gym|fit|yoga|studio|run club|crossfit/.test(c)?'Gym / Club':'Office';
-out.push({n:name,cat:cat,area:a,ring:p[3],lat:p[1]+(rnd(i+3)-.5)*.034,lon:p[2]+(rnd(i+91)-.5)*.034,score:80,signal:(r[cS]||'From the Stamina export').trim(),touch:'Email: free sample tray',sample:false})});
+out.push({n:name,cat:cat,area:a,ring:p[3],lat:p[1]+(rnd(i+3)-.5)*.034,lon:p[2]+(rnd(i+91)-.5)*.034,score:80,signal:(r[cS]||'From the Stamina export').trim(),touch:TOUCH[cat],win:WIN[cat],chan:CH(cat),sample:false})});
 return out};
 })();
 
@@ -369,7 +433,7 @@ document.querySelectorAll('.tabs button').forEach(function(b){b.onclick=function
 var BOOK_URL='';/* paste a Calendly or Google Calendar booking link here */
 function toast(m){var t=document.getElementById('toast');if(!t){t=document.createElement('div');t.id='toast';t.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#1a1316;color:#fff;border:3px solid #ffc531;border-radius:14px;padding:12px 18px;font-weight:700;font-size:14px;z-index:99;max-width:90vw;text-align:center';document.body.appendChild(t)}t.textContent=m;t.style.display='block';clearTimeout(t._t);t._t=setTimeout(function(){t.style.display='none'},6000)}
 window.addEventListener('message',function(e){var d=e.data||{};if(d.book){if(BOOK_URL)window.open(BOOK_URL,'_blank');else toast('Reply "ready" to Xander\'s text and he will lock in your 15 minutes.');return}if(!d.go)return;go(d.go);if(d.go=='beta'&&d.sub){var f=document.querySelector('#beta iframe');f.contentWindow.postMessage({tab:d.sub},'*')}});
-var h=(location.hash||'').slice(1);if(['tour','beta','plan','prop'].indexOf(h)>-1)go(h);
+var h=(location.hash||'').slice(1);if(['tour','beta','plan','camp','prop'].indexOf(h)>-1)go(h);
 </script>
 </body>
 </html>
