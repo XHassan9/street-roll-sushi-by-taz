@@ -18,8 +18,8 @@ h1,h2,h3,h4{font-family:"Potta One","Arial Black",Impact,sans-serif;font-weight:
 .tabs button.on{background:var(--red);border-color:var(--red);color:#fff;box-shadow:3px 3px 0 var(--ink)}
 .stamp{background:var(--sun);border:3px solid var(--ink);padding:5px 10px;font-size:11px;font-weight:700;transform:rotate(2deg);box-shadow:3px 3px 0 var(--blue)}
 main{flex:1;min-height:0;display:flex}
-#beta{flex:1;display:none}#beta.on{display:flex}
-#beta iframe{flex:1;border:0;width:100%}
+#tour,#beta,#prop{flex:1;display:none}#tour.on,#beta.on,#prop.on{display:flex}
+section iframe{flex:1;border:0;width:100%}
 #plan{display:none;overflow:auto;flex:1}#plan.on{display:block}
 .wrap{max-width:1120px;margin:0 auto;padding:24px 20px 60px}
 .hero{border:4px solid var(--ink);background:#fff;padding:26px;box-shadow:8px 8px 0 var(--red);border-radius:14px 2px 14px 2px;position:relative;overflow:hidden;margin-bottom:22px}
@@ -61,15 +61,15 @@ td b.n{font-family:"Potta One";font-weight:400;font-size:18px}
 <div class="top">
   <h1>Street Roll Sushi <small>Sample brand · Charlotte, NC · by TAZ</small></h1>
   <span class="stamp">VIEW-ONLY · SAMPLE DATA · NOTHING SENDS</span>
-  <div class="tabs"><button data-t="plan" class="on">Demo &amp; Gameplan</button><button data-t="beta">Beta site</button></div>
+  <div class="tabs"><button data-t="tour" class="on">TAZ Tour</button><button data-t="beta">Beta site</button><button data-t="plan">Gameplan</button><button data-t="prop">Proposal</button></div>
 </div>
 <main>
-<section id="plan" class="on"><div class="wrap">
+<section id="plan"><div class="wrap">
   <div class="hero">
     <span class="tape">What we built, and how it makes money</span>
     <h2>A targeted outreach engine <span>for a Charlotte caterer</span></h2>
     <p>This beta is a working front door (website, meal prep menu, Charlotte ordering) wired to a back office (lead radar, outreach sequences, bookings board, social calendar). The plan below explains how TAZ runs outreach behind it to turn catering inquiries and meal prep subscriptions into steady weekly revenue.</p>
-    <p style="margin-top:14px"><span class="btn" onclick="go('beta')">Open the beta</span></p>
+    <p style="margin-top:14px"><span class="btn" onclick="go('beta')">Open the beta</span> <span class="btn" onclick="go('tour')">Meet TAZ</span></p>
   </div>
 
   <h3 class="sec">What's in the beta</h3>
@@ -142,12 +142,14 @@ td b.n{font-family:"Potta One";font-weight:400;font-size:18px}
   </div>
   <p class="note">Sample brand and sample data throughout. Nothing on this page or the beta sends messages, takes payment, or stores customer information.</p>
 </div></section>
+<section id="tour" class="on"><iframe src="tour.html" title="TAZ Tour"></iframe></section>
 <section id="beta"><iframe src="beta.html" title="Beta site"></iframe></section>
+<section id="prop"><iframe src="proposal.html" title="Proposal"></iframe></section>
 </main>
 <script>
 function go(t){document.querySelectorAll('.tabs button').forEach(function(b){b.classList.toggle('on',b.dataset.t==t)});document.querySelectorAll('main > section').forEach(function(s){s.classList.toggle('on',s.id==t)});try{location.hash=t}catch(e){}}
 document.querySelectorAll('.tabs button').forEach(function(b){b.onclick=function(){go(b.dataset.t)}});
-if(location.hash=='#beta')go('beta');
+var h=(location.hash||'').slice(1);if(['tour','beta','plan','prop'].indexOf(h)>-1)go(h);
 </script>
 </body>
 </html>
