@@ -479,7 +479,7 @@ VIEWS.site=function(){
 VIEWS.clips=function(){
   var C=[['Clip 1: Singles and Social','Singles night. Game night. Supper club. Puerto Rican flavor, rolled by hand, right here in Charlotte. Planning something social? Message Chef Izaya for catering. Download the full menu on our site.'],
   ['Clip 2: Business Events','Team lunch getting boring? I\'m Chef Izaya with Boriental Sushi. Empanadas, karaage, and island fusion rolls, made by hand in Charlotte. Got a mixer or an office event coming up? Message me for a catering quote.'],
-  ['Clip 3: Latin Nights','Latin night needs food that matches the music. I\'m Chef Izaya with Boriental Sushi. Island meets sushi, with Puerto Rican soul in every roll. Hosting a Latin night in Charlotte? Message me and I\'ll send a free sample tray.']];
+  ['Clip 3: Latin Nights','Latin night needs food that matches the music. I\'m Chef Izaya with Boriental Sushi. Island meets sushi, with Puerto Rican soul in every roll. Hosting a Latin night in Charlotte? Message me for a catering quote.']];
   return '<div class="grid g3">'+C.map(function(c,i){return '<div class="card"><h3>'+c[0]+'</h3><p style="margin:12px 0">'+esc(c[1])+'</p><p class="mut">End card: @izayathahighfather, 704-905-2262</p><button class="btn sm sec" data-act="clipCopy" data-i="'+i+'">Copy script</button></div>';}).join('')+'</div><p class="mut mt">Clip 1 is rendered as kinetic type with no avatar. Clips 2 and 3 follow in the same style once the chef\'s food photos arrive.</p>';
 };
 window.CLIPS=null;
