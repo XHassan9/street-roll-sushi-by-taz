@@ -55,6 +55,10 @@ form .w{grid-column:1/-1}
 @media(max-width:860px){.mgrid{grid-template-columns:1fr}}
 .b4{grid-template-columns:repeat(4,1fr)}@media(max-width:860px){.b4{grid-template-columns:1fr 1fr}}
 .mas{columns:4 220px;column-gap:10px}.mas img{width:100%;display:block;margin:0 0 10px;border-radius:4px;break-inside:avoid}
+section[id]{scroll-margin-top:212px}
+.fab{position:fixed;right:18px;bottom:18px;z-index:20;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:40px;box-shadow:0 6px 18px rgba(29,29,61,.3);border:2px solid #fff}
+.fab:hover{background:var(--navy)}
+@media(max-width:860px){section[id]{scroll-margin-top:162px}.fab{right:12px;bottom:12px;padding:12px 18px}}
 footer{padding:30px 22px;text-align:center;font-size:14px;color:var(--mut);border-top:6px solid var(--red)}
 .note{font-size:13px;color:var(--mut);margin-top:10px}
 @media(max-width:860px){body{border-width:8px}nav .links{display:none}.hero{grid-template-columns:1fr;padding-top:26px}.hero h1{font-size:42px}.collage{height:330px}.grid{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}form{grid-template-columns:1fr}h2{font-size:30px}.circle{width:76px;height:76px;font-size:15px}}
@@ -134,6 +138,7 @@ footer{padding:30px 22px;text-align:center;font-size:14px;color:var(--mut);borde
  <p>Have you ever questioned if you can begin anew after facing numerous setbacks in life and hearing others define your value?</p>
  <p>Chef Izaya Tha HighFather chose to challenge norms with a concept that celebrates diversity in community, food and culture. Boriental Sushi is built on honesty, integrity and enjoyment, serving as a culinary link between cultures and reshaping the Japanese experience with Puerto Rican influences.</p>
  <div class="tags">#NeverGiveUp &nbsp; #SushiMeetsIsland &nbsp; #ChefIzayaThaHighFather</div></div></section>
+<div class="band" role="img" aria-label="Boriental Sushi wave border"></div>
 <footer id="contact"><b style="color:var(--navy)">Boriental Sushi</b> · Charlotte, NC<br>
  <a href="tel:7049052262">704-905-2262</a> · <a href="https://www.instagram.com/izayathahighfather" target="_blank" rel="noopener">@izayathahighfather</a> · <a href="mailto:izayathahighfather@borientalsushi.com">izayathahighfather@borientalsushi.com</a><br>To-go · Pickup · Delivery · Catering</footer>
 <script>
@@ -142,4 +147,5 @@ document.getElementById('cater').addEventListener('submit',function(e){e.prevent
  var t='Boriental Sushi sample tray request\nName: '+v('c_name')+'\nContact: '+v('c_contact')+'\nEvent: '+v('c_type')+(v('c_date')?'\nDate: '+v('c_date'):'')+(v('c_guests')?'\nGuests: '+v('c_guests'):'')+(v('c_notes')?'\nNotes: '+v('c_notes'):'');
  document.getElementById('c_msg').textContent='Your message is ready to send. If your texting app did not open, text this to 704-905-2262.';
  window.location.href='sms:7049052262?&body='+encodeURIComponent(t);});
-</script></body></html>
+</script><a class="fab" href="#catering">Contact us</a>
+</body></html>
