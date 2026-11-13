@@ -670,5 +670,50 @@ if(location.hash){var h=location.hash.slice(1);if(VIEWS[h])cur=h;}
 render();
 })();
 </script>
+
+<style>
+#tazfab{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;align-items:center;gap:8px;background:#d3232b;color:#fff;border:3px solid #fff;border-radius:40px;padding:12px 18px;font:700 15px Raleway,system-ui,Arial,sans-serif;cursor:pointer;box-shadow:0 8px 22px rgba(20,20,63,.35)}
+#tazfab b{background:#fff;color:#d3232b;border-radius:50%;width:26px;height:26px;display:grid;place-items:center;font-size:12px}
+#tazbox{position:fixed;right:18px;bottom:84px;z-index:60;width:340px;max-width:calc(100vw - 36px);background:#fff;border-radius:16px;box-shadow:0 18px 44px rgba(20,20,63,.4);overflow:hidden;display:none;font-family:Raleway,system-ui,Arial,sans-serif;color:#1d1d3d}
+#tazbox.on{display:block}
+#tazbox header{background:#2b2b86;color:#fff;padding:14px 16px}#tazbox header h3{margin:0;color:#fff;font-size:19px}#tazbox header p{margin:3px 0 0;font-size:13px;opacity:.9}
+#tazbox .bd{padding:14px 16px}#tazbox label{display:block;font-size:12px;font-weight:700;color:#5d5f85;margin:8px 0 4px}
+#tazbox input,#tazbox select,#tazbox textarea{width:100%;padding:9px;border:2px solid #d6d9ee;border-radius:8px;font:inherit;box-sizing:border-box}
+#tazbox textarea{min-height:90px}#tazbox button.send{width:100%;margin-top:12px;padding:12px;border:0;border-radius:8px;background:#d3232b;color:#fff;font:700 15px inherit;cursor:pointer}
+#tazbox .st{font-size:13px;color:#5d5f85;margin:8px 0 0}#tazbox .x{position:absolute;right:10px;top:8px;background:none;border:0;color:#fff;font-size:22px;cursor:pointer}
+</style>
+<button id="tazfab" type="button"><b>TAZ</b>Request a change</button>
+<div id="tazbox" role="dialog" aria-label="Request a change">
+ <header><button class="x" type="button" aria-label="Close">×</button><h3>Request a change</h3><p>Tell me what to fix or add on your portal, website or order pages. I reply within two business days.</p></header>
+ <div class="bd">
+  <label>What is it about?</label><select id="tz_area"><option>Portal</option><option>Website</option><option>Bento order page</option><option>Meal prep form</option><option>Menu or prices</option><option>Outreach messages</option><option>Something else</option></select>
+  <label>What should change?</label><textarea id="tz_body" placeholder="Example: change the Ponce Roll price to $16"></textarea>
+  <label>Your name</label><input id="tz_from" value="Chef Izaya">
+  <button class="send" type="button" id="tz_send">Send to TAZ</button>
+  <p class="st" id="tz_st">Sends straight to TAZ. Nothing changes until I confirm it with you.</p>
+ </div>
+</div>
+<script>
+(function(){
+ var HOOK='https://cloud.activepieces.com/api/v1/webhooks/8unh4SJmaRyIrOit64AeN';
+ var box=document.getElementById('tazbox'),st=document.getElementById('tz_st'),KEY='boriental_taz_requests';
+ function g(i){return document.getElementById(i)}
+ g('tazfab').onclick=function(){box.classList.toggle('on');};
+ box.querySelector('.x').onclick=function(){box.classList.remove('on');};
+ g('tz_send').onclick=function(){
+  var body=g('tz_body').value.trim();if(!body){st.textContent='Write what should change first.';return;}
+  var page='';try{page=(typeof cur!=='undefined'?cur:'');}catch(e){}
+  var req={workspace:'Boriental Sushi by TAZ',from:g('tz_from').value.trim()||'Chef Izaya',page:g('tz_area').value+(page?' (tab: '+page+')':''),at:new Date().toLocaleString(),title:'Change request: '+g('tz_area').value,body:body,url:location.href};
+  try{var L=JSON.parse(localStorage.getItem(KEY)||'[]');L.push(req);localStorage.setItem(KEY,JSON.stringify(L));}catch(e){}
+  st.textContent='Sending...';g('tz_send').disabled=true;
+  fetch(HOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(req)}).then(function(r){if(!r.ok)throw 0;
+   st.textContent='Sent. I will reply within two business days.';g('tz_body').value='';
+  }).catch(function(){
+   var t='Boriental Sushi by TAZ change request\n'+req.page+'\n'+body+'\nFrom: '+req.from;
+   (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){st.textContent='Could not send automatically. Your request is copied, so paste it in a text to TAZ.';},function(){st.textContent='Could not send automatically. Please text this request to TAZ.';});
+  }).then(function(){g('tz_send').disabled=false;});
+ };
+})();
+</script>
 </body>
 </html>
