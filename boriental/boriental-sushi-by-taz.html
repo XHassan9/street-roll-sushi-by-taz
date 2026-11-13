@@ -205,10 +205,20 @@ function defaultTemplates(){return {
   {day:6,subject:'',body:'Last one from me, {{first}}. The free sample tray for {{business}} stays open whenever you want it. If there\'s someone else who books food for your events, I\'d appreciate an intro.'}
  ]};}
 function defaultMenu(){return [
- {id:'m1',cat:'Meal prep box',name:'Meal prep box',desc:'Puerto Rican fusion, contents set with Izaya',price:'',prep:2,min:1},
- {id:'m2',cat:'Weekly pack',name:'Weekly pack (5 boxes)',desc:'One pack a week',price:'',prep:2,min:1},
- {id:'m3',cat:'Party tray',name:'Party tray, small',desc:'',price:'',prep:3,min:1},
- {id:'m4',cat:'Party tray',name:'Party tray, large',desc:'',price:'',prep:3,min:1},
+ {id:'b_island',cat:'Bento del Caribe',name:'El Island Bento',desc:'Puerto Rican flavor meets sushi. 1 sushi roll, 1 protein, 2 sides, pickled ginger, wasabi and house sauces.',price:18,prep:1,min:1},
+ {id:'b_boriental',cat:'Bento del Caribe',name:'El Boriental Bento',desc:'The perfect balance. 1 sushi roll, 1 protein, 2 sides, pickled ginger, wasabi and house sauces.',price:20,prep:1,min:1},
+ {id:'b_fusion',cat:'Bento del Caribe',name:'El Fusion Bento',desc:'Bold flavors, one box. 2 sushi rolls, 1 protein, 2 sides, pickled ginger, wasabi and house sauces.',price:22,prep:1,min:1},
+ {id:'b_ultimate',cat:'Bento del Caribe',name:'El Ultimate Bento',desc:'More sushi, more flavor. 3 sushi rolls, 1 protein, 2 sides, pickled ginger, wasabi and house sauces.',price:25,prep:1,min:1},
+ {id:'mp',cat:'Meal prep',name:'Custom meal prep (per meal)',desc:'Diet assessment first; $15 to $20',price:15,prep:2,min:1},
+ {id:'p_plat3',cat:'Sushi roll platter',name:'Small Sushi Platter (3 rolls)',desc:'Choose any 3 rolls, 24 pieces.',price:42,prep:2,min:1},
+ {id:'p_plat5',cat:'Sushi roll platter',name:'Medium Sushi Platter (5 rolls)',desc:'Choose any 5 rolls, 40 pieces.',price:68,prep:2,min:1},
+ {id:'p_plat7',cat:'Sushi roll platter',name:'Large Sushi Platter (7 rolls)',desc:'Choose any 7 rolls, 56 pieces.',price:92,prep:2,min:1},
+ {id:'a_xroll',cat:'Add-on',name:'Extra Sushi Roll',desc:'Add to any bento.',price:8,prep:1,min:1},
+ {id:'a_xprot',cat:'Add-on',name:'Extra Protein',desc:'Add to any bento.',price:6,prep:1,min:1},
+ {id:'a_xside',cat:'Add-on',name:'Extra Side',desc:'Add to any bento.',price:4,prep:1,min:1},
+ {id:'a_miso',cat:'Add-on',name:'Miso Soup',desc:'',price:4,prep:1,min:1},
+ {id:'a_seaweed',cat:'Add-on',name:'Seaweed Salad',desc:'',price:5,prep:1,min:1},
+ {id:'a_house',cat:'Add-on',name:'House Salad',desc:'',price:5,prep:1,min:1},
  {id:'m5',cat:'Sample tray',name:'Free sample tray (tasting)',desc:'Used for outreach tastings',price:0,prep:2,min:1}
 ];}
 function defaultSocial(){var t=['Prep day: behind the scenes','Menu spotlight: one Puerto Rican fusion roll, close up','Culture spotlight: the story behind the fusion','Sample tray reveal','Weekend order push: how to book','Event recap: the tray in the room','Meal prep preview for the week'];
@@ -223,7 +233,7 @@ var PLAN=[
 ];
 function defaultState(){return {v:1,settings:{business:'Boriental Sushi',chef:'Chef Izaya',kitchen:'Uptown Charlotte',pickup:'',start:todayISO(),weekly:40},leads:realLeads(),templates:defaultTemplates(),approved:{email:false,dm:false},menu:defaultMenu(),orders:[],social:defaultSocial(),plan:{},fees:{1:'',2:'',3:''}};}
 var S;
-function load(){try{var r=localStorage.getItem(KEY);if(r){var o=JSON.parse(r);if(o&&o.v===1)return o;}}catch(e){}return defaultState();}
+function load(){try{var r=localStorage.getItem(KEY);if(r){var o=JSON.parse(r);if(o&&o.v===1){if(o.menu&&o.menu.some(function(m){return m.id==='m1'&&m.name==='Meal prep box'}))o.menu=defaultMenu();return o;}}}catch(e){}return defaultState();}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
 
 /* ---------- derived ---------- */
