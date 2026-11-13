@@ -59,8 +59,14 @@ section[id]{scroll-margin-top:212px}
 .fab{position:fixed;right:18px;bottom:18px;z-index:20;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:40px;box-shadow:0 6px 18px rgba(29,29,61,.3);border:2px solid #fff}
 .fab:hover{background:var(--navy)}
 @media(max-width:860px){section[id]{scroll-margin-top:162px}.fab{right:12px;bottom:12px;padding:12px 18px}}
-.herologo{display:grid;place-items:center}.herologo img{width:100%;max-width:440px;height:auto;filter:drop-shadow(0 10px 22px rgba(29,29,61,.22))}
-@media(max-width:860px){.herologo img{max-width:300px}}
+.herologo{display:flex;flex-direction:column;align-items:center;text-align:center}
+.eq{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:14px}
+.eq img{width:96px;height:66px;object-fit:cover;border-radius:6px;border:1px solid var(--line);box-shadow:0 4px 10px rgba(29,29,61,.15);background:#fff}
+.eq span{font-family:'Rozha One',serif;font-size:40px;color:var(--red);line-height:1}
+.herologo .lg{width:100%;max-width:400px;height:auto;filter:drop-shadow(0 10px 22px rgba(29,29,61,.22))}
+.chef{margin:0 auto 18px}.chef img{width:190px;height:190px;object-fit:cover;border-radius:50%;border:5px solid #fff;box-shadow:0 0 0 5px var(--red)}
+.chef h3{color:#fff;font-size:26px}
+@media(max-width:860px){.herologo .lg{max-width:280px}.eq img{width:74px;height:52px}.chef img{width:150px;height:150px}}
 footer{padding:30px 22px;text-align:center;font-size:14px;color:var(--mut);border-top:6px solid var(--red)}
 .note{font-size:13px;color:var(--mut);margin-top:10px}
 @media(max-width:860px){body{border-width:8px}nav .links{display:none}.hero{grid-template-columns:1fr;padding-top:26px}.hero h1{font-size:42px}.collage{height:330px}.grid{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}form{grid-template-columns:1fr}h2{font-size:30px}.circle{width:76px;height:76px;font-size:15px}}
@@ -106,7 +112,10 @@ nav{border-bottom:4px solid var(--red)}
   <p class="t">Japanese craft. Puerto Rican soul. Rolled by hand in Charlotte.</p>
   <div class="cta"><a class="btn" href="meal-prep-orders.html">Start meal prep</a><a class="btn o" href="bento-orders.html">Order a bento</a><a class="btn o" href="#catering">Book catering</a></div>
   <p class="note">Or call or text <a href="tel:7049052262">704-905-2262</a></p></div>
- <div class="herologo"><img src="img/logo-boriental.png" alt="Boriental Sushi logo"></div>
+ <div class="herologo">
+  <p class="eyebrow" style="margin:0 0 12px">Culinary bridge between cultures</p>
+  <div class="eq"><img src="https://static.wixstatic.com/media/4dc92e_5bd2aa13c89a4ea18dd0ff3a9527023e~mv2.png" alt="Puerto Rico"><span>+</span><img src="https://static.wixstatic.com/media/4dc92e_7635b1432b2d4b04bc950643d1cbd908~mv2.jpg/v1/fit/w_600,h_600,q_85/4dc92e_7635b1432b2d4b04bc950643d1cbd908~mv2.jpg" alt="Japan"><span>=</span></div>
+  <img class="lg" src="img/logo-boriental.png" alt="Boriental Sushi logo"></div>
 </div>
 <div class="band" role="img" aria-label="Boriental Sushi wave border"></div>
 <section class="soft" id="menu"><div class="in">
@@ -165,7 +174,7 @@ nav{border-bottom:4px solid var(--red)}
 <div class="band" role="img" aria-label="Boriental Sushi wave border"></div>
 <section id="gallery"><div class="in"><p class="eyebrow">Gallery</p><h2>From Chef Izaya's kitchen</h2><p class="sub">Island meets sushi, plate by plate.</p><div class="mas"><img src="https://static.wixstatic.com/media/4dc92e_30bab249c46d4c7cb54f89007b2b0006~mv2.jpeg/v1/fit/w_1000,h_1000,q_85/4dc92e_30bab249c46d4c7cb54f89007b2b0006~mv2.jpeg" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_ef236f42231d437b907a0c77bdfe24b8~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_ef236f42231d437b907a0c77bdfe24b8~mv2.png" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_b9d49a58f4af4ab1a79795fa3edcf854~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_b9d49a58f4af4ab1a79795fa3edcf854~mv2.png" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_605d0b3f00d04266b4801d9e7c9a1935~mv2.jpeg/v1/fit/w_1000,h_1000,q_85/4dc92e_605d0b3f00d04266b4801d9e7c9a1935~mv2.jpeg" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_4f7def5992ed4646bb99218b8bbf5697~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_4f7def5992ed4646bb99218b8bbf5697~mv2.png" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_5aad2716f9b844d6aa1f3bc627652062~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_5aad2716f9b844d6aa1f3bc627652062~mv2.png" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_4a26255b1e06463faedef4e37a2a08ca~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_4a26255b1e06463faedef4e37a2a08ca~mv2.png" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_7d461506473b4c6c8f8fe693d032434e~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_7d461506473b4c6c8f8fe693d032434e~mv2.png" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_7be29e4893ea4148ac19af29b68dcc23~mv2.jpeg/v1/fit/w_1000,h_1000,q_85/4dc92e_7be29e4893ea4148ac19af29b68dcc23~mv2.jpeg" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_4b004e6053354200b254e2819d5aca81~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_4b004e6053354200b254e2819d5aca81~mv2.png" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_7c3a441f1f9c45f88092342a3746a927~mv2.jpeg/v1/fit/w_1000,h_1000,q_85/4dc92e_7c3a441f1f9c45f88092342a3746a927~mv2.jpeg" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_84c7994295f345ebb969d012fe3694f4~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_84c7994295f345ebb969d012fe3694f4~mv2.png" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_200678052c0f43c0bc466b6eaed588da~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_200678052c0f43c0bc466b6eaed588da~mv2.png" alt="Boriental Sushi" loading="lazy"></div></div></section>
 <div class="band" role="img" aria-label="Boriental Sushi wave border"></div>
-<section class="story" id="story"><div class="in"><p class="eyebrow" style="color:#ffd3d6">Our story</p><h2>Minor Setback For Major Comeback</h2>
+<section class="story" id="story"><div class="in"><div class="chef"><img src="https://static.wixstatic.com/media/4dc92e_803a7e5f7fd54d32afb70880b1c2c440~mv2.png/v1/fit/w_800,h_800,q_85/image0_edited_edited.png" alt="Chef Izaya Tha HighFather"><p class="eyebrow" style="color:#ffd3d6;margin:10px 0 0">Meet the chef</p><h3>Chef Izaya Tha HighFather</h3></div><p class="eyebrow" style="color:#ffd3d6">Our story</p><h2>Minor Setback For Major Comeback</h2>
  <p>Have you ever questioned if you can begin anew after facing numerous setbacks in life and hearing others define your value?</p>
  <p>Chef Izaya Tha HighFather chose to challenge norms with a concept that celebrates diversity in community, food and culture. Boriental Sushi is built on honesty, integrity and enjoyment, serving as a culinary link between cultures and reshaping the Japanese experience with Puerto Rican influences.</p>
  <div class="tags">#NeverGiveUp &nbsp; #SushiMeetsIsland &nbsp; #ChefIzayaThaHighFather</div></div></section>
