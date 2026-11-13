@@ -189,6 +189,13 @@ footer b{font-family:'Rozha One',serif;font-weight:400;font-size:26px;color:#fff
 .mswoosh{width:300px;max-width:80%;display:block;margin:0 auto;transform:rotate(-3deg)}
 .mamaq small{display:block;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#5b5d80;margin-top:8px}
 @media(max-width:900px){.mamaq blockquote{font-size:36px}.mink{font-size:92px}}
+#catering .two{align-items:stretch}
+.lcol{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.lcol .svc,.lcol .mthumbs{align-self:stretch}
+.mthumbs{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px;min-height:260px}
+.mthumbs a{position:relative;display:block;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 14px 30px rgba(0,0,0,.25)}
+.mthumbs img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
+.mthumbs span{position:absolute;left:0;right:0;bottom:0;padding:22px 12px 10px;background:linear-gradient(transparent,rgba(23,23,47,.85));color:#fff;font-weight:700;font-size:13px;letter-spacing:.04em}
 </style></head><body>
 <div class="stripe"></div>
 <nav><div class="in">
@@ -272,11 +279,12 @@ footer b{font-family:'Rozha One',serif;font-weight:400;font-size:26px;color:#fff
 </div></section>
 <div class="band" role="img" aria-label="Boriental Sushi wave border"></div>
 <section id="catering"><div class="in two">
- <div><p class="eyebrow">Catering and events</p><h2>Hosting? Let's plan your menu.</h2>
+ <div class="lcol"><p class="eyebrow">Catering and events</p><h2>Hosting? Let's plan your menu.</h2>
   <p class="sub">Tell us about your event and we'll follow up to build your menu and quote.</p>
   <div class="svc"><div><b>Social &amp; corporate event catering</b><span>100–350 guests. A customized menu curated with you for flavor, presentation and service.</span></div>
   <div><b>Home &amp; intimate gatherings</b><span>2–75 guests. A private chef in the comfort of your home, with the sushi menu.</span></div></div>
-  <a class="btn w" href="Boriental-Sushi-Catering-Menu.pdf" download>Download the catering menu (PDF)</a></div>
+  <a class="btn w" href="Boriental-Sushi-Catering-Menu.pdf" download>Download the catering menu (PDF)</a>
+  <div class="mthumbs"><a href="img/menu-p1.jpg" target="_blank" aria-label="Catering menu, page 1"><img src="img/menu-p1.jpg" alt="Boriental Sushi catering menu, page 1" loading="lazy"><span>Menu · page 1</span></a><a href="img/menu-p2.jpg" target="_blank" aria-label="Catering menu, page 2"><img src="img/menu-p2.jpg" alt="Boriental Sushi catering menu, page 2" loading="lazy"><span>Menu · page 2</span></a></div></div>
  <div class="rcol"><form id="cater"><h3>Request a catering quote</h3><div><label>Your name</label><input id="c_name" required></div><div><label>Phone or email</label><input id="c_contact" required></div>
   <div><label>Event date</label><input id="c_date" type="date"></div><div><label>Guests</label><input id="c_guests" type="number" min="1" placeholder="25"></div>
   <div class="w"><label>What kind of event?</label><select id="c_type"><option>Social or singles event</option><option>Latin night</option><option>Business mixer or team lunch</option><option>Family party</option><option>Private chef at home</option><option>Something else</option></select></div>
