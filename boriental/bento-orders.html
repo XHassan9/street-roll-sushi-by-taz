@@ -120,4 +120,5 @@ $('#send').onclick=function(){var t=orderText();
  else{window.location.href='sms:'+CONFIG.chefPhone+'?&body='+encodeURIComponent(t)}
  $('#msg').innerHTML='Your message is ready to send. We will text back to confirm. If your texting app did not open, tap Copy order and text it to '+CONFIG.chefPhone.replace(/(\d{3})(\d{3})(\d{4})/,'$1-$2-$3')+'.'+(CONFIG.payUrl?' <a href="'+CONFIG.payUrl+'" target="_blank" rel="noopener">Pay now</a>':'')};
 paint();
-</script></body></html>
+</script><script src="site-core.js"></script>
+</body></html>
