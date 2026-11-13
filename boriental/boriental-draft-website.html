@@ -162,6 +162,15 @@ form .w{grid-column:1/-1}.fnote{font-size:13px;color:var(--mut);margin:10px 0 0}
 .rcpt .mod{color:#d0101f!important;font-weight:700;font-size:15px!important;margin:2px 0 6px 34px!important;letter-spacing:.03em}
 .rr.tot{font-size:19px}.rr.sm{margin-top:4px}
 .rr .red{color:#d0101f}.rcpt .rmsg{font-size:22px!important;margin:8px 0 0!important}
+.pin{position:relative;max-width:520px;margin:44px auto 26px;padding-top:22px}
+.rail{position:absolute;top:0;left:-30px;right:-30px;height:30px;border-radius:6px;background:linear-gradient(#f4f5f8,#b9bcc9 45%,#8d91a3 55%,#d9dbe4);box-shadow:0 6px 14px rgba(0,0,0,.45);z-index:3}
+.rail:before,.rail:after{content:"";position:absolute;top:9px;width:12px;height:12px;border-radius:50%;background:#5b5f73;box-shadow:inset 0 1px 2px #000}.rail:before{left:14px}.rail:after{right:14px}
+.pin .rcpt{margin:0 auto!important;transform:rotate(1.2deg);transform-origin:top center;background:linear-gradient(#fffdf7,#fbf6ea)}
+.hand{position:absolute;left:-190px;top:120px;font-family:'Mr Dafoe',cursive;font-size:34px!important;line-height:1;color:var(--gold);transform:rotate(-8deg);margin:0!important;text-align:left}
+.hand svg{display:block;width:110px;margin:6px 0 0 60px}
+.stamp{position:absolute;right:14px;top:74px;z-index:2;background:rgba(255,253,247,.9);width:104px;height:104px;border:3px double #d0101f;border-radius:50%;color:#d0101f;font-family:'Courier New',monospace;font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.25;transform:rotate(14deg);opacity:.78;padding:8px}
+.stamp b{font-size:20px;letter-spacing:.08em}
+@media(max-width:900px){.hand{position:static;transform:rotate(-3deg);text-align:center;margin:0 0 14px!important}.hand svg{display:none}.pin{padding-top:0;max-width:400px}.rail{position:relative;left:0;right:0;margin-bottom:-8px}.stamp{width:84px;height:84px;font-size:8px;right:-6px;top:60px}.stamp b{font-size:16px}}
 footer{background:var(--deep);color:#cfd1f5;text-align:center;padding:34px 22px 90px;font-size:15px}
 footer b{font-family:'Rozha One',serif;font-weight:400;font-size:26px;color:#fff;display:block}footer a{color:#fff}
 .fab{position:fixed;right:18px;bottom:18px;z-index:20;background:var(--gold);color:var(--deep);text-decoration:none;font-weight:800;padding:14px 24px;border-radius:40px;box-shadow:0 8px 20px rgba(0,0,0,.35);border:3px solid #fff}
@@ -280,9 +289,9 @@ footer b{font-family:'Rozha One',serif;font-weight:400;font-size:26px;color:#fff
  <h2>Minor Setback For Major Comeback</h2>
  <p class="q">Have you ever questioned if you can begin anew after facing numerous setbacks in life and hearing others define your value?</p>
  <p>Chef Izaya Tha HighFather chose to challenge norms with a concept that celebrates diversity in community, food and culture. Boriental Sushi is built on honesty, integrity and enjoyment, serving as a culinary link between cultures and reshaping the Japanese experience with Puerto Rican influences.</p>
- <div class="sig rcpt"><svg width="0" height="0" style="position:absolute"><filter id="wet"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3"/><feGaussianBlur stdDeviation=".3"/></filter></svg>
+ <div class="pin"><div class="rail"></div><p class="hand">From my kitchen<br>to yours.<svg viewBox="0 0 120 60" aria-hidden="true"><path d="M6 10 C 40 4, 80 18, 104 44" fill="none" stroke="#f5b82e" stroke-width="4" stroke-linecap="round"/><path d="M88 42 L106 46 L102 28" fill="none" stroke="#f5b82e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></p><div class="sig rcpt"><svg width="0" height="0" style="position:absolute"><filter id="wet"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3"/><feGaussianBlur stdDeviation=".3"/></filter></svg>
   <p class="kt">*** KITCHEN ***</p>
-  <p class="rh">BORIENTAL SUSHI</p><p class="rs">Charlotte, NC · PICKUP</p>
+  <p class="rh">BORIENTAL SUSHI</p><p class="rs">CATERING · PRIVATE CHEF<br>BENTO BOXES · MEAL PREP</p>
   <div class="dash"></div>
   <div class="rr tot"><span>ORDER #2023</span><span class="red">#SushiMeetsIsland</span></div>
   <div class="rr sm"><span>CHEF: IZAYA</span><span>FRI 4:37 PM</span></div>
@@ -292,7 +301,7 @@ footer b{font-family:'Rozha One',serif;font-weight:400;font-size:26px;color:#fff
   <div class="signbox"><p class="ink">Chef Izaya<br><span>Tha HighFather</span></p>
    <svg class="swoosh" viewBox="0 0 420 46" aria-hidden="true"><path d="M8 30 C 90 6, 210 44, 300 20 S 400 14, 412 24" fill="none" stroke="#0e1a66" stroke-width="5" stroke-linecap="round" filter="url(#wet)"/><circle cx="414" cy="33" r="4.2" fill="#0e1a66"/><circle cx="398" cy="40" r="2.2" fill="#0e1a66"/></svg></div>
   <div class="sline"><span>X</span></div><p class="who">Chef &amp; Founder signature</p>
-  <p class="kt" style="margin-top:12px!important">*** #NeverGiveUp ***</p></div>
+  <p class="kt" style="margin-top:12px!important">*** #NeverGiveUp ***</p></div><div class="stamp">Made with<b>AMOR</b>Puerto Rico × Japan</div></div>
  <div class="tags"><span>#NeverGiveUp</span><span>#SushiMeetsIsland</span><span>#ChefIzayaThaHighFather</span></div>
 </div></section>
 <div class="band" role="img" aria-label="Boriental Sushi wave border"></div>
