@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Boriental Sushi | Island Meets Sushi | Charlotte, NC</title>
+<meta name="description" content="Puerto Rican soul and Japanese craft, made by hand in Charlotte. Meal prep, pickup, delivery and catering by Chef Izaya.">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Rozha+One&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#2b2b86;--red:#d3232b;--line:#d6d9ee;--mut:#5d5f85;--ink:#1d1d3d;--soft:#f4f5fb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Raleway,system-ui,Arial,sans-serif;color:var(--ink);line-height:1.5;border:14px solid var(--navy);border-bottom:0;min-height:100vh}
+h1,h2,h3{font-family:'Rozha One',Georgia,serif;font-weight:400;color:var(--navy);margin:0;line-height:1.1}
+a{color:var(--navy)}
+.draft{background:#fff7d6;border-bottom:1px solid #e8d98a;text-align:center;font-size:13px;padding:7px 12px}
+nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 22px;position:sticky;top:0;background:#fff;z-index:5;border-bottom:1px solid var(--line)}
+nav .links{display:flex;gap:22px;font-weight:600;font-size:15px}nav .links a{text-decoration:none}
+.logo{width:74px;height:74px;border-radius:50%;object-fit:contain}
+.sun{width:74px;height:74px;border-radius:50%;background:var(--red);color:#fff;display:none;place-items:center;font-family:'Rozha One',serif;font-size:32px}
+.circle{border:2px solid var(--navy);border-radius:50%;width:92px;height:92px;display:grid;place-items:center;text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;text-decoration:none;line-height:1.1}
+.btn{display:inline-block;padding:13px 24px;border-radius:4px;font-weight:700;text-decoration:none;border:2px solid var(--red);background:var(--red);color:#fff;cursor:pointer;font:inherit;font-weight:700}
+.btn.o{background:#fff;color:var(--navy);border-color:var(--navy)}
+.hero{display:grid;grid-template-columns:1fr 1.1fr;gap:30px;align-items:center;max-width:1120px;margin:0 auto;padding:44px 22px}
+.hero h1{font-size:60px}.hero p.t{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:26px;margin:12px 0 22px;color:var(--mut)}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.collage{position:relative;height:430px}
+.collage img{position:absolute;object-fit:cover;box-shadow:0 6px 18px rgba(29,29,61,.18)}
+.collage .a{left:0;top:120px;width:46%;height:270px}.collage .b{left:30%;top:0;width:36%;height:210px}.collage .c{left:38%;top:150px;width:34%;height:240px;z-index:2}.collage .d{right:0;top:190px;width:36%;height:220px}
+section{padding:54px 22px}.in{max-width:1120px;margin:0 auto}
+.soft{background:var(--soft)}
+.eyebrow{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--red);margin:0 0 8px}
+h2{font-size:38px}.sub{color:var(--mut);margin:8px 0 26px;max-width:640px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.dish{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.dish img,.dish .ph{width:100%;height:170px;object-fit:cover;display:block}
+.dish .ph{background:repeating-linear-gradient(45deg,#eceefa,#eceefa 10px,#f4f5fb 10px,#f4f5fb 20px);display:grid;place-items:center;color:var(--mut);font-size:13px}
+.dish div.b{padding:14px}.dish h3{font-size:19px}.dish p{margin:6px 0 0;font-size:14px;color:var(--mut)}
+.dish .pr{display:inline-block;margin-top:10px;font-size:12px;font-weight:700;color:var(--navy);background:#eceefa;border-radius:20px;padding:3px 10px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.two img{width:100%;height:340px;object-fit:cover;border-radius:8px}
+.steps{display:grid;gap:10px;margin:18px 0 24px;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;padding-left:44px;position:relative}
+.steps li:before{content:counter(s);position:absolute;left:0;top:-2px;width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px}
+form{background:#fff;border:1px solid var(--line);border-radius:8px;padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+form label{font-size:12px;font-weight:700;color:var(--mut);display:block;margin-bottom:4px}
+form input,form select,form textarea{width:100%;padding:10px;border:1px solid #c5c8e6;border-radius:5px;font:inherit}
+form .w{grid-column:1/-1}
+.story{background:var(--navy);color:#fff;text-align:center}.story h2{color:#fff}.story p{max-width:720px;margin:16px auto 0;font-size:18px;opacity:.95}
+.story .tags{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;margin-top:18px}
+.band{height:110px;background:url("https://static.wixstatic.com/media/4dc92e_78a56a21c4d94391b9d137dd73299b07~mv2.png") center/auto 100% repeat-x #fff}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.gal img{width:100%;height:220px;object-fit:cover;border-radius:6px;display:block}.gal img:first-child{grid-row:span 2;height:450px}
+@media(max-width:860px){.band{height:70px}.gal{grid-template-columns:1fr 1fr}.gal img:first-child{grid-row:auto;height:220px}}
+.mgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.mcol{background:#fff;border:1px solid var(--line);border-top:4px solid var(--red);border-radius:8px;padding:18px}
+.mcol h3{font-size:24px}.from{font-weight:700;font-size:13px;color:var(--red);margin:4px 0 12px}
+.rl,.pl{list-style:none;margin:0;padding:0}.rl li{padding:8px 0;border-top:1px dashed var(--line)}.rl b{display:block;color:var(--navy)}.rl span{font-size:14px;color:var(--mut)}
+.pl{columns:1}.pl li{padding:5px 0;border-top:1px dashed var(--line);font-size:15px}
+@media(max-width:860px){.mgrid{grid-template-columns:1fr}}
+.b4{grid-template-columns:repeat(4,1fr)}@media(max-width:860px){.b4{grid-template-columns:1fr 1fr}}
+.mas{columns:4 220px;column-gap:10px}.mas img{width:100%;display:block;margin:0 0 10px;border-radius:4px;break-inside:avoid}
+section[id]{scroll-margin-top:212px}
+.fab{position:fixed;right:18px;bottom:18px;z-index:20;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:40px;box-shadow:0 6px 18px rgba(29,29,61,.3);border:2px solid #fff}
+.fab:hover{background:var(--navy)}
+@media(max-width:860px){section[id]{scroll-margin-top:162px}.fab{right:12px;bottom:12px;padding:12px 18px}}
+footer{padding:30px 22px;text-align:center;font-size:14px;color:var(--mut);border-top:6px solid var(--red)}
+.note{font-size:13px;color:var(--mut);margin-top:10px}
+@media(max-width:860px){body{border-width:8px}nav .links{display:none}.hero{grid-template-columns:1fr;padding-top:26px}.hero h1{font-size:42px}.collage{height:330px}.grid{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}form{grid-template-columns:1fr}h2{font-size:30px}.circle{width:76px;height:76px;font-size:15px}}
+
+/* ===== Theme preview: built from the Puerto Rican sushi wave band ===== */
+:root{--pr:#2f6db5;--ink:#141414}
+body{border-color:var(--red)}
+h1,h2{letter-spacing:.3px}
+section h2{display:inline-block;padding-bottom:6px;background:linear-gradient(var(--red),var(--red)) left bottom/100% 4px no-repeat}
+.eyebrow{color:var(--pr)}
+.btn{border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);transition:transform .1s,box-shadow .1s}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.btn.o{border-color:var(--ink)}
+.mcol,.dish,form{border:2px solid var(--ink)!important;box-shadow:5px 5px 0 var(--ink);border-radius:10px}
+.mcol{border-top:6px solid var(--red)!important}
+.hero{position:relative}
+.hero:after{content:"";position:absolute;right:-40px;bottom:-30px;width:520px;height:310px;background:url("img/wave-red.png") right bottom/contain no-repeat;opacity:.16;pointer-events:none;z-index:-1}
+nav{border-bottom:4px solid var(--red)}
+.circle{border-color:var(--red);color:var(--red)}
+#bento{position:relative;background:var(--navy);color:#fff;overflow:hidden}
+#bento:before{content:"";position:absolute;inset:auto -60px -40px auto;width:760px;height:452px;background:url("img/wave-white.png") right bottom/contain no-repeat;opacity:.13;pointer-events:none}
+#bento .in{position:relative}
+#bento h2{color:#fff}#bento .eyebrow{color:#ffd3d6}#bento .sub{color:#d9dbf5}
+#bento .mcol{color:var(--ink)}
+#bento .b4 .mcol{text-align:center}
+#bento .b4 .from{display:inline-block;background:var(--red);color:#fff;font-size:22px;font-family:'Rozha One',serif;padding:4px 14px;border-radius:30px;border:2px solid var(--ink)}
+#bento .btn.o{background:#fff}
+.story{background:var(--navy) url("img/wave-white.png") center bottom/700px auto no-repeat}
+.story{background-blend-mode:normal}
+#gallery .mas img{border:2px solid var(--ink)}
+.preview{position:fixed;left:14px;bottom:14px;z-index:30;background:#fff;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);border-radius:8px;padding:8px 12px;font-size:13px;font-weight:700}
+@media(max-width:860px){.hero:after{width:300px;height:180px}#bento:before{width:420px;height:250px}.preview{left:8px;bottom:70px}}
+</style></head><body>
+<div class="draft"><b>Theme preview.</b> Draft for Chef Izaya to review. Photos are from Chef's own site. Menu from Chef's catering menu.</div>
+<nav>
+ <a href="#top"><img class="logo" src="https://static.wixstatic.com/media/4dc92e_574ae1822ea847c1b289136635504bf7~mv2.png" alt="Boriental Sushi" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="sun">B</span></a>
+ <div class="links"><a href="#menu">Menu</a><a href="#bento">Bento</a><a href="#gallery">Gallery</a><a href="#mealprep">Meal Prep</a><a href="#catering">Catering</a><a href="#story">Our Story</a><a href="#catering">Full Menu</a></div>
+ <a class="circle" href="#contact">Contact<br>Us</a>
+</nav>
+<div class="hero" id="top">
+ <div><p class="eyebrow">Charlotte, NC · Pickup · Delivery · Catering</p>
+  <h1>Island Meets Sushi!!</h1>
+  <p class="t">Japanese craft. Puerto Rican soul. Rolled by hand in Charlotte.</p>
+  <div class="cta"><a class="btn" href="meal-prep-orders.html">Start meal prep</a><a class="btn o" href="bento-orders.html">Order a bento</a><a class="btn o" href="#catering">Book catering</a></div>
+  <p class="note">Or call or text <a href="tel:7049052262">704-905-2262</a></p></div>
+ <div class="collage"><img class="a" src="https://static.wixstatic.com/media/4dc92e_30bab249c46d4c7cb54f89007b2b0006~mv2.jpeg/v1/fit/w_1000,h_1000,q_85/4dc92e_30bab249c46d4c7cb54f89007b2b0006~mv2.jpeg" alt="Kani salad"><img class="b" src="https://static.wixstatic.com/media/4dc92e_ef236f42231d437b907a0c77bdfe24b8~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_ef236f42231d437b907a0c77bdfe24b8~mv2.png" alt="Empanadas"><img class="c" src="https://static.wixstatic.com/media/4dc92e_b9d49a58f4af4ab1a79795fa3edcf854~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_b9d49a58f4af4ab1a79795fa3edcf854~mv2.png" alt="Karaage chicken"><img class="d" src="https://static.wixstatic.com/media/4dc92e_605d0b3f00d04266b4801d9e7c9a1935~mv2.jpeg/v1/fit/w_1000,h_1000,q_85/4dc92e_605d0b3f00d04266b4801d9e7c9a1935~mv2.jpeg" alt="Island bowl"></div>
+</div>
+<div class="band" role="img" aria-label="Boriental Sushi wave border"></div>
+<section class="soft" id="menu"><div class="in">
+ <p class="eyebrow">Catering menu</p><h2>The menu</h2><p class="sub">Proteins, extras and salads, priced by protein and size of event. Deposit required for all catering events; cancellation fee applies.</p>
+ <div class="mgrid">
+  <div class="mcol"><h3>Proteins &amp; meats</h3><p class="from">Price varies by protein</p><ul class="pl"><li>Nikkei Glazed Pernil</li><li>Miso Glazed Chicharrones</li><li>Ginger Orange Soy Chicken</li><li>Fried Chicken</li><li>Sofrito Guydon</li><li>Orange Miso Bistec Encebollado</li><li>Chicken Karaage w/ Sweet Chili Sauce</li><li>Teriyaki</li><li>Mofongo</li><li>Pinchos</li></ul></div>
+  <div class="mcol"><h3>Extras</h3><p class="from">Price varies by size of event</p><ul class="pl"><li>Isla Umami Collards</li><li>Alcapurrias</li><li>Empanadillas</li><li>Papa Rellenas</li><li>Boricua Harumaki</li><li>Tostones</li><li>Edamame</li><li>Habichuelas Guisadas</li><li>Arroz Con Gandules</li><li>Yuca En Escabeche</li><li>White Rice</li><li>Udon Noodles</li><li>Garlic Soy Potatoes</li></ul></div>
+  <div class="mcol"><h3>Salads</h3><p class="from">Price varies by size of party</p><ul class="pl"><li>Ensalada De Pulpo (octopus salad)</li><li>Ensalada Verde (house salad)</li><li>Ensalada De Papa (potato salad)</li><li>Caribe Sesame Coleslaw</li><li>Kani del Caribe (Japanese crab salad)</li></ul></div>
+ </div>
+<div style="margin-top:34px"><p class="eyebrow">Sushi menu · Home &amp; intimate gatherings</p><h3 style="font-size:28px">Sushi, priced per roll</h3><p class="sub">For home and intimate gatherings (2–75 guests). Sushi for corporate events is available at premium pricing.</p></div>
+ <div class="mgrid">
+  <div class="mcol"><h3>Japanese Maki</h3><p class="from">Classic rolls · 10 pieces</p><ul class="rl"><li><b>Tuna Roll · $13</b><span>Tuna, cucumber, sesame seeds</span></li><li><b>Spicy Tuna Roll · $14</b><span>Spicy tuna, cucumber, spicy mayo, scallions</span></li><li><b>Bonzi Roll · $13</b><span>Carrots, cucumber, avocado, sweet eel sauce</span></li><li><b>California Roll (Crispy) · $13</b><span>Crab, avocado, cucumber, sesame seeds</span></li><li><b>Samurai Roll · $17</b><span>Shrimp, crab, cucumber, red pepper, avocado, eel sauce</span></li><li><b>Rainbow Roll · $17</b><span>Assorted fish, avocado, cucumber, sweet eel sauce</span></li><li><b>Ryujin Roll · $17</b><span>Salmon, asparagus, watermelon radish, cucumber, tempura bits</span></li><li><b>Under The Sea Roll · $15</b><span>Kani crab salad mix, avocado, topped with Dragon Breath Mayo</span></li><li><b>Resurrection Roll · $17</b><span>Shrimp, avocado, cucumber, topped with garlic ponzu &amp; crispy onions</span></li><li><b>Volcano Roll · $17</b><span>Crab, avocado, crunch, topped with spicy mayo, eel sauce</span></li></ul></div>
+  <div class="mcol"><h3>Puerto Rican Maki</h3><p class="from">Signature rolls · 7 pieces</p><ul class="rl"><li><b>Ponce Roll · $15</b><span>Crab, chicken, plantain, cucumber, red pepper, sofrito sauce</span></li><li><b>Bayamón Roll · $16</b><span>Pernil, avocado, sweet plantain, pickled onions, garlic cilantro sauce</span></li><li><b>San Juan Roll · $18</b><span>Sweet &amp; spicy grilled chicken, yuca, tostones, apples, mango mayo</span></li><li><b>Guavate Roll · $17</b><span>Pork belly (chicharrón), avocado, tostones, pickled onions, sesame seeds</span></li><li><b>Taino Roll · $17</b><span>Pernil, yuca, plantain, pineapple, avocado, teriyaki &amp; sesame seeds</span></li><li><b>Isla Verde Roll</b><span>Bistec, plantains, red peppers, asparagus, pickled onions</span></li><li><b>Yunque Roll</b><span>Salmon, apples, watermelon radish, tostones, avocado, sofrito sauce</span></li><li><b>Coquí Roll · $16</b><span>Shrimp, avocado, mango, topped with mango habanero sauce</span></li></ul></div>
+  <div class="mcol"><h3>Fusion Maki</h3><p class="from">Specialty rolls · 10 pieces</p><ul class="rl"><li><b>Rising Rican Roll · $19</b><span>Tuna, salmon, cucumber, avocado, kani crab salad, sweet eel sauce</span></li><li><b>Boriental Roll · $17</b><span>Fried chicken, tempura shrimp, red peppers, apples, avocado, pernil sauce</span></li><li><b>Carolina Roll · $16</b><span>Katsu chicken, BBQ kimchi slaw, Carolina sweet eel sauce</span></li></ul></div>
+ </div>
+ <p class="note">Mofongo, empanadillas, alcapurrias and papa rellenas priced by meat.</p>
+</div></section>
+<div class="band" role="img" aria-label="Boriental Sushi wave border"></div>
+<section id="bento"><div class="in"><p class="eyebrow">Bento del Caribe · DoorDash, pickup &amp; pre-orders</p><h2>A fusion experience in every box</h2><p class="sub">Sushi, entrée, sides, bold flavors. Pick your rolls from the menu, a protein and any two sides.</p>
+ <div class="mgrid b4"><div class="mcol"><h3>El Island Bento</h3><p class="from">$18</p><p style="margin:0;font-size:14px;color:var(--mut)">Puerto Rican flavor meets sushi. 1 sushi roll, 1 protein, 2 sides, pickled ginger, wasabi and house sauces.</p></div><div class="mcol"><h3>El Boriental Bento</h3><p class="from">$20</p><p style="margin:0;font-size:14px;color:var(--mut)">The perfect balance. 1 sushi roll, 1 protein, 2 sides, pickled ginger, wasabi and house sauces.</p></div><div class="mcol"><h3>El Fusion Bento</h3><p class="from">$22</p><p style="margin:0;font-size:14px;color:var(--mut)">Bold flavors, one box. 2 sushi rolls, 1 protein, 2 sides, pickled ginger, wasabi and house sauces.</p></div><div class="mcol"><h3>El Ultimate Bento</h3><p class="from">$25</p><p style="margin:0;font-size:14px;color:var(--mut)">More sushi, more flavor. 3 sushi rolls, 1 protein, 2 sides, pickled ginger, wasabi and house sauces.</p></div></div>
+ <div class="mgrid" style="margin-top:16px">
+  <div class="mcol"><h3>Protein options</h3><p class="from">Your bento entrée</p><ul class="pl"><li>Nikkei Glazed Pernil · $19</li><li>Miso Glazed Chicharrones · $18</li><li>Ginger Orange Soy Chicken · $17</li><li>Japanese-Puerto Rican Fried Chicken · $16</li><li>Chicken Karaage · $17</li><li>Teriyaki Chicken · $16</li><li>Teriyaki Shrimp · $21</li><li>Teriyaki Salmon · $22</li></ul></div>
+  <div class="mcol"><h3>Sushi roll platters</h3><p class="from">Perfect for sharing</p><ul class="pl"><li>Small Sushi Platter (3 rolls) · $42</li><li>Medium Sushi Platter (5 rolls) · $68</li><li>Large Sushi Platter (7 rolls) · $92</li></ul></div>
+  <div class="mcol"><h3>Sides (choose 2)</h3><p class="from">With every bento</p><ul class="pl"><li>White Rice</li><li>Garlic Soy Potatoes</li><li>Yuca en Escabeche</li><li>Tostones</li><li>Maduros</li><li>Arroz con Gandules</li><li>Habichuelas Guisadas</li><li>Edamame</li><li>Island Collards</li><li>Papa Rellenas (2)</li><li>Alcapurrias (2)</li></ul></div>
+  <div class="mcol"><h3>Add-ons</h3><p class="from">Make it yours</p><ul class="pl"><li>Extra Sushi Roll · $8</li><li>Extra Protein · $6</li><li>Extra Side · $4</li><li>Miso Soup · $4</li><li>Seaweed Salad · $5</li><li>House Salad · $5</li><li>Extra Sauces · $0.50</li></ul></div>
+ </div>
+ <p style="margin-top:20px"><a class="btn" href="bento-orders.html">Order a bento</a> <a class="btn o" href="img/bento-del-caribe-menu.png" target="_blank">View the full Bento del Caribe menu</a></p>
+</div></section>
+<div class="band" role="img" aria-label="Boriental Sushi wave border"></div>
+<section id="mealprep"><div class="in two" style="align-items:start">
+ <div><p class="eyebrow">Custom meal prep</p><h2>Built around your diet.</h2>
+  <p class="sub">Separate from our Bento del Caribe boxes. Meal prep is a weekly program set up one-on-one with Chef.</p><ol class="steps"><li>Submit the meal prep order form online, or download the PDF and send it back.</li><li>Get a phone call within 24 hours for your consultation: goals, dietary questions and allergy requirements.</li><li>Chef sets your program, price (starting at $15–$20 per meal) and pickup or delivery schedule.</li></ol>
+  <a class="btn" href="meal-prep-orders.html">Fill out the meal prep form</a> <a class="btn o" href="Boriental-Meal-Prep-Order-Form.pdf" download>Download the PDF form</a></div>
+ <div class="mcol" style="border-top-color:var(--navy)"><h3>Dietary options</h3><p class="from">Covered on your phone consultation</p>
+  <ul class="rl">
+   <li><b>Allergy aware</b><span>Tell Chef about any allergies up front. Your plan is built around them, from swapping sauces to leaving out shellfish, nuts or sesame.</span></li>
+   <li><b>Vegan friendly</b><span>Plant-based builds from rolls like the Bonzi (carrots, cucumber, avocado) plus edamame, tostones, maduros, yuca, white rice, collards and fresh salads.</span></li>
+   <li><b>High protein</b><span>Lean proteins like chicken, shrimp, salmon, tuna and octopus to fuel training and recovery.</span></li>
+   <li><b>Healthy fats</b><span>Salmon and tuna bring omega-3s; avocado brings heart-friendly fats.</span></li>
+   <li><b>Smart carbs</b><span>Yuca, plantains, rice and potatoes for steady energy, scaled up or down to fit low-carb or high-carb goals.</span></li>
+   <li><b>Fiber and greens</b><span>Edamame, collards, cucumber, asparagus, watermelon radish and salads for fiber, vitamins and crunch.</span></li>
+  </ul>
+  <p class="note">Allergy requirements are reviewed on your phone consultation against the nine major food allergens identified by the FDA: milk, eggs, fish, crustacean shellfish, tree nuts, peanuts, wheat, soybeans and sesame. Our kitchen handles shellfish, fish, soy, sesame and wheat.</p>
+ </div>
+</div></section>
+<div class="band" role="img" aria-label="Boriental Sushi wave border"></div>
+<section class="soft" id="catering"><div class="in two">
+ <div><p class="eyebrow">Catering and events</p><h2>Hosting? Let's plan your menu.</h2><p class="sub">Social &amp; corporate event catering for 100–350 guests, with a menu curated with you. Home &amp; intimate gatherings for 2–75 guests, with a private chef in your home. Tell us about your event and we'll follow up to build your menu and quote.</p>
+  <p><a class="btn" href="Boriental-Sushi-Catering-Menu.pdf" download>Download the catering menu (PDF)</a></p></div>
+ <form id="cater"><div><label>Your name</label><input id="c_name" required></div><div><label>Phone or email</label><input id="c_contact" required></div>
+  <div><label>Event date</label><input id="c_date" type="date"></div><div><label>Guests</label><input id="c_guests" type="number" min="1" placeholder="25"></div>
+  <div class="w"><label>What kind of event?</label><select id="c_type"><option>Social or singles event</option><option>Latin night</option><option>Business mixer or team lunch</option><option>Family party</option><option>Something else</option></select></div>
+  <div class="w"><label>Anything we should know?</label><textarea id="c_notes" rows="3"></textarea></div>
+  <div class="w"><button class="btn" type="submit">Request a catering quote</button><p class="note" id="c_msg">Sends your request to Chef Izaya by text.</p></div></form>
+</div></section>
+<div class="band" role="img" aria-label="Boriental Sushi wave border"></div>
+<section id="gallery"><div class="in"><p class="eyebrow">Gallery</p><h2>From Chef Izaya's kitchen</h2><p class="sub">Island meets sushi, plate by plate.</p><div class="mas"><img src="https://static.wixstatic.com/media/4dc92e_30bab249c46d4c7cb54f89007b2b0006~mv2.jpeg/v1/fit/w_1000,h_1000,q_85/4dc92e_30bab249c46d4c7cb54f89007b2b0006~mv2.jpeg" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_ef236f42231d437b907a0c77bdfe24b8~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_ef236f42231d437b907a0c77bdfe24b8~mv2.png" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_b9d49a58f4af4ab1a79795fa3edcf854~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_b9d49a58f4af4ab1a79795fa3edcf854~mv2.png" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_605d0b3f00d04266b4801d9e7c9a1935~mv2.jpeg/v1/fit/w_1000,h_1000,q_85/4dc92e_605d0b3f00d04266b4801d9e7c9a1935~mv2.jpeg" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_4f7def5992ed4646bb99218b8bbf5697~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_4f7def5992ed4646bb99218b8bbf5697~mv2.png" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_5aad2716f9b844d6aa1f3bc627652062~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_5aad2716f9b844d6aa1f3bc627652062~mv2.png" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_4a26255b1e06463faedef4e37a2a08ca~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_4a26255b1e06463faedef4e37a2a08ca~mv2.png" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_7d461506473b4c6c8f8fe693d032434e~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_7d461506473b4c6c8f8fe693d032434e~mv2.png" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_7be29e4893ea4148ac19af29b68dcc23~mv2.jpeg/v1/fit/w_1000,h_1000,q_85/4dc92e_7be29e4893ea4148ac19af29b68dcc23~mv2.jpeg" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_4b004e6053354200b254e2819d5aca81~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_4b004e6053354200b254e2819d5aca81~mv2.png" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_7c3a441f1f9c45f88092342a3746a927~mv2.jpeg/v1/fit/w_1000,h_1000,q_85/4dc92e_7c3a441f1f9c45f88092342a3746a927~mv2.jpeg" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_84c7994295f345ebb969d012fe3694f4~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_84c7994295f345ebb969d012fe3694f4~mv2.png" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_200678052c0f43c0bc466b6eaed588da~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_200678052c0f43c0bc466b6eaed588da~mv2.png" alt="Boriental Sushi" loading="lazy"></div></div></section>
+<div class="band" role="img" aria-label="Boriental Sushi wave border"></div>
+<section class="story" id="story"><div class="in"><p class="eyebrow" style="color:#ffd3d6">Our story</p><h2>Minor Setback For Major Comeback</h2>
+ <p>Have you ever questioned if you can begin anew after facing numerous setbacks in life and hearing others define your value?</p>
+ <p>Chef Izaya Tha HighFather chose to challenge norms with a concept that celebrates diversity in community, food and culture. Boriental Sushi is built on honesty, integrity and enjoyment, serving as a culinary link between cultures and reshaping the Japanese experience with Puerto Rican influences.</p>
+ <div class="tags">#NeverGiveUp &nbsp; #SushiMeetsIsland &nbsp; #ChefIzayaThaHighFather</div></div></section>
+<div class="band" role="img" aria-label="Boriental Sushi wave border"></div>
+<footer id="contact"><b style="color:var(--navy)">Boriental Sushi</b> · Charlotte, NC<br>
+ <a href="tel:7049052262">704-905-2262</a> · <a href="https://www.instagram.com/izayathahighfather" target="_blank" rel="noopener">@izayathahighfather</a> · <a href="mailto:izayathahighfather@borientalsushi.com">izayathahighfather@borientalsushi.com</a><br>To-go · Pickup · Delivery · Catering</footer>
+<script>
+document.getElementById('cater').addEventListener('submit',function(e){e.preventDefault();
+ var v=function(i){return document.getElementById(i).value.trim()};
+ var t='Boriental Sushi catering request\nName: '+v('c_name')+'\nContact: '+v('c_contact')+'\nEvent: '+v('c_type')+(v('c_date')?'\nDate: '+v('c_date'):'')+(v('c_guests')?'\nGuests: '+v('c_guests'):'')+(v('c_notes')?'\nNotes: '+v('c_notes'):'');
+ document.getElementById('c_msg').textContent='Your message is ready to send. If your texting app did not open, text this to 704-905-2262.';
+ window.location.href='sms:7049052262?&body='+encodeURIComponent(t);});
+</script><div class="preview">Theme preview · <a href="boriental-draft-website.html">See current version</a></div>
+<a class="fab" href="#catering">Contact us</a>
+</body></html>
