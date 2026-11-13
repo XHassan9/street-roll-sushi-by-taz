@@ -1,201 +1,247 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Boriental Sushi | Island Meets Sushi | Charlotte, NC</title>
-<meta name="description" content="Puerto Rican soul and Japanese craft, made by hand in Charlotte. Meal prep, pickup, delivery and catering by Chef Izaya.">
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Rozha+One&display=swap" rel="stylesheet">
+<meta name="description" content="Puerto Rican soul and Japanese craft, made by hand in Charlotte. Bento del Caribe, meal prep and catering by Chef Izaya Tha HighFather.">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Rozha+One&family=Permanent+Marker&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#2b2b86;--red:#d3232b;--line:#d6d9ee;--mut:#5d5f85;--ink:#1d1d3d;--soft:#f4f5fb}
+:root{--navy:#23237a;--deep:#14143f;--red:#e0162b;--pr:#1f6fd0;--gold:#f5b82e;--cream:#fff8ec;--ink:#17172f;--mut:#5b5d80;--line:#dfe2f3}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font-family:Raleway,system-ui,Arial,sans-serif;color:var(--ink);line-height:1.5;border:14px solid var(--navy);border-bottom:0;min-height:100vh}
-h1,h2,h3{font-family:'Rozha One',Georgia,serif;font-weight:400;color:var(--navy);margin:0;line-height:1.1}
-a{color:var(--navy)}
-.draft{background:#fff7d6;border-bottom:1px solid #e8d98a;text-align:center;font-size:13px;padding:7px 12px}
-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 22px;position:sticky;top:0;background:#fff;z-index:5;border-bottom:1px solid var(--line)}
-nav .links{display:flex;gap:22px;font-weight:600;font-size:15px}nav .links a{text-decoration:none}
-.logo{width:74px;height:74px;border-radius:50%;object-fit:contain}
-.sun{width:74px;height:74px;border-radius:50%;background:var(--red);color:#fff;display:none;place-items:center;font-family:'Rozha One',serif;font-size:32px}
-.circle{border:2px solid var(--navy);border-radius:50%;width:92px;height:92px;display:grid;place-items:center;text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;text-decoration:none;line-height:1.1}
-.btn{display:inline-block;padding:13px 24px;border-radius:4px;font-weight:700;text-decoration:none;border:2px solid var(--red);background:var(--red);color:#fff;cursor:pointer;font:inherit;font-weight:700}
-.btn.o{background:#fff;color:var(--navy);border-color:var(--navy)}
-.hero{display:grid;grid-template-columns:1fr 1.1fr;gap:30px;align-items:center;max-width:1120px;margin:0 auto;padding:44px 22px}
-.hero h1{font-size:60px}.hero p.t{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:26px;margin:12px 0 22px;color:var(--mut)}
+body{margin:0;font-family:Raleway,system-ui,Arial,sans-serif;color:var(--ink);line-height:1.5;background:#fff}
+h1,h2,h3{font-family:'Rozha One',Georgia,serif;font-weight:400;margin:0;line-height:1.08}
+a{color:inherit}img{max-width:100%}
+.in{max-width:1160px;margin:0 auto;padding:0 22px}
+.stripe{height:10px;background:linear-gradient(90deg,var(--red) 0 20%,#fff 20% 40%,var(--red) 40% 60%,#fff 60% 80%,var(--red) 80%)}
+nav{position:sticky;top:0;z-index:10;background:#fff;border-bottom:4px solid var(--red);box-shadow:0 4px 14px rgba(20,20,63,.12)}
+nav .in{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:8px;padding-bottom:8px}
+nav .logo{width:64px;height:64px;display:block}
+nav .links{display:flex;gap:6px;font-weight:700;font-size:14px;flex-wrap:wrap;justify-content:center}
+nav .links a{text-decoration:none;color:var(--navy);padding:8px 12px;border-radius:30px}
+nav .links a:hover{background:var(--navy);color:#fff}
+nav .call{background:var(--red);color:#fff;text-decoration:none;font-weight:800;padding:11px 18px;border-radius:30px;white-space:nowrap;font-size:14px}
+.btn{display:inline-block;padding:14px 26px;border-radius:40px;font-weight:800;text-decoration:none;background:var(--red);color:#fff;border:3px solid var(--red);cursor:pointer;font:inherit;font-weight:800;transition:transform .12s}
+.btn:hover{transform:translateY(-2px)}
+.btn.w{background:#fff;color:var(--navy);border-color:#fff}.btn.g{background:var(--gold);border-color:var(--gold);color:var(--deep)}
+.btn.o{background:transparent;color:#fff;border-color:#fff}.btn.n{background:var(--navy);border-color:var(--navy)}
+.eyebrow{font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:12px;margin:0 0 10px;color:var(--red)}
+.marker{font-family:'Permanent Marker',cursive;letter-spacing:.02em}
+/* hero */
+.hero{position:relative;background:radial-gradient(circle at 78% 45%,#3a3ab8 0,var(--navy) 38%,var(--deep) 100%);color:#fff;overflow:hidden}
+.hero:before{content:"";position:absolute;left:-60px;bottom:-30px;width:900px;height:536px;background:url("img/wave-white.png") left bottom/contain no-repeat;opacity:.14}
+.hero .in{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;padding-top:54px;padding-bottom:60px}
+.hero h1{font-size:74px;color:#fff}.hero h1 span{color:var(--gold)}
+.hero .t{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:28px;margin:14px 0 26px;color:#e6e7ff}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
-.collage{position:relative;height:430px}
-.collage img{position:absolute;object-fit:cover;box-shadow:0 6px 18px rgba(29,29,61,.18)}
-.collage .a{left:0;top:120px;width:46%;height:270px}.collage .b{left:30%;top:0;width:36%;height:210px}.collage .c{left:38%;top:150px;width:34%;height:240px;z-index:2}.collage .d{right:0;top:190px;width:36%;height:220px}
-section{padding:54px 22px}.in{max-width:1120px;margin:0 auto}
-.soft{background:var(--soft)}
-.eyebrow{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--red);margin:0 0 8px}
-h2{font-size:38px}.sub{color:var(--mut);margin:8px 0 26px;max-width:640px}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.dish{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}
-.dish img,.dish .ph{width:100%;height:170px;object-fit:cover;display:block}
-.dish .ph{background:repeating-linear-gradient(45deg,#eceefa,#eceefa 10px,#f4f5fb 10px,#f4f5fb 20px);display:grid;place-items:center;color:var(--mut);font-size:13px}
-.dish div.b{padding:14px}.dish h3{font-size:19px}.dish p{margin:6px 0 0;font-size:14px;color:var(--mut)}
-.dish .pr{display:inline-block;margin-top:10px;font-size:12px;font-weight:700;color:var(--navy);background:#eceefa;border-radius:20px;padding:3px 10px}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
-.two img{width:100%;height:340px;object-fit:cover;border-radius:8px}
-.steps{display:grid;gap:10px;margin:18px 0 24px;padding:0;list-style:none;counter-reset:s}
-.steps li{counter-increment:s;padding-left:44px;position:relative}
-.steps li:before{content:counter(s);position:absolute;left:0;top:-2px;width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px}
-form{background:#fff;border:1px solid var(--line);border-radius:8px;padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
-form label{font-size:12px;font-weight:700;color:var(--mut);display:block;margin-bottom:4px}
-form input,form select,form textarea{width:100%;padding:10px;border:1px solid #c5c8e6;border-radius:5px;font:inherit}
-form .w{grid-column:1/-1}
-.story{background:var(--navy);color:#fff;text-align:center}.story h2{color:#fff}.story p{max-width:720px;margin:16px auto 0;font-size:18px;opacity:.95}
-.story .tags{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;margin-top:18px}
-.band{height:110px;background:url("https://static.wixstatic.com/media/4dc92e_78a56a21c4d94391b9d137dd73299b07~mv2.png") center/auto 100% repeat-x #fff}
-.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.gal img{width:100%;height:220px;object-fit:cover;border-radius:6px;display:block}.gal img:first-child{grid-row:span 2;height:450px}
-@media(max-width:860px){.band{height:70px}.gal{grid-template-columns:1fr 1fr}.gal img:first-child{grid-row:auto;height:220px}}
-.mgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.mcol{background:#fff;border:1px solid var(--line);border-top:4px solid var(--red);border-radius:8px;padding:18px}
-.mcol h3{font-size:24px}.from{font-weight:700;font-size:13px;color:var(--red);margin:4px 0 12px}
-.rl,.pl{list-style:none;margin:0;padding:0}.rl li{padding:8px 0;border-top:1px dashed var(--line)}.rl b{display:block;color:var(--navy)}.rl span{font-size:14px;color:var(--mut)}
-.pl{columns:1}.pl li{padding:5px 0;border-top:1px dashed var(--line);font-size:15px}
-@media(max-width:860px){.mgrid{grid-template-columns:1fr}}
-.b4{grid-template-columns:repeat(4,1fr)}@media(max-width:860px){.b4{grid-template-columns:1fr 1fr}}
-.mas{columns:4 220px;column-gap:10px}.mas img{width:100%;display:block;margin:0 0 10px;border-radius:4px;break-inside:avoid}
-section[id]{scroll-margin-top:212px}
-.fab{position:fixed;right:18px;bottom:18px;z-index:20;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:40px;box-shadow:0 6px 18px rgba(29,29,61,.3);border:2px solid #fff}
-.fab:hover{background:var(--navy)}
-@media(max-width:860px){section[id]{scroll-margin-top:162px}.fab{right:12px;bottom:12px;padding:12px 18px}}
-.herologo{display:flex;flex-direction:column;align-items:center;text-align:center}
-.eq{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:14px}
-.eq img{width:96px;height:66px;object-fit:cover;border-radius:6px;border:1px solid var(--line);box-shadow:0 4px 10px rgba(29,29,61,.15);background:#fff}
-.eq span{font-family:'Rozha One',serif;font-size:40px;color:var(--red);line-height:1}
-.herologo .lg{width:100%;max-width:400px;height:auto;filter:drop-shadow(0 10px 22px rgba(29,29,61,.22))}
-.chef{margin:0 auto 18px}.chef img{width:190px;height:190px;object-fit:cover;border-radius:50%;border:5px solid #fff;box-shadow:0 0 0 5px var(--red)}
-.chef h3{color:#fff;font-size:26px}
-@media(max-width:860px){.herologo .lg{max-width:280px}.eq img{width:74px;height:52px}.chef img{width:150px;height:150px}}
-
-/* ---- color pass: mirrors borientalsushi.com navy / red / Puerto Rico blue, brighter ---- */
-:root{--pr:#2f6db5;--prl:#eaf2fc;--rl:#fdeced;--cream:#fff7ee}
-#menu{background:linear-gradient(180deg,var(--prl),#fff)}
-#mealprep{background:var(--cream)}
-#catering{background:linear-gradient(180deg,var(--rl),#fff)}
-#gallery{background:linear-gradient(180deg,#fff,var(--prl))}
-#bento{background:var(--navy);color:#fff}#bento h2{color:#fff}#bento .eyebrow{color:#ffd3d6}#bento .sub{color:#dfe1f7}
-#bento .mcol{color:var(--ink)}
-.eyebrow{color:var(--red)}
-section h2{display:inline-block;padding-bottom:6px;background:linear-gradient(90deg,var(--red) 0 33%,var(--pr) 33% 66%,var(--red) 66%) left bottom/100% 4px no-repeat}
-.mgrid .mcol:nth-child(3n+2){border-top-color:var(--pr)}
-.mcol{box-shadow:0 6px 16px rgba(43,43,134,.10)}
-.mcol,.mgrid{align-items:stretch}
-.mcol{display:flex;flex-direction:column}
-.colimg{width:100%;height:170px;object-fit:cover;border-radius:8px;margin-top:auto;padding-top:14px}
-.colimg.tall{height:auto;flex:1;min-height:170px}
-.cap{font-size:13px;color:var(--mut);margin:6px 0 0;font-style:italic}
-.bcard{text-align:center;padding:0!important;overflow:hidden}
-.bcard .bimg{width:100%;height:190px;object-fit:cover;display:block;margin-bottom:12px}
-.bcard h3,.bcard p{padding:0 14px}.bcard p:last-child{padding-bottom:16px}
-.bcard .from{display:inline-block;background:var(--red);color:#fff;font-size:20px;font-family:'Rozha One',serif;padding:3px 14px;border-radius:30px;margin:8px 0 10px}
-.bcard:nth-child(even) .from{background:var(--pr)}
-.cta-card{background:var(--red)!important;color:#fff;border-color:var(--red)!important}
-.cta-card h3{color:#fff}.cta-card .from{color:#ffe1e3}.cta-card p{color:#fff}
-.cta-card .btn{background:#fff;color:var(--red);border-color:#fff;margin-top:auto;align-self:flex-start}
-.photo-card{background-size:cover;background-position:center;min-height:260px;justify-content:flex-end;padding:0!important;overflow:hidden}
-.photo-card span{display:block;background:linear-gradient(transparent,rgba(20,20,60,.85));color:#fff;font-family:'Rozha One',serif;font-size:22px;padding:40px 16px 16px}
-.evpics{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
-.evpics figure{margin:0;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 6px 16px rgba(43,43,134,.12)}
-.evpics img{width:100%;height:220px;object-fit:cover;display:block}
-.evpics figcaption{font-size:13px;font-weight:700;color:var(--navy);padding:8px 10px}
-.badges{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 20px}
-.badges span{background:#fff;border:2px solid var(--navy);color:var(--navy);font-weight:700;font-size:13px;padding:6px 12px;border-radius:30px}
-.badges span:nth-child(odd){border-color:var(--red);color:var(--red)}
-.steps li:before{background:var(--red)}
-@media(max-width:860px){.evpics{grid-template-columns:1fr}.photo-card{min-height:200px}}
-footer{padding:30px 22px;text-align:center;font-size:14px;color:var(--mut);border-top:6px solid var(--red)}
-.note{font-size:13px;color:var(--mut);margin-top:10px}
-@media(max-width:860px){body{border-width:8px}nav .links{display:none}.hero{grid-template-columns:1fr;padding-top:26px}.hero h1{font-size:42px}.collage{height:330px}.grid{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}form{grid-template-columns:1fr}h2{font-size:30px}.circle{width:76px;height:76px;font-size:15px}}
+.hero .note{margin-top:16px;font-size:14px;color:#cfd1f5}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.chips span{border:2px solid rgba(255,255,255,.45);border-radius:30px;padding:5px 12px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.eqwrap{text-align:center}
+.eq{display:inline-flex;align-items:center;gap:14px;background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.3);border-radius:60px;padding:10px 22px;margin-bottom:16px}
+.flag{width:74px;height:50px;border-radius:6px;box-shadow:0 4px 10px rgba(0,0,0,.35);display:block}
+.eq b{font-family:'Rozha One',serif;font-size:34px;color:var(--gold);line-height:1}
+.eq .ans{font-family:'Permanent Marker',cursive;font-size:22px;color:#fff}
+.biglogo{width:100%;max-width:430px;filter:drop-shadow(0 16px 30px rgba(0,0,0,.45));display:block;margin:0 auto}
+.band{height:104px;background:url("https://static.wixstatic.com/media/4dc92e_78a56a21c4d94391b9d137dd73299b07~mv2.png") center/auto 100% repeat-x #fff;border-top:4px solid var(--navy);border-bottom:4px solid var(--navy)}
+/* trio */
+.trio{background:var(--cream);padding:38px 0}
+.trio .in{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.way{border-radius:18px;padding:24px;color:#fff;text-decoration:none;display:flex;flex-direction:column;gap:8px;box-shadow:0 10px 24px rgba(20,20,63,.18);transition:transform .12s}
+.way:hover{transform:translateY(-4px)}
+.way h3{font-size:28px;color:#fff}.way p{margin:0;font-size:15px;opacity:.95}.way .go{margin-top:auto;padding-top:10px;font-weight:800}
+.way.a{background:linear-gradient(135deg,#ff3b4e,var(--red))}.way.b{background:linear-gradient(135deg,#3d8cf0,var(--pr))}.way.c{background:linear-gradient(135deg,#3a3ab8,var(--navy))}
+.way small{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:11px;opacity:.9}
+section{padding:64px 0;scroll-margin-top:84px}
+h2{font-size:46px;color:var(--navy)}.sub{color:var(--mut);margin:10px 0 28px;max-width:680px;font-size:17px}
+/* bento */
+#bento{background:#0d0d14;color:#fff;padding-top:0}
+.bbanner{width:100%;display:block;border-bottom:5px solid var(--gold)}
+#bento h2{color:#fff;margin-top:40px}#bento .sub{color:#c9cbe0}#bento .eyebrow{color:var(--gold)}
+.bgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.bento{background:#1a1a26;border:2px solid #2e2e44;border-radius:16px;overflow:hidden;text-decoration:none;color:#fff;display:flex;flex-direction:column;transition:transform .12s,border-color .12s}
+.bento:hover{transform:translateY(-4px);border-color:var(--gold)}
+.pic{position:relative}.pic img{width:100%;height:150px;object-fit:cover;object-position:left center;display:block}
+.price{position:absolute;top:8px;right:8px;background:var(--red);color:#fff;font-family:'Rozha One',serif;font-size:26px;padding:4px 16px;border-radius:30px;border:3px solid #fff;box-shadow:0 4px 10px rgba(0,0,0,.4)}
+.bb{padding:16px;display:flex;flex-direction:column;flex:1}
+.bento h3{font-family:'Permanent Marker',cursive;font-size:24px;color:var(--gold)}
+.bento .tag{margin:4px 0 10px;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#ff8f9b}
+.bento ul{margin:0 0 12px;padding-left:18px;font-size:14px;color:#dcdcec}
+.bento .go{margin-top:auto;font-weight:800;color:#fff}
+.bento:nth-child(2) h3{color:#6fb0ff}.bento:nth-child(2) .price{background:var(--pr)}.bento:nth-child(4) .price{background:var(--gold);color:var(--deep)}
+.dark3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.dcard{background:#1a1a26;border:2px solid #2e2e44;border-radius:16px;padding:20px}
+.dcard h3{font-family:'Permanent Marker',cursive;font-size:22px;color:#fff;margin-bottom:10px}
+.dcard.h1 h3{color:#ff6b7a}.dcard.h2 h3{color:#6fb0ff}.dcard.h3 h3{color:var(--gold)}
+.dcard ul{list-style:none;margin:0;padding:0}.dcard li{padding:6px 0;border-top:1px dashed #33334d;font-size:15px}
+.two-col{columns:2;column-gap:18px}.two-col li{break-inside:avoid}
+.r{display:flex;align-items:baseline;gap:8px}.r i{flex:1;border-bottom:2px dotted currentColor;opacity:.3;transform:translateY(-4px)}.r em{font-style:normal;font-weight:800;color:var(--gold);white-space:nowrap}
+.plat{display:flex;gap:14px;align-items:center;margin-bottom:12px}.plat img{width:92px;height:92px;object-fit:cover;border-radius:12px;border:2px solid var(--gold)}
+.plat p{margin:0;font-size:14px;color:#c9cbe0}
+.bcta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px;align-items:center}
+/* menu */
+#menu{background:var(--cream)}
+.m3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
+.mc{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 22px rgba(20,20,63,.10)}
+.mc header{padding:14px 18px;color:#fff}.mc header h3{font-family:'Permanent Marker',cursive;font-size:24px;color:#fff}.mc header p{margin:2px 0 0;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;opacity:.92}
+.mc.red header{background:var(--red)}.mc.blue header{background:var(--pr)}.mc.gold header{background:var(--gold)}.mc.gold header h3,.mc.gold header p{color:var(--deep)}.mc.navy header{background:var(--navy)}
+.mc ul{list-style:none;margin:0;padding:8px 18px 14px}.mc li{padding:9px 0;border-top:1px dashed var(--line)}.mc li:first-child{border-top:0}
+.mc li b{color:var(--navy)}.mc li span{display:block;font-size:13.5px;color:var(--mut)}.mc .r em{color:var(--red)}
+.mc ul.pl li{font-weight:600;color:var(--ink)}
+.stack{display:grid;gap:18px}
+.note-card{background:var(--navy);color:#fff;border-radius:16px;padding:20px}.note-card h3{color:var(--gold);font-size:22px;margin-bottom:6px}.note-card p{margin:0 0 14px;font-size:15px}
+.divider{display:flex;align-items:center;gap:16px;margin:44px 0 24px}.divider:before,.divider:after{content:"";flex:1;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--red),var(--pr))}
+.divider h3{font-size:30px;color:var(--navy)}
+/* meal prep */
+#mealprep{background:linear-gradient(135deg,#1f6fd0,#23237a);color:#fff}
+#mealprep h2{color:#fff}#mealprep .eyebrow{color:var(--gold)}#mealprep .sub{color:#e3e9ff}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+.steps{display:grid;gap:14px;margin:0 0 24px;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;padding:14px 16px 14px 62px;position:relative;background:rgba(255,255,255,.12);border-radius:14px;font-weight:600}
+.steps li:before{content:counter(s);position:absolute;left:14px;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:var(--gold);color:var(--deep);display:grid;place-items:center;font-family:'Rozha One',serif;font-size:20px}
+.diet{background:#fff;color:var(--ink);border-radius:18px;padding:22px;box-shadow:0 14px 30px rgba(0,0,0,.25)}
+.diet h3{font-size:26px;color:var(--navy)}.diet .lead{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin:4px 0 12px}
+.dg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.dg div{border-radius:12px;padding:12px;font-size:13.5px;color:var(--ink)}.dg b{display:block;font-size:15px;color:var(--navy);margin-bottom:2px}
+.dg div:nth-child(1){background:#fdeaec}.dg div:nth-child(2){background:#e6f6ea}.dg div:nth-child(3){background:#eaf2fd}.dg div:nth-child(4){background:#fff3d9}.dg div:nth-child(5){background:#f1ecfd}.dg div:nth-child(6){background:#e6f6ea}
+.fine{font-size:12.5px;color:var(--mut);margin:12px 0 0}
+/* catering */
+#catering{background:var(--red);color:#fff;position:relative;overflow:hidden}
+#catering:before{content:"";position:absolute;right:-80px;top:-20px;width:820px;height:488px;background:url("img/wave-white.png") right top/contain no-repeat;opacity:.13}
+#catering .in{position:relative}#catering h2{color:#fff}#catering .eyebrow{color:var(--gold)}#catering .sub{color:#ffe9eb}
+.svc{display:grid;gap:12px;margin:0 0 22px}.svc div{background:rgba(255,255,255,.14);border-radius:14px;padding:14px 16px}.svc b{display:block;font-family:'Rozha One',serif;font-weight:400;font-size:21px}.svc span{font-size:14.5px}
+form{background:#fff;color:var(--ink);border-radius:18px;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:12px;box-shadow:0 14px 30px rgba(0,0,0,.25)}
+form h3{grid-column:1/-1;font-size:26px;color:var(--navy)}
+form label{font-size:12px;font-weight:800;color:var(--mut);display:block;margin-bottom:4px}
+form input,form select,form textarea{width:100%;padding:11px;border:2px solid var(--line);border-radius:10px;font:inherit}
+form .w{grid-column:1/-1}.fnote{font-size:13px;color:var(--mut);margin:10px 0 0}
+/* gallery */
+#gallery{background:#fff}.mas{columns:4 220px;column-gap:12px}.mas img{width:100%;display:block;margin:0 0 12px;border-radius:12px;break-inside:avoid;box-shadow:0 6px 16px rgba(20,20,63,.14)}
+/* story */
+.story{background:radial-gradient(circle at 20% 30%,#3a3ab8 0,var(--navy) 40%,var(--deep) 100%);color:#fff;position:relative;overflow:hidden}
+.story:before{content:"";position:absolute;right:-40px;bottom:-30px;width:760px;height:452px;background:url("img/wave-white.png") right bottom/contain no-repeat;opacity:.12}
+.story .in{position:relative;display:grid;grid-template-columns:340px 1fr;gap:44px;align-items:center}
+.chef{text-align:center}.chef img{width:300px;height:300px;object-fit:cover;object-position:center top;border-radius:50%;border:6px solid #fff;box-shadow:0 0 0 8px var(--red),0 18px 34px rgba(0,0,0,.4);background:#fff}
+.chef p{font-family:'Permanent Marker',cursive;font-size:22px;margin:22px 0 0;color:var(--gold)}
+.story h2{color:#fff}.story .q{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:27px;color:var(--gold);margin:14px 0}
+.story p{font-size:17px;max-width:640px}
+.tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.tags span{font-family:'Permanent Marker',cursive;background:rgba(255,255,255,.12);border-radius:30px;padding:6px 14px}
+footer{background:var(--deep);color:#cfd1f5;text-align:center;padding:34px 22px 90px;font-size:15px}
+footer b{font-family:'Rozha One',serif;font-weight:400;font-size:26px;color:#fff;display:block}footer a{color:#fff}
+.fab{position:fixed;right:18px;bottom:18px;z-index:20;background:var(--gold);color:var(--deep);text-decoration:none;font-weight:800;padding:14px 24px;border-radius:40px;box-shadow:0 8px 20px rgba(0,0,0,.35);border:3px solid #fff}
+@media(max-width:900px){nav .links{display:none}.hero .in{grid-template-columns:1fr;padding-top:34px;text-align:center}.hero h1{font-size:50px}.cta,.chips{justify-content:center}.biglogo{max-width:300px}
+.trio .in,.m3,.dark3,.two{grid-template-columns:1fr}.bgrid{grid-template-columns:1fr 1fr}h2{font-size:34px}section{padding:46px 0}.band{height:72px}
+.story .in{grid-template-columns:1fr;text-align:center}.story p{margin-left:auto;margin-right:auto}.tags{justify-content:center}.chef img{width:220px;height:220px}form{grid-template-columns:1fr}.flag{width:54px;height:36px}.eq{gap:8px;padding:8px 14px}.eq .ans{font-size:17px}}
+@media(max-width:520px){.bgrid,.dg{grid-template-columns:1fr}.two-col{columns:1}}
 </style></head><body>
-<div class="draft">Draft for Chef Izaya to review. Photos are from Chef's own site. Menu from Chef's catering menu.</div>
-<nav>
- <a href="#top"><img class="logo" src="img/logo-boriental.png" alt="Boriental Sushi" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="sun">B</span></a>
- <div class="links"><a href="#menu">Menu</a><a href="#bento">Bento</a><a href="#gallery">Gallery</a><a href="#mealprep">Meal Prep</a><a href="#catering">Catering</a><a href="#story">Our Story</a><a href="#catering">Full Menu</a></div>
- <a class="circle" href="#contact">Contact<br>Us</a>
-</nav>
-<div class="hero" id="top">
- <div><p class="eyebrow">Charlotte, NC · Pickup · Delivery · Catering</p>
-  <h1>Island Meets Sushi!!</h1>
+<div class="stripe"></div>
+<nav><div class="in">
+ <a href="#top"><img class="logo" src="img/logo-boriental.png" alt="Boriental Sushi"></a>
+ <div class="links"><a href="#bento">Bento</a><a href="#menu">Menu</a><a href="#mealprep">Meal Prep</a><a href="#catering">Catering</a><a href="#gallery">Gallery</a><a href="#story">Our Story</a><a href="#catering">Full Menu</a></div>
+ <a class="call" href="tel:7049052262">Call 704-905-2262</a>
+</div></nav>
+<div class="hero" id="top"><div class="in">
+ <div>
+  <div class="chips"><span>Charlotte, NC</span><span>Pickup</span><span>Delivery</span><span>Catering</span></div>
+  <h1>Island Meets <span>Sushi!!</span></h1>
   <p class="t">Japanese craft. Puerto Rican soul. Rolled by hand in Charlotte.</p>
-  <div class="cta"><a class="btn" href="meal-prep-orders.html">Start meal prep</a><a class="btn o" href="bento-orders.html">Order a bento</a><a class="btn o" href="#catering">Book catering</a></div>
-  <p class="note">Or call or text <a href="tel:7049052262">704-905-2262</a></p></div>
- <div class="herologo">
-  <p class="eyebrow" style="margin:0 0 12px">Culinary bridge between cultures</p>
-  <div class="eq"><img src="https://static.wixstatic.com/media/4dc92e_5bd2aa13c89a4ea18dd0ff3a9527023e~mv2.png" alt="Puerto Rico"><span>+</span><img src="https://static.wixstatic.com/media/4dc92e_7635b1432b2d4b04bc950643d1cbd908~mv2.jpg/v1/fit/w_600,h_600,q_85/4dc92e_7635b1432b2d4b04bc950643d1cbd908~mv2.jpg" alt="Japan"><span>=</span></div>
-  <img class="lg" src="img/logo-boriental.png" alt="Boriental Sushi logo"></div>
-</div>
+  <div class="cta"><a class="btn g" href="bento-orders.html">Order a bento</a><a class="btn w" href="meal-prep-orders.html">Start meal prep</a><a class="btn o" href="#catering">Book catering</a></div>
+  <p class="note">Or call or text <a href="tel:7049052262">704-905-2262</a></p>
+ </div>
+ <div class="eqwrap">
+  <div class="eq"><svg viewBox="0 0 90 60" class="flag" aria-label="Puerto Rico"><rect width="90" height="60" fill="#fff"/><g fill="#e0162b"><rect width="90" height="12"/><rect y="24" width="90" height="12"/><rect y="48" width="90" height="12"/></g><path d="M0 0 52 30 0 60z" fill="#0b4ea2"/><path fill="#fff" d="M17.5 19.5l2.47 7.6h7.99l-6.46 4.7 2.47 7.6-6.47-4.7-6.47 4.7 2.47-7.6-6.46-4.7h7.99z"/></svg><b>+</b><svg viewBox="0 0 90 60" class="flag" aria-label="Japan"><rect width="90" height="60" fill="#fff"/><circle cx="45" cy="30" r="18" fill="#bc002d"/></svg><b>=</b><span class="ans">Boriental</span></div>
+  <img class="biglogo" src="img/logo-boriental.png" alt="Boriental Sushi logo">
+ </div>
+</div></div>
 <div class="band" role="img" aria-label="Boriental Sushi wave border"></div>
-<section class="soft" id="menu"><div class="in">
- <p class="eyebrow">Catering menu</p><h2>The menu</h2><p class="sub">Proteins, extras and salads, priced by protein and size of event. Deposit required for all catering events; cancellation fee applies.</p>
- <div class="mgrid">
-  <div class="mcol"><h3>Proteins &amp; meats</h3><p class="from">Price varies by protein</p><ul class="pl"><li>Nikkei Glazed Pernil</li><li>Miso Glazed Chicharrones</li><li>Ginger Orange Soy Chicken</li><li>Fried Chicken</li><li>Sofrito Guydon</li><li>Orange Miso Bistec Encebollado</li><li>Chicken Karaage w/ Sweet Chili Sauce</li><li>Teriyaki</li><li>Mofongo</li><li>Pinchos</li></ul></div>
-  <div class="mcol"><h3>Extras</h3><p class="from">Price varies by size of event</p><ul class="pl"><li>Isla Umami Collards</li><li>Alcapurrias</li><li>Empanadillas</li><li>Papa Rellenas</li><li>Boricua Harumaki</li><li>Tostones</li><li>Edamame</li><li>Habichuelas Guisadas</li><li>Arroz Con Gandules</li><li>Yuca En Escabeche</li><li>White Rice</li><li>Udon Noodles</li><li>Garlic Soy Potatoes</li></ul></div>
-  <div class="mcol"><h3>Salads</h3><p class="from">Price varies by size of party</p><ul class="pl"><li>Ensalada De Pulpo (octopus salad)</li><li>Ensalada Verde (house salad)</li><li>Ensalada De Papa (potato salad)</li><li>Caribe Sesame Coleslaw</li><li>Kani del Caribe (Japanese crab salad)</li></ul><img class="colimg" src="https://static.wixstatic.com/media/4dc92e_c2ae077cca074ceab803b5deccd0fcab~mv2.webp/v1/fit/w_900,h_900,q_85/4dc92e_c2ae077cca074ceab803b5deccd0fcab~mv2.webp" alt="Kani salad"><p class="cap">Kani del Caribe, made fresh.</p></div>
+<div class="trio"><div class="in">
+ <a class="way a" href="#bento"><small>Grab and go</small><h3>Bento del Caribe</h3><p>Sushi, entrée and sides in one box. $18 to $25. DoorDash, pickup and pre-orders.</p><span class="go">See the boxes →</span></a>
+ <a class="way b" href="#mealprep"><small>Built for you</small><h3>Custom Meal Prep</h3><p>A weekly program built around your diet and allergies. Starting at $15–$20 per meal.</p><span class="go">Start your form →</span></a>
+ <a class="way c" href="#catering"><small>We come to you</small><h3>Catering &amp; Events</h3><p>Corporate events for 100–350 guests. Private chef nights for 2–75.</p><span class="go">Plan your event →</span></a>
+</div></div>
+<section id="bento">
+ <img class="bbanner" src="img/bento-banner.jpg" alt="Bento del Caribe: a fusion experience in every box">
+ <div class="in">
+  <h2>Pick your box</h2><p class="sub">Every bento comes with your choice of sushi rolls, one protein, two sides, pickled ginger, wasabi and house sauces.</p>
+  <div class="bgrid"><a class="bento" href="bento-orders.html"><div class="pic"><img src="img/bento-island.jpg" alt="El Island Bento"><span class="price">$18</span></div><div class="bb"><h3>El Island Bento</h3><p class="tag">Puerto Rican flavor meets sushi</p><ul><li>Any 1 sushi roll</li><li>1 protein</li><li>2 sides</li><li>Pickled ginger, wasabi &amp; house sauces</li></ul><span class="go">Order this box →</span></div></a><a class="bento" href="bento-orders.html"><div class="pic"><img src="img/bento-boriental.jpg" alt="El Boriental Bento"><span class="price">$20</span></div><div class="bb"><h3>El Boriental Bento</h3><p class="tag">The perfect balance</p><ul><li>Any 1 sushi roll</li><li>1 protein</li><li>2 sides</li><li>Pickled ginger, wasabi &amp; house sauces</li></ul><span class="go">Order this box →</span></div></a><a class="bento" href="bento-orders.html"><div class="pic"><img src="img/bento-fusion.jpg" alt="El Fusion Bento"><span class="price">$22</span></div><div class="bb"><h3>El Fusion Bento</h3><p class="tag">Bold flavors. One box.</p><ul><li>Any 2 sushi rolls</li><li>1 protein</li><li>2 sides</li><li>Pickled ginger, wasabi &amp; house sauces</li></ul><span class="go">Order this box →</span></div></a><a class="bento" href="bento-orders.html"><div class="pic"><img src="img/bento-ultimate.jpg" alt="El Ultimate Bento"><span class="price">$25</span></div><div class="bb"><h3>El Ultimate Bento</h3><p class="tag">More sushi. More flavor.</p><ul><li>Any 3 sushi rolls</li><li>1 protein</li><li>2 sides</li><li>Pickled ginger, wasabi &amp; house sauces</li></ul><span class="go">Order this box →</span></div></a></div>
+  <div class="dark3">
+   <div class="dcard h1"><h3>Protein options</h3><ul><li><div class="r"><b>Nikkei Glazed Pernil</b><i></i><em>$19</em></div></li><li><div class="r"><b>Miso Glazed Chicharrones</b><i></i><em>$18</em></div></li><li><div class="r"><b>Ginger Orange Soy Chicken</b><i></i><em>$17</em></div></li><li><div class="r"><b>Japanese-Puerto Rican Fried Chicken</b><i></i><em>$16</em></div></li><li><div class="r"><b>Chicken Karaage</b><i></i><em>$17</em></div></li><li><div class="r"><b>Teriyaki Chicken</b><i></i><em>$16</em></div></li><li><div class="r"><b>Teriyaki Shrimp</b><i></i><em>$21</em></div></li><li><div class="r"><b>Teriyaki Salmon</b><i></i><em>$22</em></div></li></ul></div>
+   <div class="dcard h2"><h3>Sides · choose any two</h3><ul><li>White Rice</li><li>Garlic Soy Potatoes</li><li>Yuca en Escabeche</li><li>Tostones</li><li>Maduros</li><li>Arroz con Gandules</li><li>Habichuelas Guisadas</li><li>Edamame</li><li>Island Collards</li><li>Papa Rellenas (2)</li><li>Alcapurrias (2)</li></ul></div>
+   <div class="dcard h3"><h3>Platters &amp; add-ons</h3>
+    <div class="plat"><img src="img/platters.jpg" alt="Sushi roll platters"><p>Sushi roll platters, perfect for sharing.</p></div>
+    <ul><li><div class="r"><b>Small · 3 rolls, 24 pcs</b><i></i><em>$42</em></div></li><li><div class="r"><b>Medium · 5 rolls, 40 pcs</b><i></i><em>$68</em></div></li><li><div class="r"><b>Large · 7 rolls, 56 pcs</b><i></i><em>$92</em></div></li><li><div class="r"><b>Extra sushi roll</b><i></i><em>$8</em></div></li><li><div class="r"><b>Extra protein</b><i></i><em>$6</em></div></li><li><div class="r"><b>Extra side</b><i></i><em>$4</em></div></li><li><div class="r"><b>Miso soup</b><i></i><em>$4</em></div></li><li><div class="r"><b>Seaweed or house salad</b><i></i><em>$5</em></div></li></ul></div>
+  </div>
+  <div class="bcta"><a class="btn g" href="bento-orders.html">Order a bento</a><a class="btn o" href="img/bento-del-caribe-menu.png" target="_blank">View the full Bento del Caribe menu</a></div>
  </div>
-<div style="margin-top:34px"><p class="eyebrow">Sushi menu · Home &amp; intimate gatherings</p><h3 style="font-size:28px">Sushi, priced per roll</h3><p class="sub">For home and intimate gatherings (2–75 guests). Sushi for corporate events is available at premium pricing.</p></div>
- <div class="mgrid">
-  <div class="mcol"><h3>Japanese Maki</h3><p class="from">Classic rolls · 10 pieces</p><ul class="rl"><li><b>Tuna Roll · $13</b><span>Tuna, cucumber, sesame seeds</span></li><li><b>Spicy Tuna Roll · $14</b><span>Spicy tuna, cucumber, spicy mayo, scallions</span></li><li><b>Bonzi Roll · $13</b><span>Carrots, cucumber, avocado, sweet eel sauce</span></li><li><b>California Roll (Crispy) · $13</b><span>Crab, avocado, cucumber, sesame seeds</span></li><li><b>Samurai Roll · $17</b><span>Shrimp, crab, cucumber, red pepper, avocado, eel sauce</span></li><li><b>Rainbow Roll · $17</b><span>Assorted fish, avocado, cucumber, sweet eel sauce</span></li><li><b>Ryujin Roll · $17</b><span>Salmon, asparagus, watermelon radish, cucumber, tempura bits</span></li><li><b>Under The Sea Roll · $15</b><span>Kani crab salad mix, avocado, topped with Dragon Breath Mayo</span></li><li><b>Resurrection Roll · $17</b><span>Shrimp, avocado, cucumber, topped with garlic ponzu &amp; crispy onions</span></li><li><b>Volcano Roll · $17</b><span>Crab, avocado, crunch, topped with spicy mayo, eel sauce</span></li></ul></div>
-  <div class="mcol"><h3>Puerto Rican Maki</h3><p class="from">Signature rolls · 7 pieces</p><ul class="rl"><li><b>Ponce Roll · $15</b><span>Crab, chicken, plantain, cucumber, red pepper, sofrito sauce</span></li><li><b>Bayamón Roll · $16</b><span>Pernil, avocado, sweet plantain, pickled onions, garlic cilantro sauce</span></li><li><b>San Juan Roll · $18</b><span>Sweet &amp; spicy grilled chicken, yuca, tostones, apples, mango mayo</span></li><li><b>Guavate Roll · $17</b><span>Pork belly (chicharrón), avocado, tostones, pickled onions, sesame seeds</span></li><li><b>Taino Roll · $17</b><span>Pernil, yuca, plantain, pineapple, avocado, teriyaki &amp; sesame seeds</span></li><li><b>Isla Verde Roll</b><span>Bistec, plantains, red peppers, asparagus, pickled onions</span></li><li><b>Yunque Roll</b><span>Salmon, apples, watermelon radish, tostones, avocado, sofrito sauce</span></li><li><b>Coquí Roll · $16</b><span>Shrimp, avocado, mango, topped with mango habanero sauce</span></li></ul></div>
-  <div class="mcol fill"><h3>Fusion Maki</h3><p class="from">Specialty rolls · 10 pieces</p><ul class="rl"><li><b>Rising Rican Roll · $19</b><span>Tuna, salmon, cucumber, avocado, kani crab salad, sweet eel sauce</span></li><li><b>Boriental Roll · $17</b><span>Fried chicken, tempura shrimp, red peppers, apples, avocado, pernil sauce</span></li><li><b>Carolina Roll · $16</b><span>Katsu chicken, BBQ kimchi slaw, Carolina sweet eel sauce</span></li></ul><img class="colimg" src="https://static.wixstatic.com/media/4dc92e_cb001211014f434bbe0ee2ae09d374f8~mv2.jpg/v1/fit/w_900,h_900,q_85/4dc92e_cb001211014f434bbe0ee2ae09d374f8~mv2.jpg" alt="Japanese and Puerto Rican fusion roll"><p class="cap">The fusion roll: Japanese craft, Puerto Rican soul.</p></div>
+</section>
+<div class="band" role="img" aria-label="Boriental Sushi wave border"></div>
+<section id="menu"><div class="in">
+ <p class="eyebrow">The sushi menu · Home &amp; intimate gatherings</p><h2>Rolled by hand, every order</h2>
+ <p class="sub">Choose these rolls for your bento or your private gathering (2–75 guests). Sushi for corporate events is available at premium pricing.</p>
+ <div class="m3">
+  <div class="mc red"><header><h3>Japanese Maki</h3><p>Classic rolls · 10 pieces</p></header><ul><li><div class="r"><b>Tuna Roll</b><i></i><em>$13</em></div><span>Tuna, cucumber, sesame seeds</span></li><li><div class="r"><b>Spicy Tuna Roll</b><i></i><em>$14</em></div><span>Spicy tuna, cucumber, spicy mayo, scallions</span></li><li><div class="r"><b>Bonzi Roll</b><i></i><em>$13</em></div><span>Carrots, cucumber, avocado, sweet eel sauce</span></li><li><div class="r"><b>California Roll (Crispy)</b><i></i><em>$13</em></div><span>Crab, avocado, cucumber, sesame seeds</span></li><li><div class="r"><b>Samurai Roll</b><i></i><em>$17</em></div><span>Shrimp, crab, cucumber, red pepper, avocado, eel sauce</span></li><li><div class="r"><b>Rainbow Roll</b><i></i><em>$17</em></div><span>Assorted fish, avocado, cucumber, sweet eel sauce</span></li><li><div class="r"><b>Ryujin Roll</b><i></i><em>$17</em></div><span>Salmon, asparagus, watermelon radish, cucumber, tempura bits</span></li><li><div class="r"><b>Under The Sea Roll</b><i></i><em>$15</em></div><span>Kani crab salad mix, avocado, Dragon Breath Mayo</span></li><li><div class="r"><b>Resurrection Roll</b><i></i><em>$17</em></div><span>Shrimp, avocado, cucumber, garlic ponzu &amp; crispy onions</span></li><li><div class="r"><b>Volcano Roll</b><i></i><em>$17</em></div><span>Crab, avocado, crunch, spicy mayo, eel sauce</span></li></ul></div>
+  <div class="mc blue"><header><h3>Puerto Rican Maki</h3><p>Signature rolls · 7 pieces</p></header><ul><li><div class="r"><b>Ponce Roll</b><i></i><em>$15</em></div><span>Crab, chicken, plantain, cucumber, red pepper, sofrito sauce</span></li><li><div class="r"><b>Bayamón Roll</b><i></i><em>$16</em></div><span>Pernil, avocado, sweet plantain, pickled onions, garlic cilantro sauce</span></li><li><div class="r"><b>San Juan Roll</b><i></i><em>$18</em></div><span>Sweet &amp; spicy grilled chicken, yuca, tostones, apples, mango mayo</span></li><li><div class="r"><b>Guavate Roll</b><i></i><em>$17</em></div><span>Pork belly (chicharrón), avocado, tostones, pickled onions, sesame seeds</span></li><li><div class="r"><b>Taino Roll</b><i></i><em>$17</em></div><span>Pernil, yuca, plantain, pineapple, avocado, teriyaki &amp; sesame seeds</span></li><li><div class="r"><b>Isla Verde Roll</b><i></i><em>Ask Chef</em></div><span>Bistec, plantains, red peppers, asparagus, pickled onions</span></li><li><div class="r"><b>Yunque Roll</b><i></i><em>Ask Chef</em></div><span>Salmon, apples, watermelon radish, tostones, avocado, sofrito sauce</span></li><li><div class="r"><b>Coquí Roll</b><i></i><em>$16</em></div><span>Shrimp, avocado, mango, mango habanero sauce</span></li></ul></div>
+  <div class="stack">
+   <div class="mc gold"><header><h3>Fusion Maki</h3><p>Specialty rolls · 10 pieces</p></header><ul><li><div class="r"><b>Rising Rican Roll</b><i></i><em>$19</em></div><span>Tuna, salmon, cucumber, avocado, kani crab salad, sweet eel sauce</span></li><li><div class="r"><b>Boriental Roll</b><i></i><em>$17</em></div><span>Fried chicken, tempura shrimp, red peppers, apples, avocado, pernil sauce</span></li><li><div class="r"><b>Carolina Roll</b><i></i><em>$16</em></div><span>Katsu chicken, BBQ kimchi slaw, Carolina sweet eel sauce</span></li></ul></div>
+   <div class="note-card"><h3>Hosting at home?</h3><p>Chef Izaya comes to you. A private chef experience for 2–75 guests, with the full sushi menu.</p><a class="btn g" href="#catering">Plan a private night</a></div>
+   <div class="note-card" style="background:var(--red)"><h3 style="color:#fff">Want it in a box?</h3><p>Any roll here can go in your Bento del Caribe.</p><a class="btn w" href="bento-orders.html">Order a bento</a></div>
+  </div>
  </div>
- <p class="note">Mofongo, empanadillas, alcapurrias and papa rellenas priced by meat.</p>
+ <div class="divider"><h3>Catering menu</h3></div>
+ <div class="m3">
+  <div class="mc navy"><header><h3>Proteins &amp; meats</h3><p>Price varies by protein</p></header><ul class="pl"><li>Nikkei Glazed Pernil</li><li>Miso Glazed Chicharrones</li><li>Ginger Orange Soy Chicken</li><li>Fried Chicken</li><li>Sofrito Guydon</li><li>Orange Miso Bistec Encebollado</li><li>Chicken Karaage w/ Sweet Chili Sauce</li><li>Teriyaki</li><li>Mofongo</li><li>Pinchos</li></ul></div>
+  <div class="mc blue"><header><h3>Extras</h3><p>Price varies by size of event</p></header><ul class="pl"><li>Isla Umami Collards</li><li>Alcapurrias</li><li>Empanadillas</li><li>Papa Rellenas</li><li>Boricua Harumaki</li><li>Tostones</li><li>Edamame</li><li>Habichuelas Guisadas</li><li>Arroz Con Gandules</li><li>Yuca En Escabeche</li><li>White Rice</li><li>Udon Noodles</li><li>Garlic Soy Potatoes</li></ul></div>
+  <div class="stack">
+   <div class="mc red"><header><h3>Salads</h3><p>Price varies by size of party</p></header><ul class="pl"><li>Ensalada De Pulpo (octopus salad)</li><li>Ensalada Verde (house salad)</li><li>Ensalada De Papa (potato salad)</li><li>Caribe Sesame Coleslaw</li><li>Kani del Caribe (Japanese crab salad)</li></ul></div>
+   <div class="note-card"><h3>Get the full catering menu</h3><p>Mofongo, empanadillas, alcapurrias and papa rellenas are priced by meat. Deposit required for all catering events; cancellation fee applies.</p><a class="btn g" href="Boriental-Sushi-Catering-Menu.pdf" download>Download the menu (PDF)</a></div>
+  </div>
+ </div>
 </div></section>
 <div class="band" role="img" aria-label="Boriental Sushi wave border"></div>
-<section id="bento"><div class="in"><p class="eyebrow">Bento del Caribe · DoorDash, pickup &amp; pre-orders</p><h2>A fusion experience in every box</h2><p class="sub">Sushi, entrée, sides, bold flavors. Pick your rolls from the menu, a protein and any two sides.</p>
- <div class="mgrid b4"><div class="mcol bcard"><img class="bimg" src="https://static.wixstatic.com/media/4dc92e_27b48d0800bb4ee390e980df523076b6~mv2.webp/v1/fit/w_900,h_900,q_85/4dc92e_27b48d0800bb4ee390e980df523076b6~mv2.webp" alt="Bento del Caribe box"><h3>El Island Bento</h3><p class="from">$18</p><p style="margin:0;font-size:14px;color:var(--mut)">Puerto Rican flavor meets sushi. 1 sushi roll, 1 protein, 2 sides, pickled ginger, wasabi and house sauces.</p></div><div class="mcol bcard"><img class="bimg" src="https://static.wixstatic.com/media/4dc92e_27b48d0800bb4ee390e980df523076b6~mv2.webp/v1/fit/w_900,h_900,q_85/4dc92e_27b48d0800bb4ee390e980df523076b6~mv2.webp" alt="Bento del Caribe box"><h3>El Boriental Bento</h3><p class="from">$20</p><p style="margin:0;font-size:14px;color:var(--mut)">The perfect balance. 1 sushi roll, 1 protein, 2 sides, pickled ginger, wasabi and house sauces.</p></div><div class="mcol bcard"><img class="bimg" src="https://static.wixstatic.com/media/4dc92e_27b48d0800bb4ee390e980df523076b6~mv2.webp/v1/fit/w_900,h_900,q_85/4dc92e_27b48d0800bb4ee390e980df523076b6~mv2.webp" alt="Bento del Caribe box"><h3>El Fusion Bento</h3><p class="from">$22</p><p style="margin:0;font-size:14px;color:var(--mut)">Bold flavors, one box. 2 sushi rolls, 1 protein, 2 sides, pickled ginger, wasabi and house sauces.</p></div><div class="mcol bcard"><img class="bimg" src="https://static.wixstatic.com/media/4dc92e_27b48d0800bb4ee390e980df523076b6~mv2.webp/v1/fit/w_900,h_900,q_85/4dc92e_27b48d0800bb4ee390e980df523076b6~mv2.webp" alt="Bento del Caribe box"><h3>El Ultimate Bento</h3><p class="from">$25</p><p style="margin:0;font-size:14px;color:var(--mut)">More sushi, more flavor. 3 sushi rolls, 1 protein, 2 sides, pickled ginger, wasabi and house sauces.</p></div></div>
- <div class="mgrid" style="margin-top:16px">
-  <div class="mcol"><h3>Protein options</h3><p class="from">Your bento entrée</p><ul class="pl"><li>Nikkei Glazed Pernil · $19</li><li>Miso Glazed Chicharrones · $18</li><li>Ginger Orange Soy Chicken · $17</li><li>Japanese-Puerto Rican Fried Chicken · $16</li><li>Chicken Karaage · $17</li><li>Teriyaki Chicken · $16</li><li>Teriyaki Shrimp · $21</li><li>Teriyaki Salmon · $22</li></ul><img class="colimg" src="https://static.wixstatic.com/media/4dc92e_29825f688d7a47539394a32ef16ceb87~mv2.jpg/v1/fit/w_900,h_900,q_85/4dc92e_29825f688d7a47539394a32ef16ceb87~mv2.jpg" alt="Nikkei glazed pernil"><p class="cap">Nikkei Glazed Pernil, the house favorite.</p></div>
-  <div class="mcol"><h3>Sushi roll platters</h3><p class="from">Perfect for sharing</p><ul class="pl"><li>Small Sushi Platter (3 rolls) · $42</li><li>Medium Sushi Platter (5 rolls) · $68</li><li>Large Sushi Platter (7 rolls) · $92</li></ul><img class="colimg tall" src="https://static.wixstatic.com/media/4dc92e_27b48d0800bb4ee390e980df523076b6~mv2.webp/v1/fit/w_900,h_900,q_85/4dc92e_27b48d0800bb4ee390e980df523076b6~mv2.webp" alt="Bento box program"><p class="cap">Feeding a group? Platters start at $42.</p></div>
-  <div class="mcol"><h3>Sides (choose 2)</h3><p class="from">With every bento</p><ul class="pl"><li>White Rice</li><li>Garlic Soy Potatoes</li><li>Yuca en Escabeche</li><li>Tostones</li><li>Maduros</li><li>Arroz con Gandules</li><li>Habichuelas Guisadas</li><li>Edamame</li><li>Island Collards</li><li>Papa Rellenas (2)</li><li>Alcapurrias (2)</li></ul></div>
-  <div class="mcol"><h3>Add-ons</h3><p class="from">Make it yours</p><ul class="pl"><li>Extra Sushi Roll · $8</li><li>Extra Protein · $6</li><li>Extra Side · $4</li><li>Miso Soup · $4</li><li>Seaweed Salad · $5</li><li>House Salad · $5</li><li>Extra Sauces · $0.50</li></ul></div><div class="mcol cta-card"><h3>Order your bento</h3><p class="from">DoorDash · pickup · pre-orders</p><p>Pick a box, your rolls, a protein and two sides. Pre-order for pickup or get it delivered.</p><a class="btn" href="bento-orders.html">Order a bento</a></div><div class="mcol photo-card" style="background-image:url('https://static.wixstatic.com/media/4dc92e_27b48d0800bb4ee390e980df523076b6~mv2.webp/v1/fit/w_900,h_900,q_85/4dc92e_27b48d0800bb4ee390e980df523076b6~mv2.webp')"><span>A fusion experience in every box</span></div>
- </div>
- <p style="margin-top:20px"><a class="btn o" href="img/bento-del-caribe-menu.png" target="_blank">View the full Bento del Caribe menu</a></p>
-</div></section>
-<div class="band" role="img" aria-label="Boriental Sushi wave border"></div>
-<section id="mealprep"><div class="in two" style="align-items:start">
+<section id="mealprep"><div class="in two">
  <div><p class="eyebrow">Custom meal prep</p><h2>Built around your diet.</h2>
-  <p class="sub">Separate from our Bento del Caribe boxes. Meal prep is a weekly program set up one-on-one with Chef.</p><ol class="steps"><li>Submit the meal prep order form online, or download the PDF and send it back.</li><li>Get a phone call within 24 hours for your consultation: goals, dietary questions and allergy requirements.</li><li>Chef sets your program, price (starting at $15–$20 per meal) and pickup or delivery schedule.</li></ol>
-  <div class="badges"><span>Starting at $15–$20 per meal</span><span>Call within 24 hours</span><span>Allergy aware</span><span>Vegan friendly</span><span>Pickup or delivery</span></div>
-  <a class="btn" href="meal-prep-orders.html">Fill out the meal prep form</a> <a class="btn o" href="Boriental-Meal-Prep-Order-Form.pdf" download>Download the PDF form</a></div>
- <div class="mcol" style="border-top-color:var(--navy)"><h3>Dietary options</h3><p class="from">Covered on your phone consultation</p>
-  <ul class="rl">
-   <li><b>Allergy aware</b><span>Tell Chef about any allergies up front. Your plan is built around them, from swapping sauces to leaving out shellfish, nuts or sesame.</span></li>
-   <li><b>Vegan friendly</b><span>Plant-based builds from rolls like the Bonzi (carrots, cucumber, avocado) plus edamame, tostones, maduros, yuca, white rice, collards and fresh salads.</span></li>
-   <li><b>High protein</b><span>Lean proteins like chicken, shrimp, salmon, tuna and octopus to fuel training and recovery.</span></li>
-   <li><b>Healthy fats</b><span>Salmon and tuna bring omega-3s; avocado brings heart-friendly fats.</span></li>
-   <li><b>Smart carbs</b><span>Yuca, plantains, rice and potatoes for steady energy, scaled up or down to fit low-carb or high-carb goals.</span></li>
-   <li><b>Fiber and greens</b><span>Edamame, collards, cucumber, asparagus, watermelon radish and salads for fiber, vitamins and crunch.</span></li>
-  </ul>
-  <p class="note">Allergy requirements are reviewed on your phone consultation against the nine major food allergens identified by the FDA: milk, eggs, fish, crustacean shellfish, tree nuts, peanuts, wheat, soybeans and sesame. Our kitchen handles shellfish, fish, soy, sesame and wheat.</p>
- </div>
+  <p class="sub">Separate from our bento boxes. Meal prep is a weekly program set up one-on-one with Chef, starting at $15–$20 per meal.</p>
+  <ol class="steps"><li>Submit the meal prep form online, or download the PDF and send it back.</li><li>Get a phone call within 24 hours for your consultation: goals, dietary questions and allergy requirements.</li><li>Chef sets your program, price and pickup or delivery schedule.</li></ol>
+  <div class="cta"><a class="btn g" href="meal-prep-orders.html">Fill out the meal prep form</a><a class="btn o" href="Boriental-Meal-Prep-Order-Form.pdf" download>Download the PDF form</a></div></div>
+ <div class="diet"><h3>Dietary options</h3><p class="lead">Covered on your phone consultation</p>
+  <div class="dg">
+   <div><b>Allergy aware</b>Your plan is built around your allergies, from swapping sauces to leaving out shellfish, nuts or sesame.</div>
+   <div><b>Vegan friendly</b>Plant-based builds: Bonzi roll, edamame, tostones, maduros, yuca, rice, collards and salads.</div>
+   <div><b>High protein</b>Chicken, shrimp, salmon, tuna and octopus to fuel training and recovery.</div>
+   <div><b>Healthy fats</b>Omega-3s from salmon and tuna, heart-friendly fats from avocado.</div>
+   <div><b>Smart carbs</b>Yuca, plantains, rice and potatoes, scaled for low-carb or high-carb goals.</div>
+   <div><b>Fiber and greens</b>Edamame, collards, cucumber, asparagus, radish and fresh salads.</div>
+  </div>
+  <p class="fine">Allergy requirements are reviewed against the nine major food allergens identified by the FDA: milk, eggs, fish, crustacean shellfish, tree nuts, peanuts, wheat, soybeans and sesame. Our kitchen handles shellfish, fish, soy, sesame and wheat.</p></div>
 </div></section>
 <div class="band" role="img" aria-label="Boriental Sushi wave border"></div>
-<section class="soft" id="catering"><div class="in two">
- <div><p class="eyebrow">Catering and events</p><h2>Hosting? Let's plan your menu.</h2><p class="sub">Social &amp; corporate event catering for 100–350 guests, with a menu curated with you. Home &amp; intimate gatherings for 2–75 guests, with a private chef in your home. Tell us about your event and we'll follow up to build your menu and quote.</p>
-  <p><a class="btn" href="Boriental-Sushi-Catering-Menu.pdf" download>Download the catering menu (PDF)</a></p>
-  <div class="evpics"><figure><img src="https://static.wixstatic.com/media/4dc92e_369977b78d0647c1803868713d02ffd3~mv2.png/v1/fit/w_900,h_900,q_85/4dc92e_369977b78d0647c1803868713d02ffd3~mv2.png" alt="Corporate networking reception"><figcaption>Social &amp; corporate events · 100–350 guests</figcaption></figure><figure><img src="https://static.wixstatic.com/media/4dc92e_2d3503a371e14afb8702116f052276ff~mv2.png/v1/fit/w_900,h_900,q_85/4dc92e_2d3503a371e14afb8702116f052276ff~mv2.png" alt="Family buffet celebration"><figcaption>Home &amp; intimate gatherings · 2–75 guests</figcaption></figure></div></div>
- <form id="cater"><div><label>Your name</label><input id="c_name" required></div><div><label>Phone or email</label><input id="c_contact" required></div>
+<section id="catering"><div class="in two">
+ <div><p class="eyebrow">Catering and events</p><h2>Hosting? Let's plan your menu.</h2>
+  <p class="sub">Tell us about your event and we'll follow up to build your menu and quote.</p>
+  <div class="svc"><div><b>Social &amp; corporate event catering</b><span>100–350 guests. A customized menu curated with you for flavor, presentation and service.</span></div>
+  <div><b>Home &amp; intimate gatherings</b><span>2–75 guests. A private chef in the comfort of your home, with the sushi menu.</span></div></div>
+  <a class="btn w" href="Boriental-Sushi-Catering-Menu.pdf" download>Download the catering menu (PDF)</a></div>
+ <form id="cater"><h3>Request a catering quote</h3><div><label>Your name</label><input id="c_name" required></div><div><label>Phone or email</label><input id="c_contact" required></div>
   <div><label>Event date</label><input id="c_date" type="date"></div><div><label>Guests</label><input id="c_guests" type="number" min="1" placeholder="25"></div>
-  <div class="w"><label>What kind of event?</label><select id="c_type"><option>Social or singles event</option><option>Latin night</option><option>Business mixer or team lunch</option><option>Family party</option><option>Something else</option></select></div>
+  <div class="w"><label>What kind of event?</label><select id="c_type"><option>Social or singles event</option><option>Latin night</option><option>Business mixer or team lunch</option><option>Family party</option><option>Private chef at home</option><option>Something else</option></select></div>
   <div class="w"><label>Anything we should know?</label><textarea id="c_notes" rows="3"></textarea></div>
-  <div class="w"><button class="btn" type="submit">Request a catering quote</button><p class="note" id="c_msg">Sends your request to Chef Izaya by text.</p></div></form>
+  <div class="w"><button class="btn" type="submit">Request a catering quote</button><p class="fnote" id="c_msg">Sends your request to Chef Izaya by text. Deposit required for all catering events.</p></div></form>
 </div></section>
 <div class="band" role="img" aria-label="Boriental Sushi wave border"></div>
-<section id="gallery"><div class="in"><p class="eyebrow">Gallery</p><h2>From Chef Izaya's kitchen</h2><p class="sub">Island meets sushi, plate by plate.</p><div class="mas"><img src="https://static.wixstatic.com/media/4dc92e_30bab249c46d4c7cb54f89007b2b0006~mv2.jpeg/v1/fit/w_1000,h_1000,q_85/4dc92e_30bab249c46d4c7cb54f89007b2b0006~mv2.jpeg" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_ef236f42231d437b907a0c77bdfe24b8~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_ef236f42231d437b907a0c77bdfe24b8~mv2.png" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_b9d49a58f4af4ab1a79795fa3edcf854~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_b9d49a58f4af4ab1a79795fa3edcf854~mv2.png" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_605d0b3f00d04266b4801d9e7c9a1935~mv2.jpeg/v1/fit/w_1000,h_1000,q_85/4dc92e_605d0b3f00d04266b4801d9e7c9a1935~mv2.jpeg" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_4f7def5992ed4646bb99218b8bbf5697~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_4f7def5992ed4646bb99218b8bbf5697~mv2.png" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_5aad2716f9b844d6aa1f3bc627652062~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_5aad2716f9b844d6aa1f3bc627652062~mv2.png" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_4a26255b1e06463faedef4e37a2a08ca~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_4a26255b1e06463faedef4e37a2a08ca~mv2.png" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_7d461506473b4c6c8f8fe693d032434e~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_7d461506473b4c6c8f8fe693d032434e~mv2.png" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_7be29e4893ea4148ac19af29b68dcc23~mv2.jpeg/v1/fit/w_1000,h_1000,q_85/4dc92e_7be29e4893ea4148ac19af29b68dcc23~mv2.jpeg" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_4b004e6053354200b254e2819d5aca81~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_4b004e6053354200b254e2819d5aca81~mv2.png" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_7c3a441f1f9c45f88092342a3746a927~mv2.jpeg/v1/fit/w_1000,h_1000,q_85/4dc92e_7c3a441f1f9c45f88092342a3746a927~mv2.jpeg" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_84c7994295f345ebb969d012fe3694f4~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_84c7994295f345ebb969d012fe3694f4~mv2.png" alt="Boriental Sushi" loading="lazy"><img src="https://static.wixstatic.com/media/4dc92e_200678052c0f43c0bc466b6eaed588da~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_200678052c0f43c0bc466b6eaed588da~mv2.png" alt="Boriental Sushi" loading="lazy"></div></div></section>
+<section id="gallery"><div class="in"><p class="eyebrow">Gallery</p><h2>From Chef Izaya's kitchen</h2><p class="sub">Island meets sushi, plate by plate.</p><div class="mas"><img src="https://static.wixstatic.com/media/4dc92e_30bab249c46d4c7cb54f89007b2b0006~mv2.jpeg/v1/fit/w_1000,h_1000,q_85/4dc92e_30bab249c46d4c7cb54f89007b2b0006~mv2.jpeg" alt="Boriental Sushi" loading="lazy" onerror="this.remove()"><img src="https://static.wixstatic.com/media/4dc92e_ef236f42231d437b907a0c77bdfe24b8~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_ef236f42231d437b907a0c77bdfe24b8~mv2.png" alt="Boriental Sushi" loading="lazy" onerror="this.remove()"><img src="https://static.wixstatic.com/media/4dc92e_b9d49a58f4af4ab1a79795fa3edcf854~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_b9d49a58f4af4ab1a79795fa3edcf854~mv2.png" alt="Boriental Sushi" loading="lazy" onerror="this.remove()"><img src="https://static.wixstatic.com/media/4dc92e_605d0b3f00d04266b4801d9e7c9a1935~mv2.jpeg/v1/fit/w_1000,h_1000,q_85/4dc92e_605d0b3f00d04266b4801d9e7c9a1935~mv2.jpeg" alt="Boriental Sushi" loading="lazy" onerror="this.remove()"><img src="https://static.wixstatic.com/media/4dc92e_4f7def5992ed4646bb99218b8bbf5697~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_4f7def5992ed4646bb99218b8bbf5697~mv2.png" alt="Boriental Sushi" loading="lazy" onerror="this.remove()"><img src="https://static.wixstatic.com/media/4dc92e_5aad2716f9b844d6aa1f3bc627652062~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_5aad2716f9b844d6aa1f3bc627652062~mv2.png" alt="Boriental Sushi" loading="lazy" onerror="this.remove()"><img src="https://static.wixstatic.com/media/4dc92e_4a26255b1e06463faedef4e37a2a08ca~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_4a26255b1e06463faedef4e37a2a08ca~mv2.png" alt="Boriental Sushi" loading="lazy" onerror="this.remove()"><img src="https://static.wixstatic.com/media/4dc92e_7d461506473b4c6c8f8fe693d032434e~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_7d461506473b4c6c8f8fe693d032434e~mv2.png" alt="Boriental Sushi" loading="lazy" onerror="this.remove()"><img src="https://static.wixstatic.com/media/4dc92e_7be29e4893ea4148ac19af29b68dcc23~mv2.jpeg/v1/fit/w_1000,h_1000,q_85/4dc92e_7be29e4893ea4148ac19af29b68dcc23~mv2.jpeg" alt="Boriental Sushi" loading="lazy" onerror="this.remove()"><img src="https://static.wixstatic.com/media/4dc92e_4b004e6053354200b254e2819d5aca81~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_4b004e6053354200b254e2819d5aca81~mv2.png" alt="Boriental Sushi" loading="lazy" onerror="this.remove()"><img src="https://static.wixstatic.com/media/4dc92e_7c3a441f1f9c45f88092342a3746a927~mv2.jpeg/v1/fit/w_1000,h_1000,q_85/4dc92e_7c3a441f1f9c45f88092342a3746a927~mv2.jpeg" alt="Boriental Sushi" loading="lazy" onerror="this.remove()"><img src="https://static.wixstatic.com/media/4dc92e_84c7994295f345ebb969d012fe3694f4~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_84c7994295f345ebb969d012fe3694f4~mv2.png" alt="Boriental Sushi" loading="lazy" onerror="this.remove()"><img src="https://static.wixstatic.com/media/4dc92e_200678052c0f43c0bc466b6eaed588da~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_200678052c0f43c0bc466b6eaed588da~mv2.png" alt="Boriental Sushi" loading="lazy" onerror="this.remove()"></div></div></section>
 <div class="band" role="img" aria-label="Boriental Sushi wave border"></div>
-<section class="story" id="story"><div class="in"><div class="chef"><img src="https://static.wixstatic.com/media/4dc92e_803a7e5f7fd54d32afb70880b1c2c440~mv2.png/v1/fit/w_800,h_800,q_85/image0_edited_edited.png" alt="Chef Izaya Tha HighFather"><p class="eyebrow" style="color:#ffd3d6;margin:10px 0 0">Meet the chef</p><h3>Chef Izaya Tha HighFather</h3></div><p class="eyebrow" style="color:#ffd3d6">Our story</p><h2>Minor Setback For Major Comeback</h2>
- <p>Have you ever questioned if you can begin anew after facing numerous setbacks in life and hearing others define your value?</p>
- <p>Chef Izaya Tha HighFather chose to challenge norms with a concept that celebrates diversity in community, food and culture. Boriental Sushi is built on honesty, integrity and enjoyment, serving as a culinary link between cultures and reshaping the Japanese experience with Puerto Rican influences.</p>
- <div class="tags">#NeverGiveUp &nbsp; #SushiMeetsIsland &nbsp; #ChefIzayaThaHighFather</div></div></section>
+<section class="story" id="story"><div class="in">
+ <div class="chef"><img src="img/chef-izaya.jpg" alt="Chef Izaya Tha HighFather"><p>Chef Izaya Tha HighFather</p></div>
+ <div><p class="eyebrow" style="color:var(--gold)">Our story</p><h2>Minor Setback For Major Comeback</h2>
+  <p class="q">Have you ever questioned if you can begin anew after facing numerous setbacks in life and hearing others define your value?</p>
+  <p>Chef Izaya Tha HighFather chose to challenge norms with a concept that celebrates diversity in community, food and culture. Boriental Sushi is built on honesty, integrity and enjoyment, serving as a culinary link between cultures and reshaping the Japanese experience with Puerto Rican influences.</p>
+  <div class="tags"><span>#NeverGiveUp</span><span>#SushiMeetsIsland</span><span>#ChefIzayaThaHighFather</span></div></div>
+</div></section>
 <div class="band" role="img" aria-label="Boriental Sushi wave border"></div>
-<footer id="contact"><b style="color:var(--navy)">Boriental Sushi</b> · Charlotte, NC<br>
- <a href="tel:7049052262">704-905-2262</a> · <a href="https://www.instagram.com/izayathahighfather" target="_blank" rel="noopener">@izayathahighfather</a> · <a href="mailto:izayathahighfather@borientalsushi.com">izayathahighfather@borientalsushi.com</a><br>To-go · Pickup · Delivery · Catering</footer>
+<footer id="contact"><b>Boriental Sushi</b>Charlotte, NC · To-go · Pickup · Delivery · Catering<br>
+ <a href="tel:7049052262">704-905-2262</a> · <a href="https://www.instagram.com/izayathahighfather" target="_blank" rel="noopener">@izayathahighfather</a> · <a href="mailto:izayathahighfather@borientalsushi.com">izayathahighfather@borientalsushi.com</a><br><small>Good food brings cultures together.</small></footer>
+<a class="fab" href="#catering">Contact us</a>
 <script>
 document.getElementById('cater').addEventListener('submit',function(e){e.preventDefault();
  var v=function(i){return document.getElementById(i).value.trim()};
  var t='Boriental Sushi catering request\nName: '+v('c_name')+'\nContact: '+v('c_contact')+'\nEvent: '+v('c_type')+(v('c_date')?'\nDate: '+v('c_date'):'')+(v('c_guests')?'\nGuests: '+v('c_guests'):'')+(v('c_notes')?'\nNotes: '+v('c_notes'):'');
- document.getElementById('c_msg').textContent='Your message is ready to send. If your texting app did not open, text this to 704-905-2262.';
+ document.getElementById('c_msg').textContent='Your request is ready to send. If your texting app did not open, text it to 704-905-2262.';
  window.location.href='sms:7049052262?&body='+encodeURIComponent(t);});
-</script><a class="fab" href="#catering">Contact us</a>
+</script>
 </body></html>
