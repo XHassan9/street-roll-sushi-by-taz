@@ -1,124 +1,119 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Order Meal Prep | Boriental Sushi</title>
+<title>Meal Prep Order Form | Boriental Sushi</title>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Rozha+One&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#333398;--red:#d3232b;--bg:#f4f5fb;--line:#d6d9ee;--mut:#62648a;--ink:#1d1d3d}
+:root{--navy:#2b2b86;--red:#d3232b;--bg:#f4f5fb;--line:#d6d9ee;--mut:#5d5f85;--ink:#1d1d3d}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Raleway,system-ui,Arial,sans-serif;line-height:1.45}
 h1,h2,h3{font-family:'Rozha One',Georgia,serif;font-weight:400;margin:0;color:var(--navy)}
-header{background:var(--navy);color:#fff;padding:22px 18px;text-align:center;border-bottom:6px solid var(--red)}
-header h1{color:#fff;font-size:30px}header p{margin:6px 0 0;opacity:.9}
-.wrap{max-width:1000px;margin:0 auto;padding:18px;display:grid;grid-template-columns:1fr 340px;gap:20px;align-items:start}
-@media(max-width:820px){.wrap{grid-template-columns:1fr}}
-.notice{background:#fff;border:1px solid var(--line);border-left:5px solid var(--red);border-radius:6px;padding:12px 14px;margin-bottom:16px;font-size:14px}
-.menu{display:grid;gap:14px}
-.item{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;display:grid;grid-template-columns:130px 1fr}
-.item img{width:100%;height:100%;object-fit:cover;min-height:120px}
-.item .b{padding:12px 14px;display:flex;flex-direction:column;gap:4px}
-.item h3{font-size:18px}.item p{margin:0;color:var(--mut);font-size:14px}
-.row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto}
-.price{font-weight:700;color:var(--navy)}
-.qty{display:flex;align-items:center;gap:8px}
-.qty button{width:34px;height:34px;border-radius:50%;border:1px solid var(--navy);background:#fff;color:var(--navy);font-size:20px;cursor:pointer;line-height:1}
-.qty button.add{background:var(--navy);color:#fff}
-.qty b{min-width:20px;text-align:center}
-.cart{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px;position:sticky;top:12px}
-.cart h2{font-size:21px;margin-bottom:8px}
-label{display:block;font-size:12px;font-weight:700;color:var(--mut);margin:10px 0 4px}
-input,select,textarea{width:100%;padding:10px;border:1px solid #c5c8e6;border-radius:5px;font:inherit}
-textarea{min-height:60px}
-.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.seg label{margin:0;border:1px solid #c5c8e6;border-radius:5px;padding:9px;text-align:center;cursor:pointer;font-size:14px;color:var(--ink)}
-.seg input{display:none}.seg label.on{background:var(--navy);color:#fff;border-color:var(--navy)}
-.lines{margin:6px 0;font-size:14px}.lines div{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #eceefa}
-.tot{display:flex;justify-content:space-between;font-weight:700;font-size:18px;margin:10px 0}
-.btn{width:100%;padding:13px;border:0;border-radius:5px;background:var(--red);color:#fff;font-weight:700;font-size:16px;cursor:pointer;margin-top:8px}
-.btn.sec{background:#fff;color:var(--navy);border:1px solid var(--navy)}
-.btn[disabled]{opacity:.45;cursor:not-allowed}
-.msg{font-size:13px;color:var(--mut);margin-top:8px}
+header{background:var(--navy);color:#fff;padding:24px 18px;text-align:center}
+header h1{color:#fff;font-size:32px}header p{margin:6px 0 0;opacity:.92}
+.band{height:90px;background:url("https://static.wixstatic.com/media/4dc92e_78a56a21c4d94391b9d137dd73299b07~mv2.png") center/auto 100% repeat-x #fff}
+.wrap{max-width:860px;margin:0 auto;padding:22px 18px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
+.steps div{background:#fff;border:1px solid var(--line);border-top:4px solid var(--red);border-radius:8px;padding:14px;font-size:14px}
+.steps b{display:block;font-family:'Rozha One',serif;font-weight:400;color:var(--navy);font-size:18px}
+.sheet{background:#fff;border:1px solid var(--line);border-radius:8px;padding:24px;box-shadow:0 4px 14px rgba(29,29,61,.06)}
+.sheet h2{font-size:24px;margin:22px 0 4px;padding-top:16px;border-top:1px dashed var(--line)}
+.sheet h2:first-of-type{border-top:0;margin-top:0;padding-top:0}
+.hint{color:var(--mut);font-size:13px;margin:0 0 10px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+label.t{display:block;font-size:12px;font-weight:700;color:var(--mut);margin:0 0 4px}
+input[type=text],input[type=tel],input[type=email],input[type=date],input[type=number],select,textarea{width:100%;padding:10px;border:1px solid #c5c8e6;border-radius:5px;font:inherit}
+textarea{min-height:70px}
+.ck{display:flex;gap:8px;align-items:flex-start;border:1px solid var(--line);border-radius:6px;padding:9px 10px;font-size:14px;cursor:pointer;background:#fff}
+.ck input{margin-top:3px}
+.fda{background:#fff7f7;border:1px solid #f1c9cb;border-left:5px solid var(--red);border-radius:6px;padding:12px 14px;font-size:14px;margin:6px 0 12px}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.btn{padding:14px 24px;border:2px solid var(--red);border-radius:5px;background:var(--red);color:#fff;font-weight:700;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block;font-family:inherit}
+.btn.o{background:#fff;color:var(--navy);border-color:var(--navy)}
+.done{display:none;background:#eef8f0;border:1px solid #bfe3c6;border-left:5px solid #2e8b4a;border-radius:6px;padding:14px;margin-top:16px}
 footer{text-align:center;color:var(--mut);font-size:13px;padding:20px}
+@media(max-width:700px){.steps,.g2,.g3{grid-template-columns:1fr}}
 </style></head><body>
-<header><h1 id="biz"></h1><p>Bento del Caribe and meal prep, made by hand in Charlotte. A fusion experience in every box.</p></header>
+<header><h1>Meal Prep Order Form</h1><p>Boriental Sushi · Custom meal prep built around your diet · Starting at $15–$20 per meal</p></header>
+<div class="band" role="img" aria-label="Boriental Sushi wave border"></div>
 <div class="wrap">
-<div>
- <div class="notice" id="notice"></div>
- <div class="menu" id="menu"></div>
+ <div class="steps">
+  <div><b>1. Submit this form</b>Fill it out online, or download the PDF and send it back.</div>
+  <div><b>2. Phone consultation</b>We call you within 24 hours to go over your goals, dietary questions and allergy requirements.</div>
+  <div><b>3. Your program starts</b>Chef sets your menu, price and pickup or delivery schedule.</div>
+ </div>
+ <p><a class="btn o" href="Boriental-Meal-Prep-Order-Form.pdf" download>Download the PDF form</a></p>
+
+ <form class="sheet" id="f">
+  <h2>Your info</h2>
+  <div class="g2">
+   <div><label class="t">Full name *</label><input type="text" id="name" required></div>
+   <div><label class="t">Phone *</label><input type="tel" id="phone" required></div>
+   <div><label class="t">Email</label><input type="email" id="email"></div>
+   <div><label class="t">Best time to call you</label><select id="calltime"><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Anytime</option></select></div>
+  </div>
+
+  <h2>Your program</h2>
+  <div class="g2">
+   <div><label class="t">Start date</label><input type="date" id="start"></div>
+   <div><label class="t">Pickup or delivery</label><select id="mode"><option>Pickup</option><option>Delivery (Charlotte area)</option></select></div>
+   <div><label class="t">Meals per day</label><select id="mpd"><option>1 (lunch)</option><option>1 (dinner)</option><option>2 (lunch and dinner)</option></select></div>
+   <div><label class="t">Days per week</label><select id="dpw"><option>3</option><option>5</option><option>7</option></select></div>
+   <div style="grid-column:1/-1"><label class="t">Delivery address (if delivery)</label><input type="text" id="addr"></div>
+  </div>
+
+  <h2>Your goals</h2>
+  <p class="hint">Pick what fits. We go over the details on your call.</p>
+  <div class="g3" id="goals">
+   <label class="ck"><input type="checkbox" value="High protein, high carb">High protein, high carb</label>
+   <label class="ck"><input type="checkbox" value="High protein, low carb">High protein, low carb</label>
+   <label class="ck"><input type="checkbox" value="Weight loss">Weight loss</label>
+   <label class="ck"><input type="checkbox" value="Muscle gain">Muscle gain</label>
+   <label class="ck"><input type="checkbox" value="Balanced / maintenance">Balanced / maintenance</label>
+   <label class="ck"><input type="checkbox" value="Vegan / plant-based">Vegan / plant-based</label>
+  </div>
+
+  <h2>Proteins you like</h2>
+  <div class="g3" id="prot">
+   <label class="ck"><input type="checkbox" value="Pernil">Pernil</label>
+   <label class="ck"><input type="checkbox" value="Chicken">Chicken</label>
+   <label class="ck"><input type="checkbox" value="Bistec">Bistec</label>
+   <label class="ck"><input type="checkbox" value="Shrimp">Shrimp</label>
+   <label class="ck"><input type="checkbox" value="Salmon">Salmon</label>
+   <label class="ck"><input type="checkbox" value="Tuna">Tuna</label>
+   <label class="ck"><input type="checkbox" value="Octopus">Octopus</label>
+   <label class="ck"><input type="checkbox" value="Plant-based only">Plant-based only</label>
+   <label class="ck"><input type="checkbox" value="Chef's choice">Chef's choice</label>
+  </div>
+
+  <h2>Allergies and dietary restrictions</h2>
+  <div class="fda">The FDA identifies nine major food allergens. Check any that apply to you, and we'll cover every allergy and restriction on your phone consultation before your program starts.</div>
+  <div class="g3" id="alg">
+   <label class="ck"><input type="checkbox" value="Milk">Milk</label>
+   <label class="ck"><input type="checkbox" value="Eggs">Eggs</label>
+   <label class="ck"><input type="checkbox" value="Fish">Fish</label>
+   <label class="ck"><input type="checkbox" value="Crustacean shellfish">Crustacean shellfish</label>
+   <label class="ck"><input type="checkbox" value="Tree nuts">Tree nuts</label>
+   <label class="ck"><input type="checkbox" value="Peanuts">Peanuts</label>
+   <label class="ck"><input type="checkbox" value="Wheat">Wheat</label>
+   <label class="ck"><input type="checkbox" value="Soybeans">Soybeans</label>
+   <label class="ck"><input type="checkbox" value="Sesame">Sesame</label>
+  </div>
+  <div style="margin-top:12px"><label class="t">Other allergies, intolerances or foods you avoid</label><textarea id="other"></textarea></div>
+  <div style="margin-top:12px"><label class="t">Anything else Chef should know</label><textarea id="notes"></textarea></div>
+
+  <div class="btns"><button class="btn" type="submit">Submit my meal prep form</button></div>
+  <div class="done" id="done"><b>Thank you! Your form is ready to send.</b><br>You'll receive a phone call within 24 hours to set up your program. If your texting app didn't open, text your form to <a href="tel:7049052262">704-905-2262</a>.</div>
+ </form>
 </div>
-<aside class="cart">
- <h2>Your order</h2>
- <div class="lines" id="lines"><div style="color:#62648a">Nothing added yet.</div></div>
- <div class="tot"><span>Total</span><span id="total">$0</span></div>
- <label>Pickup or delivery</label>
- <div class="seg" id="mode"><label class="on"><input type="radio" name="mode" value="Pickup" checked>Pickup</label><label><input type="radio" name="mode" value="Delivery">Delivery</label></div>
- <label id="dateLabel">Date</label><input type="date" id="date">
- <label>Your name</label><input id="name" autocomplete="name">
- <label>Phone</label><input id="phone" type="tel" autocomplete="tel">
- <label id="addrL" style="display:none">Delivery address</label><input id="addr" style="display:none">
- <label>Notes: your rolls, protein, 2 sides, allergies</label><textarea id="notes"></textarea>
- <button class="btn" id="send" disabled>Send my order</button>
- <button class="btn sec" id="copy">Copy order</button>
- <div class="msg" id="msg"></div>
-</aside>
-</div>
-<footer id="foot"></footer>
+<div class="band" role="img" aria-label="Boriental Sushi wave border"></div>
+<footer>Boriental Sushi · Charlotte, NC · <a href="tel:7049052262">704-905-2262</a> · <a href="boriental-draft-website.html">Back to the site</a> · Want a bento instead? <a href="bento-orders.html">Order Bento del Caribe</a></footer>
 <script>
-/* ===== EDIT THIS BLOCK. Everything on the page comes from here. ===== */
-var CONFIG={
- business:'Boriental Sushi',
- chefPhone:'7049052262',            // orders are texted here
- orderEmail:'',                     // optional: also email orders here
- formUrl:'',                        // optional: a form endpoint (Formspree etc.) that receives the order as JSON
- payUrl:'',                         // optional: a Square/Stripe/PayPal payment link, shown after the order is sent
- prepDays:2,                        // earliest order date = today + this many days
- deliveryNote:'Delivery within the Charlotte area. Fee confirmed when we reply.',
- pickup:'Pickup location confirmed when we reply.',
- notice:'Orders need 2 days notice. We text you to confirm and take payment. Bento del Caribe: put your roll, protein and side picks in Notes.',
- items:[
-  {id:'island',name:'El Island Bento',desc:'Puerto Rican flavor meets sushi. 1 sushi roll, 1 protein, 2 sides, pickled ginger, wasabi and house sauces.',price:18,img:'g0'},
-  {id:'boriental',name:'El Boriental Bento',desc:'The perfect balance. 1 sushi roll, 1 protein, 2 sides, pickled ginger, wasabi and house sauces.',price:20,img:'g1'},
-  {id:'fusion',name:'El Fusion Bento',desc:'Bold flavors, one box. 2 sushi rolls, 1 protein, 2 sides, pickled ginger, wasabi and house sauces.',price:22,img:'g2'},
-  {id:'ultimate',name:'El Ultimate Bento',desc:'More sushi, more flavor. 3 sushi rolls, 1 protein, 2 sides, pickled ginger, wasabi and house sauces.',price:25,img:'g3'},
-  {id:'mealprep',name:'Custom Meal Prep (per meal)',desc:'Built to your diet: high protein, low carb or whatever you need. Starting at $15 to $20; Chef confirms after a quick assessment.',price:15,img:'g4'},
-  {id:'plat3',name:'Small Sushi Platter (3 rolls)',desc:'Choose any 3 rolls, 24 pieces.',price:42,img:'g5'},
-  {id:'plat5',name:'Medium Sushi Platter (5 rolls)',desc:'Choose any 5 rolls, 40 pieces.',price:68,img:'g6'},
-  {id:'plat7',name:'Large Sushi Platter (7 rolls)',desc:'Choose any 7 rolls, 56 pieces.',price:92,img:'g7'},
-  {id:'xroll',name:'Extra Sushi Roll',desc:'Add to any bento.',price:8,img:'g8'},
-  {id:'xprot',name:'Extra Protein',desc:'Add to any bento.',price:6,img:'g9'},
-  {id:'xside',name:'Extra Side',desc:'Add to any bento.',price:4,img:'g10'},
-  {id:'miso',name:'Miso Soup',desc:'',price:4,img:'g11'},
-  {id:'seaweed',name:'Seaweed Salad',desc:'',price:5,img:'g12'},
-  {id:'house',name:'House Salad',desc:'',price:5,img:'g13'}
- ]
-};
-var IMG={g0:'https://static.wixstatic.com/media/4dc92e_30bab249c46d4c7cb54f89007b2b0006~mv2.jpeg/v1/fit/w_1000,h_1000,q_85/4dc92e_30bab249c46d4c7cb54f89007b2b0006~mv2.jpeg',g1:'https://static.wixstatic.com/media/4dc92e_ef236f42231d437b907a0c77bdfe24b8~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_ef236f42231d437b907a0c77bdfe24b8~mv2.png',g2:'https://static.wixstatic.com/media/4dc92e_b9d49a58f4af4ab1a79795fa3edcf854~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_b9d49a58f4af4ab1a79795fa3edcf854~mv2.png',g3:'https://static.wixstatic.com/media/4dc92e_605d0b3f00d04266b4801d9e7c9a1935~mv2.jpeg/v1/fit/w_1000,h_1000,q_85/4dc92e_605d0b3f00d04266b4801d9e7c9a1935~mv2.jpeg',g4:'https://static.wixstatic.com/media/4dc92e_4f7def5992ed4646bb99218b8bbf5697~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_4f7def5992ed4646bb99218b8bbf5697~mv2.png',g5:'https://static.wixstatic.com/media/4dc92e_5aad2716f9b844d6aa1f3bc627652062~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_5aad2716f9b844d6aa1f3bc627652062~mv2.png',g6:'https://static.wixstatic.com/media/4dc92e_4a26255b1e06463faedef4e37a2a08ca~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_4a26255b1e06463faedef4e37a2a08ca~mv2.png',g7:'https://static.wixstatic.com/media/4dc92e_7d461506473b4c6c8f8fe693d032434e~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_7d461506473b4c6c8f8fe693d032434e~mv2.png',g8:'https://static.wixstatic.com/media/4dc92e_7be29e4893ea4148ac19af29b68dcc23~mv2.jpeg/v1/fit/w_1000,h_1000,q_85/4dc92e_7be29e4893ea4148ac19af29b68dcc23~mv2.jpeg',g9:'https://static.wixstatic.com/media/4dc92e_4b004e6053354200b254e2819d5aca81~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_4b004e6053354200b254e2819d5aca81~mv2.png',g10:'https://static.wixstatic.com/media/4dc92e_7c3a441f1f9c45f88092342a3746a927~mv2.jpeg/v1/fit/w_1000,h_1000,q_85/4dc92e_7c3a441f1f9c45f88092342a3746a927~mv2.jpeg',g11:'https://static.wixstatic.com/media/4dc92e_84c7994295f345ebb969d012fe3694f4~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_84c7994295f345ebb969d012fe3694f4~mv2.png',g12:'https://static.wixstatic.com/media/4dc92e_200678052c0f43c0bc466b6eaed588da~mv2.png/v1/fit/w_1000,h_1000,q_85/4dc92e_200678052c0f43c0bc466b6eaed588da~mv2.png',g13:'https://static.wixstatic.com/media/4dc92e_cb001211014f434bbe0ee2ae09d374f8~mv2.jpg/v1/fit/w_1000,h_1000,q_85/4dc92e_cb001211014f434bbe0ee2ae09d374f8~mv2.jpg',g14:'https://static.wixstatic.com/media/4dc92e_29825f688d7a47539394a32ef16ceb87~mv2.jpg/v1/fit/w_1000,h_1000,q_85/4dc92e_29825f688d7a47539394a32ef16ceb87~mv2.jpg',g15:'https://static.wixstatic.com/media/4dc92e_1623d8225d9845ae86d0dd8d3320c30d~mv2.jpg/v1/fit/w_1000,h_1000,q_85/4dc92e_1623d8225d9845ae86d0dd8d3320c30d~mv2.jpg',g16:'https://static.wixstatic.com/media/4dc92e_cdcb341cb59d4a7cbd488c3cc1421d26~mv2.jpeg/v1/fit/w_1000,h_1000,q_85/4dc92e_cdcb341cb59d4a7cbd488c3cc1421d26~mv2.jpeg',g17:'https://static.wixstatic.com/media/4dc92e_c2ae077cca074ceab803b5deccd0fcab~mv2.webp/v1/fit/w_1000,h_1000,q_85/4dc92e_c2ae077cca074ceab803b5deccd0fcab~mv2.webp',g18:'https://static.wixstatic.com/media/4dc92e_f9ead78425974be29ffdd16e22011532~mv2.jpeg/v1/fit/w_1000,h_1000,q_85/4dc92e_f9ead78425974be29ffdd16e22011532~mv2.jpeg',g19:'https://static.wixstatic.com/media/4dc92e_493667c9bedd47b9b28d48ec41ea46cb~mv2.jpg/v1/fit/w_1000,h_1000,q_85/4dc92e_493667c9bedd47b9b28d48ec41ea46cb~mv2.jpg'};
-/* ===== no need to edit below ===== */
-var Q={};function $(s){return document.querySelector(s)}
-function money(n){return '$'+(Math.round(n*100)/100).toFixed(n%1?2:0)}
-function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
-document.title='Order Meal Prep | '+CONFIG.business;$('#biz').textContent=CONFIG.business;
-$('#notice').textContent=CONFIG.notice;$('#foot').textContent=CONFIG.business+' · Charlotte, NC · Island Meets Sushi';
-$('#menu').innerHTML=CONFIG.items.map(function(it){return '<div class="item"><img src="'+IMG[it.img]+'" alt=""><div class="b"><h3>'+esc(it.name)+'</h3><p>'+esc(it.desc)+'</p><div class="row"><span class="price">'+money(it.price)+'</span><span class="qty"><button data-d="-1" data-id="'+it.id+'" aria-label="Remove one">-</button><b id="q_'+it.id+'">0</b><button class="add" data-d="1" data-id="'+it.id+'" aria-label="Add one">+</button></span></div></div></div>';}).join('');
-var d=new Date();d.setDate(d.getDate()+CONFIG.prepDays);var iso=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
-$('#date').min=iso;$('#date').value=iso;
-function total(){return CONFIG.items.reduce(function(t,it){return t+(Q[it.id]||0)*it.price},0)}
-function lines(){return CONFIG.items.filter(function(it){return Q[it.id]})}
-function mode(){return document.querySelector('input[name=mode]:checked').value}
-function ready(){return lines().length&&$('#name').value.trim()&&$('#phone').value.trim()&&$('#date').value&&(mode()==='Pickup'||$('#addr').value.trim())}
-function paint(){var L=lines();$('#lines').innerHTML=L.length?L.map(function(it){return '<div><span>'+Q[it.id]+' x '+esc(it.name)+'</span><span>'+money(Q[it.id]*it.price)+'</span></div>'}).join(''):'<div style="color:#62648a">Nothing added yet.</div>';
- $('#total').textContent=money(total());CONFIG.items.forEach(function(it){$('#q_'+it.id).textContent=Q[it.id]||0});
- var dl=mode()==='Delivery';$('#addr').style.display=dl?'block':'none';$('#addrL').style.display=dl?'block':'none';$('#dateLabel').textContent=dl?'Delivery date':'Pickup date';
- document.querySelectorAll('#mode label').forEach(function(l){l.classList.toggle('on',l.querySelector('input').checked)});
- $('#send').disabled=!ready();$('#msg').textContent=dl?CONFIG.deliveryNote:CONFIG.pickup;}
-function orderText(){var t=CONFIG.business+' order\n';lines().forEach(function(it){t+=Q[it.id]+' x '+it.name+' ('+money(Q[it.id]*it.price)+')\n'});
- t+='Total: '+money(total())+'\n'+mode()+' on '+$('#date').value+'\n';if(mode()==='Delivery')t+='Address: '+$('#addr').value+'\n';
- t+='Name: '+$('#name').value+'\nPhone: '+$('#phone').value+'\n';if($('#notes').value.trim())t+='Notes: '+$('#notes').value+'\n';return t}
-document.addEventListener('click',function(e){var b=e.target.closest('button[data-id]');if(!b)return;var id=b.dataset.id;Q[id]=Math.max(0,(Q[id]||0)+(+b.dataset.d));paint()});
-document.addEventListener('input',paint);document.addEventListener('change',paint);
-$('#copy').onclick=function(){var t=orderText();(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){$('#msg').textContent='Order copied.'},function(){$('#msg').textContent='Could not copy. Select and copy from the text message instead.'})};
-$('#send').onclick=function(){var t=orderText();
- if(CONFIG.formUrl){try{fetch(CONFIG.formUrl,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({order:t,total:total(),name:$('#name').value,phone:$('#phone').value})})}catch(e){}}
- if(CONFIG.orderEmail){window.open('mailto:'+CONFIG.orderEmail+'?subject='+encodeURIComponent(CONFIG.business+' order')+'&body='+encodeURIComponent(t))}
- else{window.location.href='sms:'+CONFIG.chefPhone+'?&body='+encodeURIComponent(t)}
- $('#msg').innerHTML='Your message is ready to send. We will text back to confirm. If your texting app did not open, tap Copy order and text it to '+CONFIG.chefPhone.replace(/(\d{3})(\d{3})(\d{4})/,'$1-$2-$3')+'.'+(CONFIG.payUrl?' <a href="'+CONFIG.payUrl+'" target="_blank" rel="noopener">Pay now</a>':'')};
-paint();
-</script></body></html>
+function v(i){return document.getElementById(i).value.trim()}
+function picks(id){return [].slice.call(document.querySelectorAll('#'+id+' input:checked')).map(function(c){return c.value}).join(', ')||'None'}
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();
+ var t='Boriental Sushi meal prep form\nName: '+v('name')+'\nPhone: '+v('phone')+(v('email')?'\nEmail: '+v('email'):'')+'\nBest time to call: '+v('calltime')+
+ '\nStart: '+(v('start')||'ASAP')+'\n'+v('mode')+(v('addr')?' to '+v('addr'):'')+'\nMeals/day: '+v('mpd')+'\nDays/week: '+v('dpw')+
+ '\nGoals: '+picks('goals')+'\nProteins: '+picks('prot')+'\nFDA allergens: '+picks('alg')+(v('other')?'\nOther allergies/avoid: '+v('other'):'')+(v('notes')?'\nNotes: '+v('notes'):'');
+ document.getElementById('done').style.display='block';
+ window.location.href='sms:7049052262?&body='+encodeURIComponent(t);
+});
+</script>
+</body></html>
