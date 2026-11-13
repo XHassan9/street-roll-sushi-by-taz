@@ -145,10 +145,10 @@ var SEG={
 var COUNTS={apartments:10,singles:10,social:8,venues:9,breweries:6,bizevents:7,planners:6,offices:5,gyms:4};
 var EVENT_TYPES=['Singles mixer','Speed dating','Latin night or salsa social','Cultural festival','Hispanic heritage event','Business mixer','Networking event','Client appreciation','Product launch','Conference or expo','Team lunch or offsite','Holiday party','Resident social','Birthday or family celebration','Fundraiser or gala','Food night or pop-up','Other'];
 var EV_BY_SEG={singles:['Singles mixer','Speed dating','Food night or pop-up'],social:['Latin night or salsa social','Cultural festival','Hispanic heritage event','Birthday or family celebration','Fundraiser or gala'],bizevents:['Business mixer','Networking event','Client appreciation','Product launch','Conference or expo'],apartments:['Resident social','Holiday party'],offices:['Team lunch or offsite','Holiday party'],venues:['Food night or pop-up','Birthday or family celebration'],breweries:['Food night or pop-up','Latin night or salsa social'],planners:['Holiday party','Client appreciation'],gyms:['Food night or pop-up']};
-var STAGES=['New','Contacted','Tasting','Quoted','Booked'];
+var STAGES=['New','Contacted','Consult','Quoted','Booked'];
 var SEGCOL={apartments:'#333398',singles:'#d3232b',venues:'#4aa8d8',breweries:'#1f8f5f',planners:'#8a6bd1',offices:'#5b5fc7',gyms:'#8a8ca8',social:'#e0568a',bizevents:'#2a7fb5'};
 var NAV=[['dash','Dashboard','◐'],['pkg','Package','$'],['site','Website','▣'],['clips','Video Clips','▶'],['radar','Lead Radar','◎'],['strat','Strategic Outreach','★'],['out','Outreach','✉'],['pipe','Pipeline','▤'],['order','Order Desk','🍱'],['fullmenu','Full Menu','⇩'],['map','Service Area','⌖'],['social','Social','✦'],['plan','Gameplan','✓'],['set','Settings','⚙']];
-var SUB={fullmenu:'The two-page catering menu. Click to download the PDF.',pkg:'What is included, what it costs and how to start.',site:'Upgrading borientalsushi.com: scope, photos and what we need from the chef.',clips:'Short vertical clips for Instagram, scripts ready to shoot or render.',strat:'Find anyone hosting people who needs food: social, cultural, business and holiday events.',dash:'Everything running the outreach engine, in one place.',radar:'Verified Charlotte hosts and businesses, scored for fit. Highest scores go first.',out:'Two tracks, three touches each, in the chef\'s voice.',pipe:'New, Contacted, Tasting, Quoted, Booked.',order:'Menu and price worksheet, plus the order builder.',map:'Drive rings from the Uptown kitchen and where every lead sits.',social:'The weekly Instagram plan.',plan:'The six-week rollout, checked off as you go.',set:'Business details, backups and demo tools.'};
+var SUB={fullmenu:'The two-page catering menu. Click to download the PDF.',pkg:'What is included, what it costs and how to start.',site:'Upgrading borientalsushi.com: scope, photos and what we need from the chef.',clips:'Short vertical clips for Instagram, scripts ready to shoot or render.',strat:'Find anyone hosting people who needs food: social, cultural, business and holiday events.',dash:'Everything running the outreach engine, in one place.',radar:'Verified Charlotte hosts and businesses, scored for fit. Highest scores go first.',out:'Two tracks, three touches each, in the chef\'s voice.',pipe:'New, Contacted, Consult, Quoted, Booked.',order:'Menu and price worksheet, plus the order builder.',map:'Drive rings from the Uptown kitchen and where every lead sits.',social:'The weekly Instagram plan.',plan:'The six-week rollout, checked off as you go.',set:'Business details, backups and demo tools.'};
 
 /* ---------- helpers ---------- */
 function $(s,r){return (r||document).querySelector(s);}
@@ -195,14 +195,14 @@ function makeSample(){
 }
 function defaultTemplates(){return {
  email:[
-  {day:0,subject:'Puerto Rican sushi fusion for {{business}}',body:'Hi {{first}},\n\nI\'m {{chef}} with Boriental Sushi, Puerto Rican soul food meets Japanese fusion, catered in Charlotte. {{eventline}}\n\nI\'d love to drop off a free sample tray so you can taste it before you book anything. Would a short tasting work this week?\n\n{{sign}}'},
-  {day:3,subject:'Re: Puerto Rican sushi fusion for {{business}}',body:'Hi {{first}},\n\nFollowing up on the sample tray offer. We do trays, meal prep and full catered events from our Uptown kitchen, and the menu is nothing else in Charlotte. If a different week works better, just tell me when.\n\n{{sign}}'},
-  {day:6,subject:'Last note from me',body:'Hi {{first}},\n\nI don\'t want to crowd your inbox, so this is my last note. The free sample tray for {{business}} stays open. If someone else books food for your events, I\'d appreciate the introduction.\n\n{{sign}}'}
+  {day:0,subject:'Puerto Rican sushi fusion for {{business}}',body:'Hi {{first}},\n\nI\'m {{chef}} with Boriental Sushi, Puerto Rican soul food meets Japanese fusion, catered in Charlotte. {{eventline}}\n\nI\'d love to put together a menu and quote for your next event. Would a quick call this week work?\n\n{{sign}}'},
+  {day:3,subject:'Re: Puerto Rican sushi fusion for {{business}}',body:'Hi {{first}},\n\nFollowing up on catering for your next event. We do trays, meal prep and full catered events from our Uptown kitchen, and the menu is nothing else in Charlotte. If a different week works better, just tell me when.\n\n{{sign}}'},
+  {day:6,subject:'Last note from me',body:'Hi {{first}},\n\nI don\'t want to crowd your inbox, so this is my last note. The offer to build a custom menu for {{business}} stays open. If someone else books food for your events, I\'d appreciate the introduction.\n\n{{sign}}'}
  ],
  dm:[
-  {day:0,subject:'',body:'Hey {{first}}! {{chef}} with Boriental Sushi, Puerto Rican soul food meets Japanese fusion, catered in Charlotte. {{eventline}} I\'d love to drop off a free sample tray so you can taste it before you book anything. Want one this week?'},
-  {day:3,subject:'',body:'Hey {{first}}, circling back on the sample tray. Trays, meal prep and full events out of Uptown, with a menu you won\'t find anywhere else in Charlotte. Happy to work around your calendar.'},
-  {day:6,subject:'',body:'Last one from me, {{first}}. The free sample tray for {{business}} stays open whenever you want it. If there\'s someone else who books food for your events, I\'d appreciate an intro.'}
+  {day:0,subject:'',body:'Hey {{first}}! {{chef}} with Boriental Sushi, Puerto Rican soul food meets Japanese fusion, catered in Charlotte. {{eventline}} Want me to send the menu and put together a quote for your next event?'},
+  {day:3,subject:'',body:'Hey {{first}}, circling back on catering for your next event. Trays, meal prep and full events out of Uptown, with a menu you won\'t find anywhere else in Charlotte. Happy to work around your calendar.'},
+  {day:6,subject:'',body:'Last one from me, {{first}}. Happy to build a custom menu for {{business}} whenever you need it. If there\'s someone else who books food for your events, I\'d appreciate an intro.'}
  ]};}
 function defaultMenu(){return [
  {id:'b_island',cat:'Bento del Caribe',name:'El Island Bento',desc:'Puerto Rican flavor meets sushi. 1 sushi roll, 1 protein, 2 sides, pickled ginger, wasabi and house sauces.',price:18,prep:1,min:1},
@@ -247,22 +247,21 @@ function defaultMenu(){return [
  {id:'pro4',cat:'Protein option',name:'Chicken Karaage',desc:'',price:17,prep:1,min:1},
  {id:'pro5',cat:'Protein option',name:'Teriyaki Chicken',desc:'',price:16,prep:1,min:1},
  {id:'pro6',cat:'Protein option',name:'Teriyaki Shrimp',desc:'',price:21,prep:1,min:1},
- {id:'pro7',cat:'Protein option',name:'Teriyaki Salmon',desc:'',price:22,prep:1,min:1},
- {id:'m5',cat:'Sample tray',name:'Free sample tray (tasting)',desc:'Used for outreach tastings',price:0,prep:2,min:1}
+ {id:'pro7',cat:'Protein option',name:'Teriyaki Salmon',desc:'',price:22,prep:1,min:1}
 ];}
-function defaultSocial(){var t=['Prep day: behind the scenes','Menu spotlight: one Puerto Rican fusion roll, close up','Culture spotlight: the story behind the fusion','Sample tray reveal','Weekend order push: how to book','Event recap: the tray in the room','Meal prep preview for the week'];
+function defaultSocial(){var t=['Prep day: behind the scenes','Menu spotlight: one Puerto Rican fusion roll, close up','Culture spotlight: the story behind the fusion','Bento del Caribe reveal','Weekend order push: how to book','Event recap: the tray in the room','Meal prep preview for the week'];
  return ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(function(d,i){return {day:d,theme:t[i],caption:'',done:false};});}
 var PLAN=[
  ['Week 1',['Confirm menu, prices, prep days and pickup address','Swap in real content: photos and story','Turn on order payments']],
  ['Week 2',['Grow Lead Radar from the 41 verified leads toward 250 Charlotte targets','Tag each target with its event type and date','Approve the three-touch sequence']],
- ['Week 3',['Outreach goes live at 40 targets a week','Instagram plan starts','First sample trays go out']],
- ['Week 4',['Review replies and tastings','Cut weak segments and double strong ones']],
+ ['Week 3',['Outreach goes live at 40 targets a week','Instagram plan starts','First catering quotes go out']],
+ ['Week 4',['Review replies and consults','Cut weak segments and double strong ones']],
  ['Week 5',['Send reorder nudges and referral asks','Run the first resident event, food night and Latin social']],
  ['Week 6',['Review numbers against targets','Plan winter, NYE and Q1 kickoff outreach','Decide on the second delivery ring']]
 ];
 function defaultState(){return {v:1,settings:{business:'Boriental Sushi',chef:'Chef Izaya',kitchen:'Uptown Charlotte',pickup:'',start:todayISO(),weekly:40},leads:realLeads(),templates:defaultTemplates(),approved:{email:false,dm:false},menu:defaultMenu(),orders:[],social:defaultSocial(),plan:{},fees:{1:'',2:'',3:''}};}
 var S;
-function load(){try{var r=localStorage.getItem(KEY);if(r){var o=JSON.parse(r);if(o&&o.v===1){if(o.menu&&o.menu.some(function(m){return (m.id==='m1'&&m.name==='Meal prep box')||m.id==='b_island'})&&!o.menu.some(function(m){return m.id==='pro0'}))o.menu=defaultMenu();return o;}}}catch(e){}return defaultState();}
+function load(){try{var r=localStorage.getItem(KEY);if(r){var o=JSON.parse(r);if(o&&o.v===1){if(o.menu)o.menu=o.menu.filter(function(m){return m.id!=='m5';});if(o.templates&&JSON.stringify(o.templates).indexOf('sample tray')>-1)o.templates=defaultTemplates();if(o.leads)o.leads.forEach(function(l){if(l.status==='Tasting')l.status='Consult';if(l.stageAt&&l.stageAt.Tasting){l.stageAt.Consult=l.stageAt.Tasting;delete l.stageAt.Tasting;}});if(o.menu&&o.menu.some(function(m){return (m.id==='m1'&&m.name==='Meal prep box')||m.id==='b_island'})&&!o.menu.some(function(m){return m.id==='pro0'}))o.menu=defaultMenu();return o;}}}catch(e){}return defaultState();}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
 
 /* ---------- derived ---------- */
@@ -272,7 +271,7 @@ function stats(){
   return {total:L.length,ready:L.filter(function(l){return l.score>=80&&l.status!=='Lost';}).length,
    reached:L.filter(function(l){return l.touches.some(function(t){return t.ts>=wk;});}).length,
    replies:L.filter(function(l){return l.repliedAt&&l.repliedAt>=wk;}).length,
-   tastings:L.filter(function(l){return l.stageAt.Tasting&&l.stageAt.Tasting>=wk;}).length,
+   tastings:L.filter(function(l){return l.stageAt.Consult&&l.stageAt.Consult>=wk;}).length,
    booked7:L.filter(function(l){return l.stageAt.Booked&&l.stageAt.Booked>=wk;}).length,
    booked:L.filter(function(l){return l.status==='Booked';}).length};
 }
@@ -309,9 +308,9 @@ function donut(){
   return '<div class="card"><h2>Where the leads are</h2><div class="row mt" style="align-items:center;gap:20px"><svg viewBox="0 0 200 200" width="190" height="190">'+arcs+'<text x="100" y="98" text-anchor="middle" style="font-family:\'Rozha One\',Georgia,serif;font-size:34px;fill:#333398">'+tot+'</text><text x="100" y="120" text-anchor="middle" style="font-size:12px;fill:#62648a">leads</text></svg><div style="flex:1;min-width:150px;display:grid;gap:6px">'+legend+'</div></div></div>';
 }
 function funnelViz(s,T){
-  var st=[['Reached',s.reached,T,'#333398'],['Replies',s.replies,T*.3,'#4aa8d8'],['Tastings',s.tastings,T*.075,'#e0568a'],['Booked',s.booked7,T*.0375,'#d3232b']];
+  var st=[['Reached',s.reached,T,'#333398'],['Replies',s.replies,T*.3,'#4aa8d8'],['Consults',s.tastings,T*.075,'#e0568a'],['Booked',s.booked7,T*.0375,'#d3232b']];
   var rows=st.map(function(x,i){var w=100-i*12;return '<div style="width:'+w+'%;margin:0 auto 6px;background:'+x[3]+';color:#fff;padding:10px 14px;border-radius:6px;display:flex;justify-content:space-between;clip-path:polygon(0 0,100% 0,'+(100-3)+'% 100%,3% 100%)"><b>'+x[0]+'</b>&nbsp;<span>'+fmt(x[1])+' <small style="opacity:.8">goal '+fmt(Math.round(x[2]*10)/10)+'</small></span></div>';}).join('');
-  return '<div class="card"><h2>Weekly funnel</h2><p class="mut" style="margin:4px 0 14px">Reached, replied, tasted, booked.</p>'+rows+'</div>';
+  return '<div class="card"><h2>Weekly funnel</h2><p class="mut" style="margin:4px 0 14px">Reached, replied, consulted, booked.</p>'+rows+'</div>';
 }
 function weekRing(wk){
   var C=2*Math.PI*54,len=wk/6*C;
@@ -319,13 +318,13 @@ function weekRing(wk){
 }
 VIEWS.dash=function(){
   var s=stats(),d=planDay(),wk=Math.min(6,Math.ceil(d/7)),T=S.settings.weekly;
-  var funnel=[['Targets reached',s.reached,T],['Replies',s.replies,T*.3],['Tastings',s.tastings,T*.075],['New accounts',s.booked7,T*.0375]];
+  var funnel=[['Targets reached',s.reached,T],['Replies',s.replies,T*.3],['Consults',s.tastings,T*.075],['New accounts',s.booked7,T*.0375]];
   var winN=S.leads.filter(function(l){var n=evDays(l.eventDate);return n!=null&&n>=14&&n<=42&&l.status!=='Lost'&&l.status!=='Booked';}).length;
   var due=S.leads.map(nextTouch).filter(function(x){return x&&x.now;}).length;
   var chase=S.leads.filter(function(l){return l.status==='Quoted'&&l.quotedAt&&Date.now()-l.quotedAt>3*DAY;});
   var toTaste=S.leads.filter(function(l){return l.replied&&l.status==='Contacted';});
   var phase=d<=30?'30 days: own the core zones':d<=60?'60 days: expand to SouthPark, Ballantyne, University City':'90 days: cover every ring, grow by referral';
-  var tiles=[['Leads on radar',s.total],['Ready for outreach',s.ready],['Reached this week',s.reached+' / '+T],['Replies this week',s.replies],['Tastings this week',s.tastings],['Accounts booked',s.booked]];
+  var tiles=[['Leads on radar',s.total],['Ready for outreach',s.ready],['Reached this week',s.reached+' / '+T],['Replies this week',s.replies],['Consults this week',s.tastings],['Accounts booked',s.booked]];
   var segRows=Object.keys(SEG).map(function(k){var n=S.leads.filter(function(l){return l.segment===k;}).length,rd=S.leads.filter(function(l){return l.segment===k&&l.score>=80;}).length,mx=Math.max.apply(null,Object.keys(SEG).map(function(q){return S.leads.filter(function(l){return l.segment===q;}).length;}))||1;
     return '<div class="seg-bar"><span>'+esc(SEG[k].label)+'</span><div class="bar"><i style="width:'+(n/mx*100)+'%;background:'+SEGCOL[k]+'"></i></div><span class="mut">'+n+' / '+rd+'</span></div>';}).join('');
   return heroStrip('Boriental Sushi by TAZ','Island meets sushi. Your outreach engine, at a glance.')+'<div class="grid g6">'+tiles.map(function(t){return '<div class="card kpi"><div class="n or">'+esc(t[1])+'</div><div class="l">'+esc(t[0])+'</div></div>';}).join('')+'</div>'+
@@ -336,7 +335,7 @@ VIEWS.dash=function(){
    '<div class="mt"><div class="row sp"><span>By day 30</span><span class="mut">'+s.booked+' of 4 accounts</span></div><div class="bar" style="margin-top:6px"><i style="width:'+Math.min(100,s.booked/4*100)+'%"></i></div></div>'+
    '<div class="mt"><div class="row sp"><span>By day 60</span><span class="mut">'+s.booked+' of 10 accounts</span></div><div class="bar" style="margin-top:6px"><i style="width:'+Math.min(100,s.booked/10*100)+'%"></i></div></div></div></div>'+
   '<div class="grid g2 mt"><div class="card"><h2>Today</h2><div class="mt">'+
-   todo('Touches due to send',due,'out')+todo('Quotes older than 3 days to chase',chase.length,'pipe')+todo('Events in the 2 to 6 week booking window',winN,'strat')+todo('Replies ready to book a tasting',toTaste.length,'pipe')+todo('Outreach sequence approved',(S.approved.email&&S.approved.dm)?0:1,'out','Needs approval')+
+   todo('Touches due to send',due,'out')+todo('Quotes older than 3 days to chase',chase.length,'pipe')+todo('Events in the 2 to 6 week booking window',winN,'strat')+todo('Replies ready to book a consult call',toTaste.length,'pipe')+todo('Outreach sequence approved',(S.approved.email&&S.approved.dm)?0:1,'out','Needs approval')+
    '</div></div><div class="card"><h2>Leads by segment</h2><p class="mut" style="margin:4px 0 8px">Total / ready for outreach</p>'+segRows+'</div></div>';
   function todo(t,n,v,alt){return '<div class="row sp" style="padding:9px 0;border-bottom:1px solid var(--line)"><span>'+esc(t)+'</span><span class="row">'+(n?'<span class="badge b-o">'+(alt||n)+'</span>':'<span class="badge b-g">Clear</span>')+'<button class="btn sm sec" data-act="nav" data-view="'+v+'">Open</button></span></div>';}
 };
@@ -378,7 +377,7 @@ VIEWS.strat=function(){
   var typeBars=counts.map(function(x){return '<div class="seg-bar"><span>'+esc(x[0])+'</span><div class="bar"><i style="width:'+(x[1]/mx*100)+'%"></i></div><span class="mut">'+x[1]+'</span></div>';}).join('')||'<p class="mut">Nothing tagged yet.</p>';
   var opts='<option value="">All event types</option>'+EVENT_TYPES.map(function(t){return '<option'+(t===stratType?' selected':'')+'>'+esc(t)+'</option>';}).join('');
   var src=[['Eventbrite, Meetup, Partiful and Luma','Search Charlotte for singles, Latin night, salsa, heritage, networking, mixer and holiday listings inside the 15 and 25 minute rings.'],['Instagram and Facebook events','Venues, taprooms, apartment communities and Latin promoters announce events here. It also gives you the DM handle.'],['LinkedIn','Office managers, HR and event organizers posting that they are planning a party, mixer or launch.'],['Chambers and associations','Charlotte Regional, Hispanic and Latino chambers, young professionals groups and industry associations publish event calendars.'],['Venue calendars','Open dates mean the venue wants a caterer. Ask for the approved-caterer list.'],['Community and cultural groups','Puerto Rican and Latino organizations, churches, festivals and family celebration hosts.']];
-  return '<div class="banner"><span><b>Strategic Services Outreach.</b> Find anyone hosting people who needs food. Lead with the free sample tray, then Boriental Sushi: Puerto Rican soul food meets Japanese fusion.</span></div>'+
+  return '<div class="banner"><span><b>Strategic Services Outreach.</b> Find anyone hosting people who needs food. Lead with the event, then Boriental Sushi: Puerto Rican soul food meets Japanese fusion.</span></div>'+
    '<div class="grid g4">'+tiles.map(function(t){return '<div class="card kpi"><div class="n or">'+esc(t[1])+'</div><div class="l">'+esc(t[0])+'</div></div>';}).join('')+'</div>'+
    '<div class="card mt"><div class="row sp"><div class="row"><h2>Event pipeline</h2><select data-bind="stratType" style="max-width:240px">'+opts+'</select></div><button class="btn" data-act="addEvent">Add event</button></div>'+
    '<p class="mut" style="margin:8px 0 12px">An event 2 to 6 weeks out gets a score bonus, because that is when hosts book food. '+(hol.length?hol.length+' holiday parties tracked. ':'')+'December dates are decided in November, so holiday targets go first.</p>'+
@@ -386,7 +385,7 @@ VIEWS.strat=function(){
    '<div class="grid g2 mt"><div class="card"><h2>Event types</h2><div class="mt">'+typeBars+'</div></div>'+
    '<div class="card"><h2>Who books what</h2><div class="mt"><p><b>Social and cultural:</b> Latin nights, salsa socials, heritage and cultural festivals, family and community celebrations, fundraisers. Organizer is the buyer. DM.</p><p><b>Singles:</b> mixers, speed dating, supper clubs. DM.</p><p><b>Business:</b> mixers, networking, client appreciation, launches, conferences, team lunches, holiday parties. Event lead, office manager or EA. Email.</p><p><b>Venues and organizers:</b> repeat referral sources. Ask for the approved-caterer list.</p></div></div></div>'+
    '<div class="card mt"><h2>Where we find them</h2><div class="grid g2 mt">'+src.map(function(x){return '<div><b>'+esc(x[0])+'</b><p class="mut" style="margin:4px 0 12px">'+esc(x[1])+'</p></div>';}).join('')+'</div></div>'+
-   '<div class="card mt"><h2>Timing</h2><p class="mut" style="margin:6px 0 0">Reach out 2 to 6 weeks before the event. Three touches over 6 days, sample tray as the close. Holiday and December dates first, then NYE, winter socials and Q1 kickoffs, then the year-round Latin and cultural calendar.</p></div>';
+   '<div class="card mt"><h2>Timing</h2><p class="mut" style="margin:6px 0 0">Reach out 2 to 6 weeks before the event. Three touches over 6 days, a catering quote as the close. Holiday and December dates first, then NYE, winter socials and Q1 kickoffs, then the year-round Latin and cultural calendar.</p></div>';
 };
 VIEWS.out=function(){
   var ch=outTab,T=S.templates[ch],ok=S.approved[ch];
@@ -441,7 +440,7 @@ function ordPane(){
 VIEWS.fullmenu=function(){return '<div class="card"><h2>Full Menu</h2><p class="mut">Chef Izaya\'s catering menu, two pages, generated as one PDF.</p><p><a class="btn" href="Boriental-Sushi-Catering-Menu.pdf" download>Download the full menu (PDF)</a></p><a href="Boriental-Sushi-Catering-Menu.pdf" download><img src="img/menu-p1.jpg" alt="Menu page 1" style="width:100%;border-radius:6px;margin-top:12px;border:1px solid var(--line)"><img src="img/menu-p2.jpg" alt="Menu page 2" style="width:100%;border-radius:6px;margin-top:12px;border:1px solid var(--line)"></a></div>';};
 VIEWS.order=function(){
   var mr=S.menu.map(function(m){return '<tr><td><input data-bind="menu" data-id="'+m.id+'" data-f="name" value="'+esc(m.name)+'"><input data-bind="menu" data-id="'+m.id+'" data-f="desc" placeholder="Description" value="'+esc(m.desc)+'" style="margin-top:4px"></td>'+
-   '<td><select data-bind="menu" data-id="'+m.id+'" data-f="cat">'+['Meal prep box','Weekly pack','Party tray','Sample tray'].map(function(c){return '<option'+(c===m.cat?' selected':'')+'>'+c+'</option>';}).join('')+'</select></td>'+
+   '<td><select data-bind="menu" data-id="'+m.id+'" data-f="cat">'+['Bento del Caribe','Sushi roll platter','Japanese maki','Puerto Rican maki','Fusion maki','Protein option','Meal prep','Add-on'].map(function(c){return '<option'+(c===m.cat?' selected':'')+'>'+c+'</option>';}).join('')+'</select></td>'+
    '<td><input type="number" min="0" step="0.01" placeholder="Set" data-bind="menu" data-id="'+m.id+'" data-f="price" value="'+esc(m.price)+'" style="width:90px"></td>'+
    '<td><input type="number" min="0" data-bind="menu" data-id="'+m.id+'" data-f="prep" value="'+esc(m.prep)+'" style="width:64px"></td>'+
    '<td><input type="number" min="1" data-bind="menu" data-id="'+m.id+'" data-f="min" value="'+esc(m.min)+'" style="width:64px"></td>'+
@@ -478,8 +477,8 @@ VIEWS.site=function(){
   '<div class="card"><h2>Checklist</h2>'+[['photos','Food photos received from the chef'],['menu','Dish descriptions and prices confirmed'],['lead','Lead confirmed: pickup and delivery, then catering'],['mascot','Mascot approved (The Chef)'],['live','Upgraded site reviewed and live']].map(function(c){var k='site_'+c[0];return '<label class="chk'+(S.plan[k]?' done':'')+'" style="margin:0;color:inherit;font-size:15px"><input type="checkbox" data-bind="plan" data-k="'+k+'"'+(S.plan[k]?' checked':'')+'> '+c[1]+'</label>';}).join('')+'</div></div>';
 };
 VIEWS.clips=function(){
-  var C=[['Clip 1: Singles and Social','Singles night. Game night. Supper club. Puerto Rican flavor, rolled by hand, right here in Charlotte. Planning something social? Message Chef Izaya for a free sample tray. Taste it first.'],
-  ['Clip 2: Business Events','Team lunch getting boring? I\'m Chef Izaya with Boriental Sushi. Empanadas, karaage, and island fusion rolls, made by hand in Charlotte. Got a mixer or an office event coming up? Message me for a free sample tray.'],
+  var C=[['Clip 1: Singles and Social','Singles night. Game night. Supper club. Puerto Rican flavor, rolled by hand, right here in Charlotte. Planning something social? Message Chef Izaya for catering. Download the full menu on our site.'],
+  ['Clip 2: Business Events','Team lunch getting boring? I\'m Chef Izaya with Boriental Sushi. Empanadas, karaage, and island fusion rolls, made by hand in Charlotte. Got a mixer or an office event coming up? Message me for a catering quote.'],
   ['Clip 3: Latin Nights','Latin night needs food that matches the music. I\'m Chef Izaya with Boriental Sushi. Island meets sushi, with Puerto Rican soul in every roll. Hosting a Latin night in Charlotte? Message me and I\'ll send a free sample tray.']];
   return '<div class="grid g3">'+C.map(function(c,i){return '<div class="card"><h3>'+c[0]+'</h3><p style="margin:12px 0">'+esc(c[1])+'</p><p class="mut">End card: @izayathahighfather, 704-905-2262</p><button class="btn sm sec" data-act="clipCopy" data-i="'+i+'">Copy script</button></div>';}).join('')+'</div><p class="mut mt">Clip 1 is rendered as kinetic type with no avatar. Clips 2 and 3 follow in the same style once the chef\'s food photos arrive.</p>';
 };
@@ -631,7 +630,7 @@ var A={
   var top=S.leads.filter(function(l){return l.score>=80;}).sort(function(a,b){return b.score-a.score;}).slice(0,20),now=Date.now();
   top.forEach(function(l,i){l.touches=[{n:1,ts:now-(5-i%5)*DAY*.9,ch:l.channel}];l.stageAt={Contacted:l.touches[0].ts};l.status='Contacted';
     if(i<12){l.replied=true;l.repliedAt=now-DAY*(1+i%4);}
-    if(i<7){l.status='Tasting';l.stageAt.Tasting=now-DAY*(1+i%3);}
+    if(i<7){l.status='Consult';l.stageAt.Consult=now-DAY*(1+i%3);}
     if(i<4){l.status='Quoted';l.quotedAt=now-DAY*(i===0?4:1);l.stageAt.Quoted=l.quotedAt;}
     if(i<2){l.status='Booked';l.stageAt.Booked=now-DAY*i;}});
   save();toast('Demo activity added');rerender();},
