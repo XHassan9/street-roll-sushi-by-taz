@@ -219,6 +219,35 @@ function defaultMenu(){return [
  {id:'a_miso',cat:'Add-on',name:'Miso Soup',desc:'',price:4,prep:1,min:1},
  {id:'a_seaweed',cat:'Add-on',name:'Seaweed Salad',desc:'',price:5,prep:1,min:1},
  {id:'a_house',cat:'Add-on',name:'House Salad',desc:'',price:5,prep:1,min:1},
+ {id:'rJa0',cat:'Japanese maki',name:'Tuna Roll',desc:'Tuna, cucumber, sesame seeds',price:13,prep:1,min:1},
+ {id:'rJa1',cat:'Japanese maki',name:'Spicy Tuna Roll',desc:'Spicy tuna, cucumber, spicy mayo, scallions',price:14,prep:1,min:1},
+ {id:'rJa2',cat:'Japanese maki',name:'Bonzi Roll',desc:'Carrots, cucumber, avocado, sweet eel sauce',price:13,prep:1,min:1},
+ {id:'rJa3',cat:'Japanese maki',name:'California Roll (Crispy)',desc:'Crab, avocado, cucumber, sesame seeds',price:13,prep:1,min:1},
+ {id:'rJa4',cat:'Japanese maki',name:'Samurai Roll',desc:'Shrimp, crab, cucumber, red pepper, avocado, eel sauce',price:17,prep:1,min:1},
+ {id:'rJa5',cat:'Japanese maki',name:'Rainbow Roll',desc:'Assorted fish, avocado, cucumber, sweet eel sauce',price:17,prep:1,min:1},
+ {id:'rJa6',cat:'Japanese maki',name:'Ryujin Roll',desc:'Salmon, asparagus, watermelon radish, cucumber, tempura bits',price:17,prep:1,min:1},
+ {id:'rJa7',cat:'Japanese maki',name:'Under The Sea Roll',desc:'Kani crab salad mix, avocado, topped with Dragon Breath Mayo',price:15,prep:1,min:1},
+ {id:'rJa8',cat:'Japanese maki',name:'Resurrection Roll',desc:'Shrimp, avocado, cucumber, topped with garlic ponzu & crispy onions',price:17,prep:1,min:1},
+ {id:'rJa9',cat:'Japanese maki',name:'Volcano Roll',desc:'Crab, avocado, crunch, topped with spicy mayo, eel sauce',price:17,prep:1,min:1},
+ {id:'rPu0',cat:'Puerto Rican maki',name:'Ponce Roll',desc:'Crab, chicken, plantain, cucumber, red pepper, sofrito sauce',price:15,prep:1,min:1},
+ {id:'rPu1',cat:'Puerto Rican maki',name:'Bayamón Roll',desc:'Pernil, avocado, sweet plantain, pickled onions, garlic cilantro sauce',price:16,prep:1,min:1},
+ {id:'rPu2',cat:'Puerto Rican maki',name:'San Juan Roll',desc:'Sweet & spicy grilled chicken, yuca, tostones, apples, mango mayo',price:18,prep:1,min:1},
+ {id:'rPu3',cat:'Puerto Rican maki',name:'Guavate Roll',desc:'Pork belly (chicharrón), avocado, tostones, pickled onions, sesame seeds',price:17,prep:1,min:1},
+ {id:'rPu4',cat:'Puerto Rican maki',name:'Taino Roll',desc:'Pernil, yuca, plantain, pineapple, avocado, teriyaki & sesame seeds',price:17,prep:1,min:1},
+ {id:'rPu5',cat:'Puerto Rican maki',name:'Isla Verde Roll',desc:'Bistec, plantains, red peppers, asparagus, pickled onions',price:'',prep:1,min:1},
+ {id:'rPu6',cat:'Puerto Rican maki',name:'Yunque Roll',desc:'Salmon, apples, watermelon radish, tostones, avocado, sofrito sauce',price:'',prep:1,min:1},
+ {id:'rPu7',cat:'Puerto Rican maki',name:'Coquí Roll',desc:'Shrimp, avocado, mango, topped with mango habanero sauce',price:16,prep:1,min:1},
+ {id:'rFu0',cat:'Fusion maki',name:'Rising Rican Roll',desc:'Tuna, salmon, cucumber, avocado, kani crab salad, sweet eel sauce',price:19,prep:1,min:1},
+ {id:'rFu1',cat:'Fusion maki',name:'Boriental Roll',desc:'Fried chicken, tempura shrimp, red peppers, apples, avocado, pernil sauce',price:17,prep:1,min:1},
+ {id:'rFu2',cat:'Fusion maki',name:'Carolina Roll',desc:'Katsu chicken, BBQ kimchi slaw, Carolina sweet eel sauce',price:16,prep:1,min:1},
+ {id:'pro0',cat:'Protein option',name:'Nikkei Glazed Pernil',desc:'',price:19,prep:1,min:1},
+ {id:'pro1',cat:'Protein option',name:'Miso Glazed Chicharrones',desc:'',price:18,prep:1,min:1},
+ {id:'pro2',cat:'Protein option',name:'Ginger Orange Soy Chicken',desc:'',price:17,prep:1,min:1},
+ {id:'pro3',cat:'Protein option',name:'Japanese-Puerto Rican Fried Chicken',desc:'',price:16,prep:1,min:1},
+ {id:'pro4',cat:'Protein option',name:'Chicken Karaage',desc:'',price:17,prep:1,min:1},
+ {id:'pro5',cat:'Protein option',name:'Teriyaki Chicken',desc:'',price:16,prep:1,min:1},
+ {id:'pro6',cat:'Protein option',name:'Teriyaki Shrimp',desc:'',price:21,prep:1,min:1},
+ {id:'pro7',cat:'Protein option',name:'Teriyaki Salmon',desc:'',price:22,prep:1,min:1},
  {id:'m5',cat:'Sample tray',name:'Free sample tray (tasting)',desc:'Used for outreach tastings',price:0,prep:2,min:1}
 ];}
 function defaultSocial(){var t=['Prep day: behind the scenes','Menu spotlight: one Puerto Rican fusion roll, close up','Culture spotlight: the story behind the fusion','Sample tray reveal','Weekend order push: how to book','Event recap: the tray in the room','Meal prep preview for the week'];
@@ -233,7 +262,7 @@ var PLAN=[
 ];
 function defaultState(){return {v:1,settings:{business:'Boriental Sushi',chef:'Chef Izaya',kitchen:'Uptown Charlotte',pickup:'',start:todayISO(),weekly:40},leads:realLeads(),templates:defaultTemplates(),approved:{email:false,dm:false},menu:defaultMenu(),orders:[],social:defaultSocial(),plan:{},fees:{1:'',2:'',3:''}};}
 var S;
-function load(){try{var r=localStorage.getItem(KEY);if(r){var o=JSON.parse(r);if(o&&o.v===1){if(o.menu&&o.menu.some(function(m){return m.id==='m1'&&m.name==='Meal prep box'}))o.menu=defaultMenu();return o;}}}catch(e){}return defaultState();}
+function load(){try{var r=localStorage.getItem(KEY);if(r){var o=JSON.parse(r);if(o&&o.v===1){if(o.menu&&o.menu.some(function(m){return (m.id==='m1'&&m.name==='Meal prep box')||m.id==='b_island'})&&!o.menu.some(function(m){return m.id==='pro0'}))o.menu=defaultMenu();return o;}}}catch(e){}return defaultState();}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
 
 /* ---------- derived ---------- */
