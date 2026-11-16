@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Share Your Feedback | Boriental Sushi by TAZ</title>
+<style>
+:root{--navy:#2b2b86;--red:#d3232b;--line:#d6d9ee;--mut:#5d5f85;--ink:#1d1d3d;--bg:#f6f7fd}
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:var(--navy);color:#fff;text-align:center;padding:44px 20px 36px}
+header .k{letter-spacing:.2em;font:600 12px Arial,sans-serif;text-transform:uppercase;opacity:.8}
+h1{font-weight:400;font-size:38px;margin:10px 0 8px;line-height:1.1}
+header p{margin:0 auto;max-width:560px;font-style:italic;font-size:19px;opacity:.95}
+main{max-width:620px;margin:-22px auto 40px;padding:0 16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;box-shadow:0 8px 24px rgba(43,43,134,.08)}
+.why{font-size:17px;margin:0 0 20px}
+label{display:block;font:700 13px Arial,sans-serif;color:var(--navy);margin:16px 0 6px;letter-spacing:.03em}
+input[type=text],input[type=email],textarea{width:100%;border:1px solid var(--line);border-radius:9px;padding:12px;font:16px Arial,sans-serif;color:var(--ink)}
+textarea{min-height:130px;resize:vertical}
+input:focus,textarea:focus{outline:2px solid var(--navy);border-color:var(--navy)}
+.stars{display:flex;gap:6px;flex-direction:row-reverse;justify-content:flex-end}
+.stars input{position:absolute;opacity:0}
+.stars label{margin:0;font-size:38px;line-height:1;color:#cfd2ea;cursor:pointer;letter-spacing:0}
+.stars input:checked~label,.stars label:hover,.stars label:hover~label{color:#e5a712}
+.stars input:focus-visible+label{outline:2px solid var(--navy)}
+.ref{border:1px solid var(--line);border-radius:10px;padding:12px;margin-top:10px;background:#fafbff}
+.ref b{font:700 12px Arial,sans-serif;color:var(--navy);letter-spacing:.05em}
+.ref input{margin-top:6px}
+.chk{display:flex;gap:10px;align-items:flex-start;margin-top:18px;font:15px Arial,sans-serif}
+.chk input{margin-top:3px;width:18px;height:18px}
+button{margin-top:22px;width:100%;background:var(--red);color:#fff;border:0;border-radius:10px;padding:15px;font:700 16px Arial,sans-serif;cursor:pointer}
+button:disabled{opacity:.6}
+.st{font:14px Arial,sans-serif;color:var(--mut);margin:12px 0 0;text-align:center;min-height:20px}
+.thanks{display:none;text-align:center;padding:18px 4px}
+.thanks h2{font-weight:400;color:var(--navy);font-size:28px;margin:0 0 8px}
+footer{text-align:center;font:13px Arial,sans-serif;color:var(--mut);padding:0 16px 30px}
+</style></head><body>
+<header>
+ <div class="k">Boriental Sushi by TAZ</div>
+ <h1>Tell me how I did</h1>
+ <p>Honest feedback helps me build better, and every kind word helps the next small business find me.</p>
+</header>
+<main><div class="card">
+ <div id="formwrap">
+  <p class="why">Testimonials are how my business grows. If you have a minute, I would love to hear what working with me was like, what you liked, and what I could do better. Any feedback, big or small, is appreciated.</p>
+  <form id="fb" novalidate>
+   <label for="name">YOUR NAME</label>
+   <input type="text" id="name" autocomplete="name" placeholder="Chef Izaya">
+   <label for="biz">YOUR BUSINESS</label>
+   <input type="text" id="biz" placeholder="Boriental Sushi">
+   <label>HOW WAS THE EXPERIENCE?</label>
+   <div class="stars" role="radiogroup" aria-label="Rating">
+    <input type="radio" name="r" id="r5" value="5"><label for="r5" title="5">★</label>
+    <input type="radio" name="r" id="r4" value="4"><label for="r4" title="4">★</label>
+    <input type="radio" name="r" id="r3" value="3"><label for="r3" title="3">★</label>
+    <input type="radio" name="r" id="r2" value="2"><label for="r2" title="2">★</label>
+    <input type="radio" name="r" id="r1" value="1"><label for="r1" title="1">★</label>
+   </div>
+   <label for="hl">WHAT DID YOU ENJOY MOST?</label>
+   <textarea id="hl" style="min-height:170px" placeholder="Write it like you would tell a friend. What stood out about the build, the process, or working with me? Specific moments help the most."></textarea>
+   <label for="msg">WHAT COULD I DO BETTER? (OPTIONAL)</label>
+   <textarea id="msg" placeholder="Anything I should change next time."></textarea>
+   <label>REFERRALS (AT LEAST 1, UP TO 5)</label>
+   <p style="font:14px Arial,sans-serif;color:var(--mut);margin:0 0 4px">Who else could use a build like this? One referral is required, and more are always welcome. I will mention your name when I reach out.</p>
+   <div id="refs"></div>
+   <label for="contact">BEST WAY TO REACH YOU (OPTIONAL)</label>
+   <input type="text" id="contact" placeholder="Email or phone">
+   <div class="chk"><input type="checkbox" id="ok"><label for="ok" style="margin:0;font-weight:400;letter-spacing:0;color:var(--ink)">You may share my words as a testimonial, with my name and business.</label></div>
+   <button type="submit" id="go">Send feedback</button>
+   <p class="st" id="st"></p>
+  </form>
+ </div>
+ <div class="thanks" id="thanks">
+  <h2>Thank you</h2>
+  <p>Your feedback came straight to me, and I read every one. I appreciate you taking the time.</p>
+ </div>
+</div></main>
+<footer>Boriental Sushi by TAZ</footer>
+<script>
+(function(){var h='';for(var i=1;i<=5;i++){h+='<div class="ref"><b>REFERRAL '+i+(i==1?' (REQUIRED)':' (OPTIONAL)')+'</b><input type="text" id="rn'+i+'" placeholder="Name"><input type="text" id="rw'+i+'" placeholder="Business (optional)"><input type="text" id="rc'+i+'" placeholder="Email or phone"></div>';}document.getElementById('refs').innerHTML=h;})();
+(function(){
+ var HOOK='https://cloud.activepieces.com/api/v1/webhooks/wCx2SW0fEx4cgv99CqeQ2';
+ function g(i){return document.getElementById(i)}
+ g('fb').addEventListener('submit',function(e){
+  e.preventDefault();
+  var st=g('st'),hl=g('hl').value.trim(),r=document.querySelector('input[name=r]:checked');
+  if(!r){st.textContent='Please choose a star rating.';return;}
+  if(hl.length<20){st.textContent='Please write a few sentences about what you enjoyed most.';return;}
+  var refs=[],i,n,c,w;
+  for(i=1;i<=5;i++){n=g('rn'+i).value.trim();c=g('rc'+i).value.trim();w=g('rw'+i).value.trim();if(n||c||w){if(!n||!c){st.textContent='Referral '+i+' needs a name and a way to reach them.';return;}refs.push(i+'. '+n+(w?' ('+w+')':'')+' - '+c);}}
+  if(refs.length<1){st.textContent='Please add at least one referral.';return;}
+  var data={name:g('name').value.trim()||'Anonymous',business:g('biz').value.trim()||'Not given',rating:r.value,highlight:hl,feedback:g('msg').value.trim()||'None',referrals:refs.join('<br>'),referral_count:String(refs.length),contact:g('contact').value.trim()||'Not given',permission:g('ok').checked?'Yes':'No',at:new Date().toLocaleString()};
+  st.textContent='Sending...';g('go').disabled=true;
+  fetch(HOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)}).then(function(res){
+   if(!res.ok)throw 0;
+   g('formwrap').style.display='none';g('thanks').style.display='block';
+  }).catch(function(){
+   var t='Feedback for Boriental Sushi by TAZ\nRating: '+data.rating+'/5\n'+data.highlight+'\nBetter: '+data.feedback+'\nReferrals:\n'+data.referrals.replace(/<br>/g,'\n')+'\nFrom: '+data.name+', '+data.business;
+   var ok=function(){st.textContent='Could not send automatically. Your feedback is copied, so please paste it in a text or email to me.';};
+   var no=function(){st.textContent='Could not send automatically. Please try again in a moment.';};
+   (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(ok,no);
+   g('go').disabled=false;
+  });
+ });
+})();
+</script>
+</body></html>
