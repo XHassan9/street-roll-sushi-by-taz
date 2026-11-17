@@ -1,7 +1,7 @@
 (function(){
   var END=Date.parse('2026-11-21T05:00:00Z');
-  function closed(){
-    document.documentElement.innerHTML='<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Boriental Sushi by TAZ</title></head><body style="margin:0;min-height:100vh;display:grid;place-items:center;background:#2b2b86;color:#fff;font-family:system-ui,Arial,sans-serif;text-align:center;padding:24px"><div><h1 style="font-family:Georgia,serif;font-weight:400;font-size:34px;margin:0 0 12px">This preview has closed</h1><p style="font-size:18px;opacity:.9;max-width:460px;margin:0 auto">The Boriental Sushi by TAZ proposal was open through November 20, 2026. Reach out and we will open it back up.</p></div></body>';
+  function closed(){window.__siteCoreClose=true;
+    document.documentElement.innerHTML='<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Boriental Sushi by TAZ</title></head><body style="margin:0;min-height:100vh;display:grid;place-items:center;background:#2b2b86;color:#fff;font-family:system-ui,Arial,sans-serif;text-align:center;padding:24px"><div><h1 style="font-family:Georgia,serif;font-weight:400;font-size:34px;margin:0 0 12px">This preview has closed</h1><p style="font-size:18px;opacity:.9;max-width:460px;margin:0 auto">The Boriental Sushi by TAZ proposal was open through November 20, 2026. Want to pick it back up or learn more? Reply to your TAZ email and I will reopen it.</p></div></body>';
   }
   if(Date.now()>=END){closed();return;}
   setTimeout(closed,Math.min(END-Date.now(),2147483647));
