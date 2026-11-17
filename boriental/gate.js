@@ -36,8 +36,8 @@
     var days = Math.max(0, Math.ceil((CLOSE_AT - Date.now()) / 864e5));
     var n = document.createElement('div'); n.id = 'bg-note';
     n.innerHTML = '<span><b>Hey Chef Izaya, this portal is all yours through Friday, Nov 20' +
-      (days ? ' (' + days + ' day' + (days > 1 ? 's' : '') + ' left)' : '') + '.</b> Click around, try the order pages, and send me anything you want changed. Your agreement is ready whenever you are.</span>' +
-      '<span style="display:flex;gap:8px;align-items:center;justify-content:center"><a href="' + base + 'agreement.html">Review the agreement →</a>' +
+      (days ? ' (' + days + ' day' + (days > 1 ? 's' : '') + ' left)' : '') + '.</b> Click around, try the order pages, and send me anything you want changed. When you&rsquo;re ready, you can review and sign your agreement right here in the portal.</span>' +
+      '<span style="display:flex;gap:8px;align-items:center;justify-content:center"><a href="' + base + 'agreement.html">Review &amp; sign →</a>' +
       '<button class="x" aria-label="Hide">×</button></span>';
     n.querySelector('.x').onclick = function () { n.remove(); };
     document.body.appendChild(n);

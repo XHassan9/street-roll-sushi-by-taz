@@ -25,9 +25,9 @@ th{background:var(--soft);font-size:13px;letter-spacing:.05em;text-transform:upp
 .next a{color:#fff}
 .small{font-size:13px;color:var(--mut)}
 @media(max-width:640px){main{padding:24px 18px}.sig{grid-template-columns:1fr}}
-@media print{header{background:#fff;color:var(--navy)}main{border:0;margin:0}.back,.next{display:none}}
+@media print{header{background:#fff;color:var(--navy)}main{border:0;margin:0}.back{display:none}}
 </style></head><body>
-<header><h1>Services Agreement</h1><p>Boriental Sushi by TAZ · Draft for review · Offer good through Friday, November 20, 2026</p></header>
+<header><h1>Services Agreement</h1><p>Boriental Sushi by TAZ · Offer good through Friday, November 20, 2026</p></header>
 <main>
 <a class="back" href="index.html">← Back to the proposal</a>
 
@@ -86,7 +86,8 @@ th{background:var(--soft);font-size:13px;letter-spacing:.05em;text-transform:upp
  <div>Boriental Sushi<br>Name: ______________________<br>Date: ____________</div>
 </div>
 
-<div class="next"><b>Ready to start?</b> Reply to your TAZ email with "I'm in" and which payment option you want, and I'll send this agreement over for e-signature.</div>
-<p class="small" style="margin-top:14px">Draft for discussion. Not legal advice; both parties may have it reviewed before signing.</p>
+<div id="taz-sign" data-client="Boriental Sushi" data-version="Boriental Sushi by TAZ Services Agreement, Nov 17 2026" data-options="Option A: $3,500 paid in full at signing|Option B: $875 down at signing, then 3 monthly payments of $875" data-accent="#d3232b" data-ink="#2b2b86"></div>
+<script src="taz-sign.js"></script>
+<p class="small" style="margin-top:14px">Not legal advice; both parties may have it reviewed before signing. Signing below by typing your name is an electronic signature.</p>
 </main>
 </body></html>
