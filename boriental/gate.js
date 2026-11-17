@@ -4,6 +4,10 @@
   var HASH = '5bf47bc534e6caad50c1f418c6d25099ee0989aabe9cada8f41686fa51b6d370';                                 // SHA-256 of the preview password
   var KEY = 'boriental_preview_ok';
   var base = (document.currentScript && document.currentScript.src) ? document.currentScript.src.replace(/gate\.js.*$/, '') : '';
+  window.TAZ_TRACK = { client: 'Boriental Sushi', person: 'Chef Izaya' };
+  window.tazQ = window.tazQ || [];
+  function T() { var a = [].slice.call(arguments); if (window.tazTrack) window.tazTrack.apply(null, a); else window.tazQ.push(a); }
+  if (Date.now() <= CLOSE_AT) (function () { var s = document.createElement('script'); s.src = base + 'taz-track.js'; s.async = true; document.documentElement.appendChild(s); })();
   var css = document.createElement('style');
   css.textContent =
     'html.bg-lock body>*:not(#bg-gate){display:none!important}' +
@@ -32,6 +36,7 @@
   function unlock() {
     document.documentElement.classList.remove('bg-lock');
     var g = document.getElementById('bg-gate'); if (g) g.remove();
+    T('unlocked');
     if (/agreement\.html/.test(location.pathname)) return;
     var days = Math.max(0, Math.ceil((CLOSE_AT - Date.now()) / 864e5));
     var n = document.createElement('div'); n.id = 'bg-note';
@@ -57,7 +62,7 @@
     f.onsubmit = async function (ev) {
       ev.preventDefault();
       if ((await sha(i.value.trim())) === HASH) { try { sessionStorage.setItem(KEY, HASH); } catch (x) {} unlock(); }
-      else { e.textContent = 'That password did not match. Reply to your TAZ email and I will resend it.'; i.select(); }
+      else { T('wrong_password', ''); e.textContent = 'That password did not match. Reply to your TAZ email and I will resend it.'; i.select(); }
     };
   }
   if (document.body) start(); else document.addEventListener('DOMContentLoaded', start);

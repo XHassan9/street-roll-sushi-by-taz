@@ -17,6 +17,7 @@
     '#taz-sign .done{text-align:center;padding:10px}#taz-sign .done b{display:block;font-size:22px;color:' + ink + ';margin-bottom:6px}' +
     '@media print{#taz-sign form{display:none}}';
   document.head.appendChild(st);
+  function tk() { var a = [].slice.call(arguments); if (window.tazTrack) window.tazTrack.apply(null, a); else (window.tazQ = window.tazQ || []).push(a); }
   function done(d) {
     el.innerHTML = '<div class="done"><b>Signed. Thank you!</b>Accepted by ' + esc(d.signer_name) + ' on ' + esc(d.when) +
       (d.payment_option ? ' · ' + esc(d.payment_option) : '') + '.<br>A copy of your acceptance was sent to TAZ, and I will be in touch with next steps shortly.</div>';
@@ -32,6 +33,7 @@
     '<label>Anything you want me to know? (optional)</label><textarea name="notes" rows="2"></textarea>' +
     '<label class="chk"><input type="checkbox" name="agreed" required> <span>I have read this agreement and agree to its terms, and I am authorized to sign for my business.</span></label>' +
     '<button type="submit">Accept &amp; sign</button><div class="msg"></div></form>';
+  var f0 = el.querySelector('form'); if (f0) f0.addEventListener('focusin', function once() { tk('sign_started', ''); f0.removeEventListener('focusin', once); });
   var f = el.querySelector('form'), msg = f.querySelector('.msg'), btn = f.querySelector('button');
   f.onsubmit = function (ev) {
     ev.preventDefault();
@@ -45,7 +47,7 @@
     d.at = new Date().toISOString(); d.when = new Date().toLocaleString('en-US', { dateStyle: 'long', timeStyle: 'short' });
     btn.disabled = true; btn.textContent = 'Signing…'; msg.textContent = '';
     fetch(HOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(d) })
-      .then(function (r) { if (!r.ok) throw 0; try { localStorage.setItem(KEY, JSON.stringify(d)); } catch (e) {} done(d); })
+      .then(function (r) { if (!r.ok) throw 0; tk('signed', d.payment_option || ''); try { localStorage.setItem(KEY, JSON.stringify(d)); } catch (e) {} done(d); })
       .catch(function () { btn.disabled = false; btn.textContent = 'Accept & sign'; msg.style.color = accent; msg.textContent = 'That did not go through. Please try again, or reply to your TAZ email with "I\'m in".'; });
   };
 })();
