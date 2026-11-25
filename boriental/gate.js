@@ -1,6 +1,6 @@
-/* Boriental preview gate: password screen, agreement note, closes after Fri Nov 20 2026 (11:59 PM ET). */
+/* Boriental preview gate: password screen, agreement note, closes after Fri Jan 15 2027 (11:59 PM ET). */
 (function () {
-  var CLOSE_AT = Date.parse('2026-11-21T04:59:59Z');      // Fri Nov 20 2026, 11:59:59 PM Eastern
+  var CLOSE_AT = Date.parse('2027-01-16T04:59:59Z');      // Fri Jan 15 2027, 11:59:59 PM Eastern
   var HASH = '5bf47bc534e6caad50c1f418c6d25099ee0989aabe9cada8f41686fa51b6d370';                                 // SHA-256 of the preview password
   var KEY = 'boriental_preview_ok';
   var base = (document.currentScript && document.currentScript.src) ? document.currentScript.src.replace(/gate\.js.*$/, '') : '';
@@ -30,7 +30,7 @@
     (document.body || document.documentElement).appendChild(g); return g;
   }
   function closed() {
-    gate('<h2>This preview has closed</h2><p>The Boriental Sushi by TAZ preview ran through Friday, November 20, 2026.</p>' +
+    gate('<h2>This preview has closed</h2><p>The Boriental Sushi by TAZ preview ran through Friday, January 15, 2027.</p>' +
       '<p>Want to pick it back up or learn more? Reply to your TAZ email and I will reopen it.</p>');
   }
   function unlock() {
@@ -40,9 +40,9 @@
     if (/agreement\.html/.test(location.pathname)) return;
     var days = Math.max(0, Math.ceil((CLOSE_AT - Date.now()) / 864e5));
     var n = document.createElement('div'); n.id = 'bg-note';
-    n.innerHTML = '<span><b>Hey Chef Izaya, this portal is all yours through Friday, Nov 20' +
-      (days ? ' (' + days + ' day' + (days > 1 ? 's' : '') + ' left)' : '') + '.</b> Click around, try the order pages, and send me anything you want changed. When you&rsquo;re ready, you can review and sign your agreement right here in the portal.</span>' +
-      '<span style="display:flex;gap:8px;align-items:center;justify-content:center"><a href="' + base + 'agreement.html">Review &amp; sign →</a>' +
+    n.innerHTML = '<span><b>Hey Chef Izaya, this portal is all yours through Friday, Jan 15' +
+      (days ? ' (' + days + ' day' + (days > 1 ? 's' : '') + ' left)' : '') + '.</b> Click around, try the order pages, and send me anything you want changed. We&rsquo;ll go over pricing together when we talk.</span>' +
+      '<span style="display:flex;gap:8px;align-items:center;justify-content:center"><a href="' + base + 'agreement.html">Read the agreement →</a>' +
       '<button class="x" aria-label="Hide">×</button></span>';
     n.querySelector('.x').onclick = function () { n.remove(); };
     document.body.appendChild(n);
@@ -55,7 +55,7 @@
     if (Date.now() > CLOSE_AT) { if (window.__siteCoreClose) { document.documentElement.classList.remove('bg-lock'); return; } return closed(); }
     var ok = false; try { ok = sessionStorage.getItem(KEY) === HASH; } catch (e) {}
     if (ok) return unlock();
-    var g = gate('<h2>Boriental Sushi by TAZ</h2><p>Welcome, Chef Izaya! This private preview is yours through Friday, November 20. Enter the password from your TAZ email to jump in.</p>' +
+    var g = gate('<h2>Boriental Sushi by TAZ</h2><p>Welcome, Chef Izaya! This private preview is yours through Friday, January 15. Enter the password from your TAZ email to jump in.</p>' +
       '<form><input type="password" autocomplete="current-password" placeholder="Password" aria-label="Password"><button>Open preview</button><div class="err"></div></form>');
     var f = g.querySelector('form'), i = g.querySelector('input'), e = g.querySelector('.err');
     i.focus();
